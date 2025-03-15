@@ -2,6 +2,7 @@ const express=require('express')
 const app=express()
 const mongose=require("mongoose");
 const bikeRouter=require('./Router/bikeRouter');
+const userRoutes=require('./Router/userRoutes');
 const AppError = require('./Errorhandler/errorHandler');
 const globalErrorhandler = require('./Errorhandler/globalErrorhandler');
 
@@ -10,6 +11,7 @@ app.use(express.json())
 
 
 app.use('/api/bike',bikeRouter)
+app.use('/api/user',userRoutes)
 
 mongose.connect("mongodb+srv://ahsanmushtaq7894:j8cz7WgYUnJayW8w@cluster0.6otap.mongodb.net/",{
   useNewUrlParser: true,
