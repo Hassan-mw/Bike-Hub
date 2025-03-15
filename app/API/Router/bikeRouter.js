@@ -1,7 +1,7 @@
 const express=require('express');
 const router=express.Router();
 const bikeController=require('./../Controller/bikeController')
-
+const authController=require('../Controller/authController');
 router
 .route('/')
 .get(bikeController.getAllBike)
@@ -10,7 +10,7 @@ router
 
 router
 .route('/:id')
-.get(bikeController.getBikeByName)
+.get(authController.protect,bikeController.getBikeByName)
 
 
 

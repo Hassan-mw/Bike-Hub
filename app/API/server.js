@@ -9,7 +9,6 @@ const globalErrorhandler = require('./Errorhandler/globalErrorhandler');
 app.use(express.json())
 
 
-
 app.use('/api/bike',bikeRouter)
 app.use('/api/user',userRoutes)
 
