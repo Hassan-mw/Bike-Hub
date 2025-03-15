@@ -17,8 +17,7 @@ exports.getAllBike=catchAsync(async(req,res,next)=>{
 
 exports.createBike=catchAsync(async(req,res,next)=>{
 
-    const createdBike=await BIKE.findOneAndUpdate(req.body,{runValidator:true})    
-    console.log(createdBike,'😎😎😋')
+    const createdBike=await BIKE.create(req.body)    
     res.status(201).json({
     status:'sucess',
     data:createdBike
@@ -26,7 +25,8 @@ exports.createBike=catchAsync(async(req,res,next)=>{
 })
 
 exports.getBikeByName=catchAsync(async(req,res,next)=>{
-    const bike=await BIKE.find({url:req.params.name})
+  console.log(req.params.id,'😍😍😍😍😍😍😍')
+    const bike=await BIKE.findById(req.params.id)
     res.status(200).json({
     status:'success',
     bike

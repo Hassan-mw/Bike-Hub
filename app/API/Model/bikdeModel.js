@@ -24,7 +24,7 @@ const bikeSchema = new mongoose.Schema({
 
 //! Pre Save Middleware
 bikeSchema.pre('save',function(next){
-  this.create({unique:true})
+  // this.create({unique:true})
 this.slug=slugify(this.name,{lower:true})
 next();
 })

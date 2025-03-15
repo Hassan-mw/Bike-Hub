@@ -9,7 +9,7 @@ router
 
 
 router
-.route('/:name')
+.route('/:id')
 .get(bikeController.getBikeByName)
 
 
