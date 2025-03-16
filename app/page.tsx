@@ -7,6 +7,7 @@ const page = () => {
     <div className='flex flex-col'>
       <Hero/>
       <PopularCompany/>
+      <BikeDetails/>
     </div>
   )
 }

@@ -25,9 +25,9 @@ import { RiEBikeLine } from 'react-icons/ri';
 const HeroData = () => {
   return (
     // <div className='flex space-y-3 xl:space-y-6 flex-col absolute  top-[50%]  left-9 text-white  font-extrabold w-full'>
-    <div className='flex space-y-3 xl:space-y-6  flex-col lg:absolute lg:top-[50%] lg:left-9  lg:text-white  font-extrabold w-full bg-[#e5ebf5] lg:bg-transparent  text-[#3c3d42]  px-7 lg:px-0 lg:py-0 py-14 '>
-    <div style={{fontWeight:800}} className={`${jost.className} text-3xl lg:text-5xl xl:text-6xl `}>Ride the Future, Own the Road</div>
-    <div  style={{fontWeight:400}}  className='text-xl lg:text-2xl '>Explore the best motorbikes, accessories, and gear. Find your perfect ride today!</div>
+    <div className='flex space-y-3 xl:space-y-6  flex-col lg:absolute lg:top-[50%] lg:left-9  lg:text-white  font-extrabold w-full bg-[#e5ebf5] lg:bg-transparent  text-[#494a4f]  px-7 lg:px-0 lg:py-0 py-14 '>
+    <div style={{fontWeight:500}} className={`${jost.className} text-2xl lg:text-5xl xl:text-6xl `}>Ride the Future, Own the Road</div>
+    <div  style={{fontWeight:400}}  className='text-[#8a95a0] lg:text-white text-sm lg:text-2xl '>Explore the best motorbikes, accessories, and gear. Find your perfect ride today!</div>
    
    
 <div className=' flex flex-col lg:flex-row lg:w-[65%] 2xl:w-[50%] items-center justify-center bg-white  p-3 rounded-md space-y-6 lg:space-y-0 lg:space-x-3'>
