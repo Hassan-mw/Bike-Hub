@@ -5,6 +5,7 @@ const page = () => {
   return (
     <div className='flex flex-col'>
       <Hero/>
+      <PopularCompany/>
     </div>
   )
 }
