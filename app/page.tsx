@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from './HomepageComponents/Hero'
+import PopularCompany from './HomepageComponents/PopularCompany'
 
 const page = () => {
   return (
