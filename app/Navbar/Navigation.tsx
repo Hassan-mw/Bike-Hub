@@ -62,7 +62,7 @@ const Navigation = () => {
    <div className={`${jost.className} text-sm`}>3051, Australia. </div>
    <div className={`${jost.className} text-sm`}>support@bikehub.com</div>
    <div className="flex items-start  space-x-6">
-     <div className=" text-[#929292]  hover:cursor-pointer  hover:scale-110 duration-300 hover:text-white"><FaFacebookF /></div>
+   <div className=" text-[#929292]  hover:cursor-pointer  hover:scale-110 duration-300 hover:text-white"><FaFacebookF /></div>
      <div className=" text-[#929292]  hover:cursor-pointer  hover:scale-110 duration-300 hover:text-white"><FaTwitch /></div>
      <div className="  text-[#929292]  hover:cursor-pointer hover:scale-110 duration-300 hover:text-white"><FaLinkedinIn /></div>
      <div className="  text-[#929292]  hover:cursor-pointer hover:scale-110 duration-300 hover:text-white"><FaInstagram /></div>
