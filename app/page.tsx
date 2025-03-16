@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from './HomepageComponents/Hero'
 
 const page = () => {
   return (
-    <div>abc</div>
+    <div className='flex flex-col'>
+      <Hero/>
+    </div>
   )
 }
 
