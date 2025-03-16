@@ -13,6 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitch } from 'react-icons/fa'
+import { IoPerson } from 'react-icons/io5'
 
 
 
@@ -39,12 +40,14 @@ const Navigation = () => {
       </div>
       <div className=" sm:hidden ">
        <Sheet >
-     <SheetTrigger className='hover:cursor-pointer text-[#868787] '><BsList size={30} /></SheetTrigger>
+     <SheetTrigger className='hover:cursor-pointer text-[#868787] flex items-center justify-center space-x-3 '><Link href="/" className='hover:text-blue-500 duration-500'><IoPerson  size={20} /></Link><BsList size={30} /></SheetTrigger>
      <SheetContent className='bg-[#202124] text-[#868787]  w-[300px]'>
      <SheetHeader  >
       
-      <SheetTitle className='text-[#868787] bg-white min-w-full p-3'> <Link href="/"><img className='h-12 rounded-4xl' src="./logo.png" alt='logo' /></Link></SheetTitle>
-      <SheetDescription className='py-3 px-8 flex flex-col  '>
+      <SheetTitle className='text-[#868787] bg-white min-w-full p-3'>
+      <Link href="/"><img className='h-16 rounded-4xl' src="./logo.png" alt='logo' /></Link>
+         </SheetTitle>
+      <SheetDescription className='py-4 px-8 flex flex-col  '>
       <div className='flex flex-col items-start justify-center space-y-5  text-md hover:cursor-pointer '>
       <div className={` ${jost.className} text-lg   hover:text-white duration-500 `}>Bikes</div>
         <div className={` ${jost.className} text-lg   hover:text-white duration-500 `}>Gears</div>
