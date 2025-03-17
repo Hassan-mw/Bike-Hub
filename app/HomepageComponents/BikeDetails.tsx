@@ -8,8 +8,8 @@ const jost=Jost({
 
 const BikeDetails = () => {
   return (
-    <div className='w-full  flex items-center justify-center p-5 '>
-    <div className='w-full  flex flex-col space-y-8 max-w-screen-xl  '>
+    <div className='w-full  flex items-center justify-center p-5 bg-[#f9fafb] '>
+    <div className='w-full  flex flex-col space-y-8 max-w-screen-lg  '>
    <div className=' w-full flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4'>
    <div className='md:w-1/2  flex flex-col space-y-3'>
     <div className={`${jost.className} text-green-500 text-3xl md:text-4xl`}>"Find Your Perfect Ride"</div>
