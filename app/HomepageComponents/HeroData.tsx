@@ -10,7 +10,7 @@ const jost=Jost({
   subsets:['latin']
 })
 
-import { InteractiveHoverButton } from "@/registry/magicui/interactive-hover-button";
+import Button from "@/components/Button"
  
 import {
   Select,
@@ -57,8 +57,8 @@ const HeroData = () => {
 </div>
 {/*//! Button*/}
 
-<div style={{fontWeight:300}} className={`${jost.className} w-full hover:cursor-pointer flex items-center justify-center bg-[#1967d2] hover:bg-blue-700 text-white duration-700  text-xl p-6 rounded-md`}>Find Bike</div>
-
+ <div className='w-full text-black'><Button  />
+  </div>
     </div>
 
 </div>

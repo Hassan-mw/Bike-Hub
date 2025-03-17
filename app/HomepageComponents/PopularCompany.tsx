@@ -2,6 +2,7 @@ import { Jost } from 'next/font/google'
 import React from 'react'
 import { SiDucati, SiHonda, SiKtm, SiSuzuki, SiYamahacorporation } from 'react-icons/si'
 import { CgBmw } from "react-icons/cg";
+import Button from '@/components/Button';
 const jost=Jost({
     weight:['500'],
     subsets:['latin']
