@@ -5,13 +5,16 @@ import BikeDetails from './HomepageComponents/BikeDetails'
 import Test from './HomepageComponents/Test'
 import Testmonials from './HomepageComponents/Testmonials'
 import Status from './HomepageComponents/Status'
+import Carousels from './HomepageComponents/Carousels'
+
 
 const page = () => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col space-y-16'>
       <Hero/>
       <PopularCompany/>
       <BikeDetails/>
+      <Carousels/>
      <Status/>
       <Testmonials/>
     </div>
