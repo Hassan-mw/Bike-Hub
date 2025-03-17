@@ -27,7 +27,7 @@ const jost=Jost({
 const Navigation = () => {
   return (
     <div className={` ${jost.className} h-24 flex items-center justify-between w-full p-4  `}>
-      <Link href="/"><img className='h-10 w-32 lg:w-40 rounded-4xl' src="./logo.png" alt='logo' /></Link>
+      <Link href="/"><img className='h-12 w-32 lg:w-40 rounded-4xl' src="./logo.png" alt='logo' /></Link>
       
       <div className='hidden sm:block'>
       <div className='flex items-center justify-center space-x-6 lg:text-lg xl:text-xl hover:cursor-pointer '>

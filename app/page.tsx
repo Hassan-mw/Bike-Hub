@@ -4,6 +4,7 @@ import PopularCompany from './HomepageComponents/PopularCompany'
 import BikeDetails from './HomepageComponents/BikeDetails'
 import Test from './HomepageComponents/Test'
 import Testmonials from './HomepageComponents/Testmonials'
+import Status from './HomepageComponents/Status'
 
 const page = () => {
   return (
@@ -11,7 +12,7 @@ const page = () => {
       <Hero/>
       <PopularCompany/>
       <BikeDetails/>
-      {/* <Test/> */}
+     <Status/>
       <Testmonials/>
     </div>
   )
