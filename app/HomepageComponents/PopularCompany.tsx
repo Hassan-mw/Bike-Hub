@@ -14,9 +14,10 @@ const PopularCompany = () => {
 
     <section className="bg-background overflow-hidden py-16">
             <div className="group relative m-auto max-w-7xl px-6 pb-9 border-b ">
-                <div className="flex flex-col items-center md:flex-row">
+                <div className="flex flex-col items-center ">
                     <div className="md:max-w-44 md:border-r md:pr-6">
-                        <p className="text-end text-sm">Best Companies</p>
+                        {/* <p className="text-end text-sm">Best Companies</p> */}
+                        <div className={`${jost.className} text-black/80 text-3xl md:text-4xl`}>Best Companies</div>
                     </div>
                     <div className="relative py-6 md:w-[calc(100%-11rem)]">
                         <InfiniteSlider
