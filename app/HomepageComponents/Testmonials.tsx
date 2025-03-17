@@ -17,7 +17,7 @@ export default function Testimonials() {
                         </CardHeader>
                         <CardContent>
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">Tailus has transformed the way I develop web applications. Their extensive collection of UI components, blocks, and templates has significantly accelerated my workflow. The flexibility to customize every aspect allows me to create unique user experiences. Tailus is a game-changer for modern web development</p>
+                                <p className="text-xl font-medium">Finding the perfect motorcycle was overwhelming until I discovered Bike-Hub. Their expert reviews and comparisons helped me choose between a sportbike and a cruiser. I finally got the Yamaha MT-07, and I love it! If you're looking for your next ride, I highly recommend Bike-Hub!</p>
 
                                 <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                     <Avatar className="size-12">
@@ -27,7 +27,6 @@ export default function Testimonials() {
 
                                     <div>
                                         <cite className="text-sm font-medium">Shekinah Tshiokufila</cite>
-                                        <span className="text-muted-foreground block text-sm">Software Ingineer</span>
                                     </div>
                                 </div>
                             </blockquote>
@@ -36,7 +35,7 @@ export default function Testimonials() {
                     <Card className="md:col-span-2">
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.</p>
+                                <p className="text-xl font-medium">I love how Bike-Hub lists all the top motorcycle brands in one place. It saved me hours of research!</p>
 
                                 <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                     <Avatar className="size-12">
@@ -45,7 +44,7 @@ export default function Testimonials() {
                                     </Avatar>
                                     <div>
                                         <cite className="text-sm font-medium">Jonathan Yombo</cite>
-                                        <span className="text-muted-foreground block text-sm">Software Ingineer</span>
+                                       
                                     </div>
                                 </div>
                             </blockquote>
@@ -54,7 +53,7 @@ export default function Testimonials() {
                     <Card>
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p>Great work on tailfolio template. This is one of the best personal website that I have seen so far!</p>
+                                <p>The comparison tool helped me pick between a sportbike and a cruiser. Now, I ride with confidence!</p>
 
                                 <div className="grid items-center gap-3 [grid-template-columns:auto_1fr]">
                                     <Avatar className="size-12">
@@ -63,30 +62,31 @@ export default function Testimonials() {
                                     </Avatar>
                                     <div>
                                         <cite className="text-sm font-medium">Yucel Faruksahan</cite>
-                                        <span className="text-muted-foreground block text-sm">Creator, Tailkits</span>
+                                        
                                     </div>
                                 </div>
                             </blockquote>
                         </CardContent>
                     </Card>
-                    <Card className="card variant-mixed">
+                    <Card>
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p>Great work on tailfolio template. This is one of the best personal website that I have seen so far!</p>
+                                <p>Bike-Hub not only helped me find my motorcycle but also the perfect riding jacket and gloves.!</p>
 
-                                <div className="grid grid-cols-[auto_1fr] gap-3">
+                                <div className="grid items-center gap-3 [grid-template-columns:auto_1fr]">
                                     <Avatar className="size-12">
-                                        <AvatarImage src="https://tailus.io/images/reviews/rodrigo.webp" alt="Rodrigo Aguilar" height="400" width="400" loading="lazy" />
+                                        <AvatarImage src="https://tailus.io/images/reviews/yucel.webp" alt="Yucel Faruksahan" height="400" width="400" loading="lazy" />
                                         <AvatarFallback>YF</AvatarFallback>
                                     </Avatar>
                                     <div>
-                                        <p className="text-sm font-medium">Rodrigo Aguilar</p>
-                                        <span className="text-muted-foreground block text-sm">Creator, TailwindAwesome</span>
+                                        <cite className="text-sm font-medium">Liam J.</cite>
+                                        
                                     </div>
                                 </div>
                             </blockquote>
                         </CardContent>
                     </Card>
+                
                 </div>
             </div>
         </section>
