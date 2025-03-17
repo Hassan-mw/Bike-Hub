@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from './HomepageComponents/Hero'
 import PopularCompany from './HomepageComponents/PopularCompany'
 import BikeDetails from './HomepageComponents/BikeDetails'
+import Test from './HomepageComponents/Test'
 
 const page = () => {
   return (
@@ -9,6 +10,8 @@ const page = () => {
       <Hero/>
       <PopularCompany/>
       <BikeDetails/>
+      <Test/>
+      {/* <Testmonials/> */}
     </div>
   )
 }
