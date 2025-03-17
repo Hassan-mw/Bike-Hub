@@ -3,6 +3,7 @@ import Hero from './HomepageComponents/Hero'
 import PopularCompany from './HomepageComponents/PopularCompany'
 import BikeDetails from './HomepageComponents/BikeDetails'
 import Test from './HomepageComponents/Test'
+import Testmonials from './HomepageComponents/Testmonials'
 
 const page = () => {
   return (
@@ -11,7 +12,7 @@ const page = () => {
       <PopularCompany/>
       <BikeDetails/>
       <Test/>
-      {/* <Testmonials/> */}
+      <Testmonials/>
     </div>
   )
 }
