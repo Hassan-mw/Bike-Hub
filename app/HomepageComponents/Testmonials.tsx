@@ -1,13 +1,18 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Jost } from 'next/font/google'
+
+const jost=Jost({
+    weight:['500'],
+    subsets:['latin']
+})
 
 export default function Testimonials() {
     return (
-        <section className="py-16 md:py-32">
-            <div className="mx-auto max-w-6xl space-y-8 px-6 md:space-y-16">
-                <div className="relative z-10 mx-auto max-w-xl space-y-6 text-center md:space-y-12">
-                    <h2 className="text-4xl font-medium lg:text-5xl">Build by makers, loved by thousand developers</h2>
-                    <p>Gemini is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</p>
+        <section className="py-16 md:py-32 ">
+            <div className="mx-auto max-w-7xl space-y-8 px-6 md:space-y-16">
+                <div className="w-full flex items-center justify-start">
+                    <h2 className={`${jost.className} text-black/80 text-3xl md:text-4xl`}>Build by makers, loved by thousand peopels</h2>
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-rows-2">
@@ -17,7 +22,7 @@ export default function Testimonials() {
                         </CardHeader>
                         <CardContent>
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">Finding the perfect motorcycle was overwhelming until I discovered Bike-Hub. Their expert reviews and comparisons helped me choose between a sportbike and a cruiser. I finally got the Yamaha MT-07, and I love it! If you're looking for your next ride, I highly recommend Bike-Hub!</p>
+                                <p className={`${jost.className} text-black/60 text-xl`}>Finding the perfect motorcycle was overwhelming until I discovered Bike-Hub. Their expert reviews and comparisons helped me choose between a sportbike and a cruiser. I finally got the Yamaha MT-07, and I love it! If you're looking for your next ride, I highly recommend Bike-Hub!</p>
 
                                 <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                     <Avatar className="size-12">
@@ -35,7 +40,7 @@ export default function Testimonials() {
                     <Card className="md:col-span-2">
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p className="text-xl font-medium">I love how Bike-Hub lists all the top motorcycle brands in one place. It saved me hours of research!</p>
+                                <p className={`${jost.className} text-black/60 text-xl font-medium`}>I love how Bike-Hub lists all the top motorcycle brands in one place. It saved me hours of research!</p>
 
                                 <div className="grid grid-cols-[auto_1fr] items-center gap-3">
                                     <Avatar className="size-12">
@@ -53,7 +58,7 @@ export default function Testimonials() {
                     <Card>
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p>The comparison tool helped me pick between a sportbike and a cruiser. Now, I ride with confidence!</p>
+                                <p  className={`${jost.className} text-black/60`}>The comparison tool helped me pick between a sportbike and a cruiser. Now, I ride with confidence!</p>
 
                                 <div className="grid items-center gap-3 [grid-template-columns:auto_1fr]">
                                     <Avatar className="size-12">
@@ -71,7 +76,7 @@ export default function Testimonials() {
                     <Card>
                         <CardContent className="h-full pt-6">
                             <blockquote className="grid h-full grid-rows-[1fr_auto] gap-6">
-                                <p>Bike-Hub not only helped me find my motorcycle but also the perfect riding jacket and gloves.!</p>
+                                <p  className={`${jost.className} text-black/60`}>Bike-Hub not only helped me find my motorcycle but also the perfect riding jacket and gloves.!</p>
 
                                 <div className="grid items-center gap-3 [grid-template-columns:auto_1fr]">
                                     <Avatar className="size-12">

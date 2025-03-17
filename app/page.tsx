@@ -11,7 +11,7 @@ const page = () => {
       <Hero/>
       <PopularCompany/>
       <BikeDetails/>
-      <Test/>
+      {/* <Test/> */}
       <Testmonials/>
     </div>
   )
