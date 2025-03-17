@@ -10,7 +10,7 @@ import Carousels from './HomepageComponents/Carousels'
 
 const page = () => {
   return (
-    <div className='flex flex-col space-y-16'>
+    <div className='flex flex-col space-y-24 md:space-y-32'>
       <Hero/>
       <PopularCompany/>
       <BikeDetails/>
