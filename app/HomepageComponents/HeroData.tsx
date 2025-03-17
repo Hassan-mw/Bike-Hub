@@ -10,6 +10,8 @@ const jost=Jost({
   subsets:['latin']
 })
 
+import { InteractiveHoverButton } from "@/registry/magicui/interactive-hover-button";
+ 
 import {
   Select,
   SelectContent,
