@@ -6,6 +6,7 @@ import Test from './HomepageComponents/Test'
 import Testmonials from './HomepageComponents/Testmonials'
 import Status from './HomepageComponents/Status'
 import Carousels from './HomepageComponents/Carousels'
+import HoverCard from './HomepageComponents/HoverCard'
 
 
 const page = () => {
@@ -15,6 +16,7 @@ const page = () => {
       <BikeDetails/>
       <PopularCompany/>
       <Carousels/>
+      <HoverCard/>
      <Status/>
       <Testmonials/>
     </div>
