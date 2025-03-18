@@ -24,8 +24,10 @@ const Showlarge = () => {
   return (
     <div className=' w-full flex items-center justify-center bg-green-500 relative'>
       
-    <div className='hidden  w-full h-full lg:block  flex-col relative '>     
-    <img  className=' object-cover  w-full h-full max-h-[90vh] ' src="./bg-images.jpeg"/>
+    <div className='hidden  w-full h-full lg:block  flex-col relative '>
+      {/* <div className='absolute inset-0 bg-black/35 bg-opacity-20 z-10'></div>      */}
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent"></div> */}
+    <img  className=' object-cover  w-full h-full max-h-[80vh] ' src="./bg-bike-7.jpg"/>
    </div>
    <HeroData/>
     {/* <div className='flex space-y-3 xl:space-y-6 flex-col absolute  top-[50%]  left-9 text-white  font-extrabold w-full'>

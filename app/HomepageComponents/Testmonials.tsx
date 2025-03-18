@@ -11,7 +11,7 @@ export default function Testimonials() {
     return (
         <section className="py-16 md:py-32 ">
             <div className="mx-auto max-w-7xl space-y-8 px-6 md:space-y-16">
-                <div className="w-full flex items-center justify-start">
+                <div className="w-full flex items-center justify-center">
                     <h2 className={`${jost.className} text-black/80 text-3xl md:text-4xl`}>Build by makers, loved by thousand peopels</h2>
                 </div>
 

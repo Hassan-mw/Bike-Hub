@@ -9,7 +9,7 @@ export default function Status() {
     return (
 
             <div className="w-full  mx-auto max-w-screen-xl space-y-8 px-6 md:space-y-16">
-                <div className="w-full flex flex-col items-start justify-start space-y-4">
+                <div className="w-full flex flex-col items-center justify-center space-y-4">
                     <h2 className={`${jost.className} text-black/80 text-3xl md:text-4xl`}>Bike-Hub in Numbers</h2>
                     <p className={`${jost.className} text-[#828282]`}>Connecting riders with the best motorcycles and gear worldwide</p>
                 </div>

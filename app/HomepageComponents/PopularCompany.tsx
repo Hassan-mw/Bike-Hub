@@ -14,8 +14,8 @@ const PopularCompany = () => {
 
     <section className="bg-background overflow-hidden py-16">
             <div className="group relative m-auto max-w-7xl px-6 pb-9 border-b ">
-                <div className="flex flex-col items-center ">
-                    <div className="md:max-w-44 md:border-r md:pr-6">
+                <div className="flex flex-col items-center space-y-9 ">
+                    <div className="w-full flex items-start justify-center">
                         {/* <p className="text-end text-sm">Best Companies</p> */}
                         <div className={`${jost.className} text-black/80 text-3xl md:text-4xl`}>Best Companies</div>
                     </div>
