@@ -25,7 +25,7 @@ import ShowSmall from './ShowSmall'
 
 const Hero = () => {
   return (
-  <div>
+  <div  id="section2">
     <div className='hidden lg:block'><Showlarge/></div>
     <div className=' lg:hidden '><ShowSmall/></div>
   </div>

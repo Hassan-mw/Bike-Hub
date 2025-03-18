@@ -71,7 +71,7 @@ const footerLinks = [
     <div className='w-full max-w-screen-xl flex  flex-col space-y-8 items-center justify-center '>
       {/* 1 */}
     <div className='w-full flex items-center justify-between border-b pb-5  '>
-        <Link href="/"><img className='h-12 w-32 lg:w-40 rounded-4xl' src="./logo.png" alt='logo' /></Link>
+        <Link href="#section2"><img className='h-12 w-32 lg:w-40 rounded-4xl' src="./logo.png" alt='logo' /></Link>
         <div className='flex items-center justify-center gap-x-4'>
                  <div className=" text-[#929292]  hover:cursor-pointer  hover:scale-110 duration-300 hover:text-black"><FaFacebookF size={20} /></div>
                  <div className=" text-[#929292]  hover:cursor-pointer  hover:scale-110 duration-300 hover:text-black"><FaTwitch size={20}/></div>

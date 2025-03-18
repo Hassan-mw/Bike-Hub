@@ -20,7 +20,7 @@ const Carousels = () => {
     <div className={`${jost.className} text-black/80 text-3xl md:text-4xl`}>Discover top motorcycle brands today!</div>
     <Carousel>
   <CarouselContent className=" m-2">
-    <CarouselItem className="sm:basis-1/2 md:basis-1/3">
+    <CarouselItem className="sm:basis-1/2 md:basis-1/3 hover:scale-90 duration-500  hover:cursor-pointer">
     <div className="flex flex-col ">
       <img className="h-60 sm:h-40  lg:h-72 w-full object-cover rounded-t-md" src="./bike-1.jpeg"/>
       <div className="flex flex-col space-y-2 bg-white rounded-b-md border  p-3">
@@ -29,7 +29,7 @@ const Carousels = () => {
       </div>
     </div>
     </CarouselItem>
-    <CarouselItem className="sm:basis-1/2 md:basis-1/3">
+    <CarouselItem className="sm:basis-1/2 md:basis-1/3  hover:scale-90 duration-500  hover:cursor-pointer">
     <div className="flex flex-col ">
       <img className="h-60 sm:h-40 lg:h-72 w-full object-cover rounded-t-md" src="./bike-2.jpeg"/>
       <div  className="flex flex-col space-y-2 bg-white rounded-b-md border  p-3">
@@ -38,7 +38,7 @@ const Carousels = () => {
       </div>
     </div>
     </CarouselItem>
-    <CarouselItem className="sm:basis-1/2 md:basis-1/3">
+    <CarouselItem className="sm:basis-1/2 md:basis-1/3  hover:scale-90 duration-500 hover:cursor-pointer">
     <div className="flex flex-col ">
       <img className="h-60 sm:h-40  lg:h-72 w-full object-cover rounded-t-md" src="./bike-3.jpeg"/>
       <div  className="flex flex-col space-y-2 bg-white rounded-b-md border  p-3">
