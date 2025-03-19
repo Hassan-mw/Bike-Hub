@@ -9,7 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { IoLocationOutline } from 'react-icons/io5';
+import { TbBrand4Chan, TbCategory } from "react-icons/tb";
 const jost=Jost({
   weight:['400'],
   subsets:['latin']
@@ -19,22 +19,21 @@ import { Label } from "@/components/ui/label"
 import { Switch } from "@/components/ui/switch"
 import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { BsFuelPump } from 'react-icons/bs';
 const SideBarData = () => {
+     const [name,setName]=useState('')
+     const [brand,setBrand]=useState('all')
+     const [category,setCategory]=useState('all')
+     const [fuelType,setFuelType]=useState('all')
+     const [milage,setMilage]=useState('0')
+     const [topSpeed,setTopSpeed]=useState('0')
+     const [price,setPrice]=useState('0')
+     const [model,setModel]=useState('0')
+     
+  
+function handleFuleTypeChange(){
 
-
-    const [jobSearch, setJobSearch] = useState('')
-    const [CitySearch, setCitySearch] = useState('')
-    const [rangeMiles, setRangeMiles] = useState('0')
-    const [category,setCategory]=useState('none')
-    const [jobType,setjobType]=useState('none')
-    const [job,setJob]=useState('')
-    const [datePosted,setDatePosted]=useState('none')
-    const [rangeSalery, setRangeSalery] = useState('0')
-    const [experienced,setExperienced]=useState<string>('none')
-    const [carrerlevel,setLevel]=useState<string>('none')
-    const [itemPerPage,setitemPerPage]=useState(8)
-    const searchParams=useSearchParams()
-
+}
 
   return (
     <div>
@@ -42,215 +41,126 @@ const SideBarData = () => {
         <div className='w-full h-full flex flex-col  space-y-8  bg-white'>
     {/* input fields */}
     <div className='flex flex-col w-full space-y-7 p-4 rounded-md bg-slate-100'>
-            {/*  Input Filed  1*/}
-          {/*<div className='w-full flex flex-col space-y-1 group'>
-          <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Search by Keywords</div>
+
+
+           {/*  input Name  1*/}
+           <div className='w-full flex flex-col space-y-1 group'>
+          <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Search by Name</div>
 
                  <div className='border group-hover:border-blue-500 duration-500 p-3 space-x-3 rounded-md border-white bg-white flex items-center justify-center'>
                    <div className='text-[#7b7b7b]'><CiSearch size={25} /></div>
                     <div className='w-full'>
-                      <input type='text'  onChange={(e) => setJobSearch(e.target.value)} placeholder='Job title, Keywords...'   value={jobSearch} className={` placeholder:${jost.className} focus:outline-none lg:text-base text-[#7b8793]`}  />       
+                      <input type='text'   value={name} onChange={(e) => setName(e.target.value)} placeholder='Search by name ...'  className={` placeholder:${jost.className} focus:outline-none lg:text-base text-[#7b8793]`}  />       
                         </div>
                              </div> 
-          </div>*/}
-            {/*  Input Filed  2*/}
-          {/* <div className='w-full flex flex-col space-y-1 group'>
-              <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Location</div>
-              <div className='border group-hover:border-blue-500 duration-500 p-3 space-x-3 rounded-md border-white bg-white flex items-center justify-center'>
-                   <div className='text-[#7b7b7b]'><CiSearch size={20} /></div>
-                    <div className='w-full'>
-                      <input type='text'  onChange={(e) => setCitySearch(e.target.value)} placeholder='City or postcode'   value={CitySearch} className={` placeholder:${jost.className} focus:outline-none lg:text-base text-[#7b8793]`}  />       
-                        </div>
-                 </div>
-          </div> */}
+           </div>
 
-          {/* Radii 1 */}
-          <div className='w-full flex flex-col space-y-1 group'>
-          <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Radius</div>
-              <div style={{fontWeight:500}} className={` ${jost.className} text-sm text-blue-500`}>Radius: {rangeMiles} miles</div>
-                    <div className='w-full'>
-                       <input type='range' min='0'   value={rangeMiles} max='100'   onChange={(e) => setRangeMiles(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
-                          </div>
-                
-          </div>
-             {/*  Select Categroy  1*/}
-             <div className='w-full flex flex-col space-y-1 group'>
+           {/*  Select Categroy  */}
+           <div className='w-full flex flex-col space-y-1 group'>
               <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Category</div>
                      <div className='flex items-center justify-start  group-hover:border-blue-500 border rounded-lg duration-500 border-white bg-white p-2 space-x-3  w-full   px-4'>
-                         <div className='text-[#7b7b7b]'><IoLocationOutline size={20} /></div>
+                         <div className='text-[#7b7b7b]'><TbCategory size={20} /></div>
                                 <div className='w-full'>
                                            <Select value={category} onValueChange={(v)=>setCategory(v)}>
                                                    <SelectTrigger className="w-full  focus:ring-0 shadow-none border-none focus:outline-none text-[#7b7b7b] text-base">
-                                                     <SelectValue className={`  placeholder:truncate  placeholder:${jost.className} placeholder:text-xs`}  placeholder="City or postcode" />
+                                                     <SelectValue className={`  placeholder:truncate  placeholder:${jost.className} placeholder:text-xs`}  placeholder="All" />
                                                    </SelectTrigger>
                                                    <SelectContent className={` ${jost.className} text-[#888888]  text-xs h-[250px]  w-full`}>
-                                                     {/* <SelectItem value="">None</SelectItem> */}
-                                                     <SelectItem value="none">None</SelectItem>
-                                                     <SelectItem value="freelance">Freelance</SelectItem>
-                                                     <SelectItem value="automotive-jobs">Automatic Jobs</SelectItem>
-                                                     <SelectItem value="customer">Customer</SelectItem>
-                                                     <SelectItem value="design">Design</SelectItem>
-                                                     <SelectItem value="human-resources">Human Resources</SelectItem>
-                                                     <SelectItem value="development">Development</SelectItem>
-                                                     <SelectItem value="health-and-care">Health and Care</SelectItem>
-                                                     <SelectItem value="marketing">Marketing</SelectItem>
-                                                     <SelectItem value="project-mangament">Project Mangament</SelectItem>
+                                                     <SelectItem value="all">All</SelectItem>
+                                                     <SelectItem value="Sports">Sports</SelectItem>
                                                 </SelectContent>
                                            </Select>
                                                </div>
                                                      
                  </div>
-          </div>
-             {/*  Select JobType  1*/}
-             <div className='w-full flex flex-col space-y-1 group'>
-              <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Job type</div>
+           </div>
+
+           {/*  Select Company  */}
+           <div className='w-full flex flex-col space-y-1 group'>
+              <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Company</div>
                      <div className='flex items-center justify-start  group-hover:border-blue-500 border rounded-lg duration-500 border-white bg-white p-2 space-x-3  w-full   px-4'>
+                         <div className='text-[#7b7b7b]'><TbBrand4Chan size={20} /></div>                       
                                 <div className='w-full'>
-                                <Select value={jobType} onValueChange={(v)=>setjobType(v)}>
+                                <Select value={brand} onValueChange={(v)=>setBrand(v)}>
 
                                                    <SelectTrigger className="w-full  focus:ring-0 shadow-none border-none focus:outline-none text-[#7b7b7b] text-base">
-                                                     <SelectValue className={`  placeholder:truncate  placeholder:${jost.className} placeholder:text-[10px]`}  placeholder="Job type" />
+                                                     <SelectValue className={`  placeholder:truncate  placeholder:${jost.className} placeholder:text-[10px]`}  placeholder="All" />
                                                    </SelectTrigger>
                                                    <SelectContent className={` ${jost.className} text-[#888888]  text-xs h-[180px]  w-full`}>
-                                                     <SelectItem value="none">None</SelectItem>
-                                                     <SelectItem value="freelance">Freelance</SelectItem>
-                                                     <SelectItem value="full-time">Full Time</SelectItem>
-                                                     <SelectItem value="intership">Intership</SelectItem>
-                                                     <SelectItem value="part-time">Part Time</SelectItem>
-                                                     <SelectItem value="temporary">Temporary</SelectItem>
-                                                   
+                                                     <SelectItem value="all">All</SelectItem>
+                                                     <SelectItem value="Yahama">Yahama</SelectItem>
                                                 </SelectContent>
                                            </Select>
                                                </div>
                                                      
                  </div>
-          </div>
-             {/*  Input Filed  1*/}
-             <div className='w-full flex flex-col space-y-1 group'>
-          <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Date Posted</div>
+           </div>
 
-            <div className='w-full flex flex-col items-start px-3 space-y-3'>
-              <div className='flex items-center justify-center space-x-2 '><div><input name='Time-radio' value="none" onChange={(e)=>setDatePosted(e.target.value)} type='radio'/></div ><div style={{fontWeight:300}} className={` text-sm ${jost.className}`}>None</div></div>
-              <div className='flex items-center justify-center space-x-2 '><div><input name='Time-radio' value="last-hour" onChange={(e)=>setDatePosted(e.target.value)} type='radio'/></div ><div style={{fontWeight:300}} className={` text-sm ${jost.className}`}>Last Hour</div></div>
-              <div className='flex items-center justify-center space-x-2 '><div><input name='Time-radio'   value="last-7-days" onChange={(e)=>setDatePosted(e.target.value)} type='radio'/></div ><div style={{fontWeight:300}} className={` text-sm ${jost.className}`}>Last 7 days</div></div>
-              <div className='flex items-center justify-center space-x-2 '><div><input name='Time-radio'  value="last-24-hour" onChange={(e)=>setDatePosted(e.target.value)} type='radio'/></div ><div style={{fontWeight:300}} className={` text-sm ${jost.className}`}>Last 24 hour</div></div>
-              <div className='flex items-center justify-center space-x-2 '><div><input name='Time-radio'  value="last-14-days" onChange={(e)=>setDatePosted(e.target.value)} type='radio'/></div ><div style={{fontWeight:300}} className={` text-sm ${jost.className}`}>Last 14 days</div></div>
-              <div className='flex items-center justify-center space-x-2 '><div><input name='Time-radio'  value="last-30-days" onChange={(e)=>setDatePosted(e.target.value)} type='radio'/></div ><div style={{fontWeight:300}} className={` text-sm ${jost.className}`}>Last 30 days</div></div>
+           {/*  Select Fuel Type  */}
+           <div className='w-full flex flex-col space-y-1 group'>
+              <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Fuel Type</div>
+                     <div className='flex items-center justify-start  group-hover:border-blue-500 border rounded-lg duration-500 border-white bg-white p-2 space-x-3  w-full   px-4'>
+                         <div className='text-[#7b7b7b]'><BsFuelPump size={20} /></div>
+                              
+                                <div className='w-full'>
+                                <Select value={fuelType} onValueChange={(v)=>setFuelType(v)}>
+                               
+                                                   <SelectTrigger className="w-full  focus:ring-0 shadow-none border-none focus:outline-none text-[#7b7b7b] text-base">
+                                                     <SelectValue className={`  placeholder:truncate  placeholder:${jost.className} placeholder:text-[10px]`}  placeholder="All" />
+                                                   </SelectTrigger>
+                                                   <SelectContent className={` ${jost.className} text-[#888888]  text-xs h-[180px]  w-full`}>
+                                                     <SelectItem value="all">All</SelectItem>
+                                                     <SelectItem value="Petrol">Petrol</SelectItem>
+                                                </SelectContent>
+                                           </Select>
+                                               </div>
+                                                     
+                 </div>
+           </div>
 
-              </div>    
-          </div>
-             {/*  Boolean Experience Level  1*/}
-             {/* <div className='w-full flex flex-col space-y-1 group'>
-                 <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Experience Level</div>
-                     <div className='w-full flex flex-col items-start px-3 space-y-3'>
-                     <div className="flex items-center space-x-2">
-        <Switch id="fresh" checked={experienced === "none"} defaultChecked onCheckedChange={() => handleChange("none")} />
-        <Label htmlFor="fresh">None</Label>
-      </div>
-                     <div className="flex items-center space-x-2">
-        <Switch id="fresh" checked={experienced === "fresh"} defaultChecked onCheckedChange={() => handleChange("fresh")} />
-        <Label htmlFor="fresh">Fresh</Label>
-      </div>
-
-      <div className="flex items-center space-x-2">
-        <Switch id="1-year" checked={experienced === "1-year"} onCheckedChange={() => handleChange("1-year")} />
-        <Label htmlFor="1-year">1 Year</Label>
-      </div>
-
-      <div className="flex items-center space-x-2">
-        <Switch id="2-year" checked={experienced === "2-year"} onCheckedChange={() => handleChange("2-year")} />
-        <Label htmlFor="2-year">2 Year</Label>
-      </div>
-
-      <div className="flex items-center space-x-2">
-        <Switch id="3-year" checked={experienced === "3-year"} onCheckedChange={() => handleChange("3-year")} />
-        <Label htmlFor="3-year">3 Year</Label>
-      </div>
-
-      <div className="flex items-center space-x-2">
-        <Switch id="4-year" checked={experienced === "4-year"} onCheckedChange={() => handleChange("4-year")} />
-        <Label htmlFor="4-year">4 Year</Label>
-      </div>
-                        </div>
-                             </div> */}
-             {/*  Boolean Carrier Level  1*/}
-             {/* <div className='w-full flex flex-col space-y-1 group'>
-                 <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Career Level</div>
-                     <div className='w-full flex flex-col items-start px-3 space-y-3'>
-            <div className="flex items-center space-x-2"><Switch checked={carrerlevel==='none'} onCheckedChange={()=>handleLevelChange("none")} id="airplane-mode"   /><Label   htmlFor="airplane-mode">None</Label></div>  
-            <div className="flex items-center space-x-2"><Switch checked={carrerlevel==='manager'} onCheckedChange={()=>handleLevelChange("manager")} id="airplane-mode"   /><Label   htmlFor="airplane-mode">Manager</Label></div>  
-            <div className="flex items-center space-x-2"><Switch  checked={carrerlevel==='officer'} onCheckedChange={()=>handleLevelChange("officer")} id="airplane-mode" /><Label   htmlFor="airplane-mode"> Office</Label></div>    
-            <div className="flex items-center space-x-2"><Switch  checked={carrerlevel==='student'} onCheckedChange={()=>handleLevelChange("student")} id="airplane-mode" /><Label   htmlFor="airplane-mode"> Student</Label></div>
-            <div className="flex items-center space-x-2"><Switch  checked={carrerlevel==='executive'} onCheckedChange={()=>handleLevelChange("executive")} id="airplane-mode" /><Label   htmlFor="airplane-mode"> Esecutive</Label></div> 
-            <div className="flex items-center space-x-2"><Switch  checked={carrerlevel==='other'} onCheckedChange={()=>handleLevelChange("other")} id="airplane-mode" /><Label   htmlFor="airplane-mode"> Others</Label></div>    
-                        </div>
-                             </div> */}
-              {/* Radii Salery*/}
-          <div className='w-full flex flex-col space-y-1 group'>
-          <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Salary</div>
-              <div style={{fontWeight:500}} className={` ${jost.className} w-full flex items-center justify-center text-sm text-blue-500`}>$ {rangeSalery} </div>
+           {/* Radii Price*/}
+           <div className='w-full flex flex-col space-y-1 group'>
+          <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Price</div>
+              <div style={{fontWeight:500}} className={` ${jost.className} w-full flex items-center justify-center text-sm text-blue-500`}>$ {price} </div>
                     <div className='w-full'>
-                       <input type='range' min='0'   value={rangeSalery} max='1000'   onChange={(e) => setRangeSalery(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
+                       <input type='range' min='0'   value={price} max='50000'   onChange={(e) => setPrice(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
                           </div>
                 
-          </div>
-          <div>
-            
-          </div>
-             {/* <div className='w-full b'>
-             <Link href="/job-list" className='w-full hover:cursor-pointer  lg:col-span-1 duration-300 bg-[#1967d2] hover:bg-white hover:border border hover:text-[#1967d2] border-[#1967d2] flex items-center justify-center text-white rounded-lg text-sm py-4  '>Find Jobs</Link>
+           </div>
 
-             </div> */}
-    </div>      
-    {/* input fields */}
-    {/* <div className='flex flex-col w-full space-y-9 p-4  rounded-md bg-slate-100'>
-         
-          <div className='w-full flex flex-col space-y-1 group'>
-          <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Job Alert</div>
-
-                <div className='border group-hover:border-blue-500 duration-500 p-3 space-x-3 rounded-md border-white bg-white flex items-center justify-center'>
-                   <div className='text-[#7b7b7b]'><CiSearch size={25} /></div>
+           {/* Radii Model*/}
+           <div className='w-full flex flex-col space-y-1 group'>
+          <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Model</div>
+              <div style={{fontWeight:500}} className={` ${jost.className} w-full flex items-center justify-center text-sm text-blue-500`}> {model} Model </div>
                     <div className='w-full'>
-                      <input type='text'  onChange={(e) => setJobSearch(e.target.value)} placeholder='Job title, Keywords...'   value={jobSearch} className={` placeholder:${jost.className}  focus:outline-none lg:text-base text-[#7b8793]`}  />       
-                        </div>
-                             </div>
-          </div>
-           
-         
-             
-             <div className='w-full flex flex-col space-y-1 group'>
-              <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Category</div>
-                     <div className='flex items-center justify-start  group-hover:border-blue-500 border rounded-lg duration-500 border-white bg-white p-2 space-x-3  w-full   px-4'>
-                         <div className='text-[#7b7b7b]'><IoLocationOutline size={20} /></div>
-                                <div className='w-full'>
-                                           <Select>
-                                                   <SelectTrigger className="w-full  focus:ring-0 shadow-none border-none focus:outline-none text-[#7b7b7b] text-base">
-                                                     <SelectValue className={`  placeholder:truncate  placeholder:${jost.className} placeholder:text-xs`}  placeholder="Daily" />
-                                                   </SelectTrigger>
-                                                   <SelectContent className={` ${jost.className} text-[#888888]  text-xs h-[180px]  w-full`}>
-                                                     <SelectItem value="Daily">Daily</SelectItem>
-                                                     <SelectItem value="Weekly">Weekly</SelectItem>
-                                                     <SelectItem value="Fortnightly">Fortnightly</SelectItem>
-                                                     <SelectItem value="Monthly">Monthly</SelectItem>
-                                                     <SelectItem value="Biannually">Biannually</SelectItem>
-                                                  
-                                                </SelectContent>
-                                           </Select>
-                                               </div>
-                                                     
-                 </div>
-          </div>
-           
-             <div className='w-full b'>
-             <Link href="/job-list" className='w-full hover:cursor-pointer  lg:col-span-1 duration-300 bg-[#1967d2] hover:bg-white hover:border border hover:text-[#1967d2] border-[#1967d2] flex items-center justify-center text-white rounded-lg text-sm py-4  '>Find Jobs</Link>
+                       <input type='range' min='2000'   value={model} max='2025'   onChange={(e) => setModel(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
+                          </div>
+                
+           </div>
 
-             </div>
-    </div>       */}
+           {/* Radii milage*/}
+           <div className='w-full flex flex-col space-y-1 group'>
+          <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Milage</div>
+              <div style={{fontWeight:500}} className={` ${jost.className} w-full flex items-center justify-center text-sm text-blue-500`}> {milage} Milage </div>
+                    <div className='w-full'>
+                       <input type='range' min='10'   value={milage} max='400'   onChange={(e) => setMilage(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
+                          </div>
+                
+           </div>
 
-    
-     
+           {/* Radii TopSpeed*/}
+           <div className='w-full flex flex-col space-y-1 group'>
+          <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Top Speed</div>
+              <div style={{fontWeight:500}} className={` ${jost.className} w-full flex items-center justify-center text-sm text-blue-500`}> {milage} km/h </div>
+                    <div className='w-full'>
+                       <input type='range' min='10'   value={topSpeed} max='400'   onChange={(e) => setTopSpeed(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
+                          </div>
+                
+           </div>
+  
+  
+        </div>      
       </div>
-
     </div>
   )
 }
