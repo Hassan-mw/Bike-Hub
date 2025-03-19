@@ -22,6 +22,7 @@ import {
 import { Jost } from 'next/font/google'
 import { CiSearch } from 'react-icons/ci';
 import { RiEBikeLine } from 'react-icons/ri';
+import Link from 'next/link';
 
 
 const HeroData = () => {
@@ -57,8 +58,8 @@ const HeroData = () => {
 </div>
 {/*//! Button*/}
 
- <div className='w-full text-black'><Button  />
-  </div>
+ <Link href="/bike" className='w-full text-black'><Button  />
+  </Link>
     </div>
 
 </div>

@@ -20,7 +20,7 @@ const page = () => {
       <Carousels/>
        <Status/>
        <AppDownload/>
-       <BrowseByStyle/>
+
       <Testmonials/>
     </div>
   )
