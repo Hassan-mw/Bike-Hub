@@ -8,6 +8,7 @@ import Status from './HomepageComponents/Status'
 import Carousels from './HomepageComponents/Carousels'
 import HoverCard from './HomepageComponents/HoverCard'
 import AppDownload from './HomepageComponents/AppDownload'
+import BrowseByStyle from './HomepageComponents/BrowseByStyle'
 
 
 const page = () => {
@@ -19,6 +20,7 @@ const page = () => {
       <Carousels/>
        <Status/>
        <AppDownload/>
+       <BrowseByStyle/>
       <Testmonials/>
     </div>
   )
