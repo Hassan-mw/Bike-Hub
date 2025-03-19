@@ -7,6 +7,7 @@ import Testmonials from './HomepageComponents/Testmonials'
 import Status from './HomepageComponents/Status'
 import Carousels from './HomepageComponents/Carousels'
 import HoverCard from './HomepageComponents/HoverCard'
+import AppDownload from './HomepageComponents/AppDownload'
 
 
 const page = () => {
@@ -17,6 +18,7 @@ const page = () => {
       <PopularCompany/>
       <Carousels/>
        <Status/>
+       <AppDownload/>
       <Testmonials/>
     </div>
   )

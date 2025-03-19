@@ -17,7 +17,7 @@ const PopularCompany = () => {
                 <div className="flex flex-col items-center space-y-9 ">
                     <div className="w-full flex items-start justify-center">
                         {/* <p className="text-end text-sm">Best Companies</p> */}
-                        <div className={`${jost.className} text-black/80 text-3xl md:text-4xl`}>Best Companies</div>
+                        <div className={`${jost.className} text-black/80 text-3xl md:text-4xl`}>Top Companies</div>
                     </div>
                     <div className="relative py-6 md:w-[calc(100%-11rem)]">
                         <InfiniteSlider
