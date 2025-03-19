@@ -16,7 +16,6 @@ const page = () => {
       <BikeDetails/>
       <PopularCompany/>
       <Carousels/>
-      <HoverCard/>
        <Status/>
       <Testmonials/>
     </div>
