@@ -9,8 +9,9 @@ const jost=Jost({
 const AppDownload = () => {
   return (
     <div>
-        <div>
-
+        <div className='w-full flex flex-col space-y-5 items-center justify-center'>
+        <div className={`${jost.className} text-[#4f8bdd]`}>DOWNLOAD & ENJOY</div>    
+        <div className={`${jost.className} text-[#4f8bdd]`}>Get the Bike-Hub  Bike Search App</div>    
         </div>
     </div>
   )
