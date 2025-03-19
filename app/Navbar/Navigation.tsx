@@ -45,7 +45,7 @@ const Navigation = () => {
      <SheetHeader  >
       
       <SheetTitle className='text-[#868787] bg-white min-w-full p-3'>
-      <Link href="/"><img className='h-16 rounded-4xl' src="./logo.png" alt='logo' /></Link>
+      <Link href="/"><img className='h-8' src="./logo.png" alt='logo' /></Link>
          </SheetTitle>
       <SheetDescription className='py-4 px-8 flex flex-col  '>
       <div className='flex flex-col items-start justify-center space-y-5  text-md hover:cursor-pointer '>
