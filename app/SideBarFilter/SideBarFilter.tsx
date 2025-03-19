@@ -28,7 +28,7 @@ const SideBarFilter = () => {
     <div> 
          <Sheet>
     <SheetTrigger asChild>
-      <Button className='border-none shadow-none bg-[#f3f6fb] text-blue-500' variant="outline"><RxHamburgerMenu /> Show Sidebar</Button>
+      <Button className='border-none hover:cursor-pointer shadow-none bg-[#f3f6fb] text-blue-500' variant="outline"><RxHamburgerMenu /> Show Sidebar</Button>
     </SheetTrigger>
     <SheetContent>
       <SheetHeader>

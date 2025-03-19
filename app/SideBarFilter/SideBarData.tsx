@@ -38,7 +38,7 @@ function handleFuleTypeChange(){
   return (
     <div>
         
-        <div className='w-full h-full flex flex-col  space-y-8  bg-white'>
+        <div className='w-full h-full flex flex-col  space-y-8  bg-white lg:border lg:rounded-lg p-4  min-w-[350px]'>
     {/* input fields */}
     <div className='flex flex-col w-full space-y-7 p-4 rounded-md bg-slate-100'>
 
