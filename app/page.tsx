@@ -17,7 +17,7 @@ const page = () => {
       <PopularCompany/>
       <Carousels/>
       <HoverCard/>
-     <Status/>
+       <Status/>
       <Testmonials/>
     </div>
   )
