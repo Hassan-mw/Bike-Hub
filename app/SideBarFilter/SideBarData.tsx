@@ -26,11 +26,30 @@ const SideBarData = () => {
      const [category,setCategory]=useState('all')
      const [fuelType,setFuelType]=useState('all')
      const [milage,setMilage]=useState('0')
-     const [topSpeed,setTopSpeed]=useState('0')
+     const [topSpeed,setTopSpeed]=useState('10')
      const [price,setPrice]=useState('0')
-     const [model,setModel]=useState('0')
+     const [model,setModel]=useState('2000')
      
-  
+     const searchParams=useSearchParams();
+     const pathname=usePathname()
+     const router=useRouter();
+     console.log(pathname,'😍😍😍😍😍😍😍😍')
+      useEffect(()=>{
+      const params=new URLSearchParams(searchParams)
+     if(name!=="")            params.set("name",name) ;          else params.delete("name");
+     if (brand!=="all")       params.set("brand",brand);         else params.delete("brand");
+     if(category!=="all")     params.set("category",category);   else params.delete("category");
+     if (fuelType!=="all")    params.set("fuelType",fuelType);   else params.delete("fuelType");
+     if (milage !== "10") params.set("milage[lt]", milage); else params.delete("milage[lt]");
+     if (topSpeed !== "10") params.set("topSpeed[lt]", topSpeed); else params.delete("topSpeed[lt]");
+     if (price !== "0") params.set("price[lt]", price); else params.delete("price[lt]");
+     if (model !== "2000") params.set("model[lt]", model); else params.delete("model[lt]");
+
+         router.replace(`${pathname}?${params.toString()}`,{scroll:false})
+      },[name,brand,category,fuelType,milage,topSpeed,price,model])
+
+
+     
 function handleFuleTypeChange(){
 
 }
@@ -68,6 +87,11 @@ function handleFuleTypeChange(){
                                                    <SelectContent className={` ${jost.className} text-[#888888]  text-xs h-[250px]  w-full`}>
                                                      <SelectItem value="all">All</SelectItem>
                                                      <SelectItem value="Sports">Sports</SelectItem>
+                                                    <SelectItem value="Touring">Touring</SelectItem>
+                                                    <SelectItem value="Adventure">Adventure</SelectItem>
+                                                    <SelectItem value="Dirt Bike">Dirt Bike</SelectItem>
+                                                    <SelectItem value="Scooter">Scooter</SelectItem>
+                                                    <SelectItem value="Electric">Electric</SelectItem>
                                                 </SelectContent>
                                            </Select>
                                                </div>
@@ -151,7 +175,7 @@ function handleFuleTypeChange(){
            {/* Radii TopSpeed*/}
            <div className='w-full flex flex-col space-y-1 group'>
           <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Top Speed</div>
-              <div style={{fontWeight:500}} className={` ${jost.className} w-full flex items-center justify-center text-sm text-blue-500`}> {milage} km/h </div>
+              <div style={{fontWeight:500}} className={` ${jost.className} w-full flex items-center justify-center text-sm text-blue-500`}> {topSpeed} km/h </div>
                     <div className='w-full'>
                        <input type='range' min='10'   value={topSpeed} max='400'   onChange={(e) => setTopSpeed(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
                           </div>
