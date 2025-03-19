@@ -13,31 +13,22 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import SideBarData from './SideBarData'
 
-const page = () => {
+const SideBarFilter = () => {
   return (
     <div> 
          <Sheet>
     <SheetTrigger asChild>
-      <Button variant="outline">Open</Button>
+      <Button variant="outline">Show Sidebar</Button>
     </SheetTrigger>
     <SheetContent>
       <SheetHeader>
         <SheetTitle>Edit profile</SheetTitle>
         <SheetDescription>
-          Make changes to your profile here. Click save when you're done.
+          <SideBarData/>
         </SheetDescription>
       </SheetHeader>
-      <div className="grid gap-4 py-4">
-        <div className="grid grid-cols-4 items-center gap-4">
-         
-          <Input id="name" value="Pedro Duarte" className="col-span-3" />
-        </div>
-        <div className="grid grid-cols-4 items-center gap-4">
-         
-          <Input id="username" value="@peduarte" className="col-span-3" />
-        </div>
-      </div>
       <SheetFooter>
         <SheetClose asChild>
           <Button type="submit">Save changes</Button>
@@ -48,4 +39,4 @@ const page = () => {
   )
 }
 
-export default page
+export default SideBarFilter

@@ -1,6 +1,7 @@
 import { Jost } from 'next/font/google'
 import Link from 'next/link'
 import React from 'react'
+import SideBarFilter from '../SideBarFilter/SideBarFilter'
 
 
 
@@ -19,7 +20,8 @@ const page = () => {
        <div style={{fontWeight:300}} className={`${jost.className} text- text-[#202124]`}> <Link className='text-[#888888]' href="/">Home</Link> / Bike List</div>
       </div>
       {/* Middle Body */}
-      <div className='w-full flex items-center justify-center p-3 bg-[#f3f6fb]'>
+      <div className='w-full flex flex-col items-center justify-center p-3 bg-[#f3f6fb]'>
+        <SideBarFilter/>
           <div className='w-full max-w-screen-xl grid grid-cols-1 md:grid-cols-2 gap-4 py-10'>
             {/* data */}
              <div className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden  relative shadow-xl'>
