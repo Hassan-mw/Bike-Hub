@@ -5,9 +5,9 @@ const bikeRouter=require('./Router/bikeRouter');
 const userRoutes=require('./Router/userRoutes');
 const AppError = require('./Errorhandler/errorHandler');
 const globalErrorhandler = require('./Errorhandler/globalErrorhandler');
-
+const cors=require('cors')
 app.use(express.json())
-
+app.use(cors())
 
 app.use('/api/bike',bikeRouter)
 app.use('/api/user',userRoutes)
