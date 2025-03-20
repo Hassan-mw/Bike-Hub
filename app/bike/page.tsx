@@ -60,12 +60,15 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
         {/* Right Body */}
          <div className='w-full flex items-start justify-center lg:space-x-6'>
          <div className='hidden lg:block'><SideBarData/></div>
-          <div className='w-full max-w-screen-xl grid grid-cols-1 2xl:grid-cols-2 xl: gap-4 '>
+          {/* <div className='w-full max-w-screen-xl grid grid-cols-1 2xl:grid-cols-2 xl: gap-4 '> */}
             {/* data */}
              
              {
-              result.data.length>0 ?
-             result.data.map((data,index:Number)=>
+              result.data.length>0 ?(
+
+             
+              <div className='w-full max-w-screen-xl grid grid-cols-1 2xl:grid-cols-2 xl: gap-4 '>
+            { result.data.map((data,index:Number)=>(
              <div key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border relative shadow-xl'>
               <div className='absolute top-5 -right-14 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div>
               {/* <div className='absolute top-5 -left-14 bg-green-500 text-white -rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div> */}
@@ -75,19 +78,21 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
               <div className={`${jost.className} flex items-center justify-between w-full text-[#635f5f]`}>
                 <div >{data.fuelType}</div> <div >{data.price} $</div><div >{data.brand}</div>
                 </div>
-
+                 </div>
               </div>
+              ))}
              </div>
              )
+             
                :
-               <div className={`${jost.className} w-full h-full flex items-center justify-center text-4xl`}>No Data</div>
+               <div className={`${jost.className}  w-full bg-red-400 h-full flex items-center min-h-[600px] max-w-screen-xl justify-center text-4xl`}>No Data</div>
             
             }
             
       </div>
     </div>
     </div>
-    </div>
+  //  </div>
   )
 }
 
