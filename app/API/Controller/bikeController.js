@@ -2,6 +2,12 @@ const APIFeatures = require('../dev-data/apiFeatures');
 const BIKE=require('./../Model/bikdeModel')
 const catchAsync=require('../Errorhandler/catchAsync');
 const AppError = require('../Errorhandler/errorHandler');
+const multer =require('multer');
+const upload=multer({dest:'public'})
+
+exports.uploadBikePhoto=upload.single('photo')
+
+
 
 
 exports.getAllBike=catchAsync(async(req,res,next)=>{
@@ -31,4 +37,13 @@ exports.getBikeByName=catchAsync(async(req,res,next)=>{
     status:'success',
     bike
    })
+})
+
+exports.imageHandler=catchAsync(async(req,res,next)=>{
+  console.log('🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎')
+
+ console.log(req.body)
+ console.log(req.file)
+
+
 })
