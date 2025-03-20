@@ -64,6 +64,7 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
             {/* data */}
              
              {
+              result.data.length>0 ?
              result.data.map((data,index:Number)=>
              <div key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border relative shadow-xl'>
               <div className='absolute top-5 -right-14 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div>
@@ -77,7 +78,11 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
 
               </div>
              </div>
-             )}
+             )
+               :
+               <div className={`${jost.className} w-full h-full flex items-center justify-center text-4xl`}>No Data</div>
+            
+            }
             
       </div>
     </div>
