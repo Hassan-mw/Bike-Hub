@@ -1,9 +1,11 @@
+'use client'
 import { Jost } from 'next/font/google'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 import SideBarFilter from '../SideBarFilter/SideBarFilter'
 import SideBarData from '../SideBarFilter/SideBarData'
-
+import getAllBike from '../DataFetching/api'
+// import {getAllBike} from "@/app/DataFetching/api"
 
 
 const jost=Jost({
@@ -13,6 +15,25 @@ const jost=Jost({
 
 
 const page = () => {
+//  const data=await getAllBike()
+
+ useEffect(()=>{
+  const getAllBike=async()=>{
+    try {
+      const response = await fetch(`http://127.0.0.1:5000/api/bike`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
+      }
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+    
+    }
+    getAllBike();
+ },[])
+//  console.log(data)
   return (
     <div className='w-full '>
             {/* Upper Body */}
