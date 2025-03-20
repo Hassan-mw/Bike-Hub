@@ -25,7 +25,7 @@ const SideBarData = () => {
      const [brand,setBrand]=useState('all')
      const [category,setCategory]=useState('all')
      const [fuelType,setFuelType]=useState('all')
-     const [milage,setMilage]=useState('0')
+     const [milage,setMilage]=useState('10')
      const [topSpeed,setTopSpeed]=useState('10')
      const [price,setPrice]=useState('0')
      const [model,setModel]=useState('2000')
