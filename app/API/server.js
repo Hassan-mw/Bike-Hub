@@ -11,6 +11,7 @@ const cors=require('cors')
 app.use(express.json())
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
+app.use("/public", express.static("public"));
 app.use('/api/bike',bikeRouter)
 app.use('/api/user',userRoutes)
 
