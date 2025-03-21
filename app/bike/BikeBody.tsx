@@ -23,28 +23,30 @@ interface BikeDataType {
     slug: string;
     status: string;
     image:string;
-    length:number
   }
 
+  interface APIResponse {
+    data:BikeDataType[]
+  }
 
-const BikeBody = ({result}:{result:BikeDataType}) => {
+const BikeBody = ({result}:{result:BikeDataType[]}) => {
 
   const [count,setCount]=useState(1)
  
  
-  const bikePerPage=3;
+  const bikePerPage=4;
   const initial=bikePerPage*(count-1);
   const final=count*bikePerPage;
   const paginatedData=result.slice(initial,final)
 
- const  number=[...Array(Math.ceil(result?.length/bikePerPage)).keys()].slice(1)
+ const  number=[...Array(Math.ceil(result?.length/bikePerPage)).keys()]
 
   return (
        <>
         {/* Left Body */}
         <div className='w-full   max-w-screen-xl flex items-center justify-between  lg:justify-end pb-16'>
         <div className='lg:hidden'> <SideBarFilter/></div>
-       <div className={`${jost.className} md:text-xl lg:text-2xl lg:border-b lg:pb-1`}>Showing 1 – 10 of 17 results</div>
+       <div className={`${jost.className} md:text-xl lg:text-2xl lg:border-b lg:pb-1`}>Showing {initial} – {final} of {result.length} results</div>
         </div> 
 
 
@@ -55,12 +57,12 @@ const BikeBody = ({result}:{result:BikeDataType}) => {
            {/* data */}
             
             {
-             result.length>0 ?(
+             paginatedData.length>0 ?(
 
             <div className='w-full max-w-screen-xl flex flex-col items-center justify-center space-y-16'>
 
              <div className='w-full max-w-screen-xl grid grid-cols-1 2xl:grid-cols-2 xl: gap-10 '>
-           { result.map((data,index:Number)=>(
+           { paginatedData.map((data,index:number)=>(
             <div key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border relative shadow-xl'>
              <div className='absolute top-5 -right-14 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div>
              {/* <div className='absolute top-5 -left-14 bg-green-500 text-white -rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div> */}
@@ -74,15 +76,19 @@ const BikeBody = ({result}:{result:BikeDataType}) => {
              </div>
              ))}
             </div>
-            <div className="w-full flex items-center justify-center space-x-3">
+          <div className="flex space-x-2 mt-6">
+             {number.map((page) => (
+           <button
+             key={page}
+             onClick={() => setCount(page + 1)}
+         
+              className={`${jost.className} hover:cursor-pointer text-[#696969]  border py-2 px-4 rounded-full ${page+1===count ? 'bg-[#1967d2] text-white' : 'hover:bg-[#1967d2] hover:text-white'}`}
+            >
+            {page + 1}
+            </button>
+           ))}
+          </div>
 
-         { number.map((data,index)=>
-             <div  className={`${jost.className} hover:cursor-pointer text-[#696969]  border py-2 px-4 rounded-full ${data===4 ? 'bg-[#1967d2] text-white' : 'hover:bg-[#1967d2] hover:text-white'}`} key={index}>
-          {data}
-            </div>
-             )}
-            
-            </div>
             </div>
             )
             

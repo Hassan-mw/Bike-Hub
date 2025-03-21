@@ -54,7 +54,7 @@ const number=[1,2,3,4,5,6]
       <div className='w-full flex flex-col items-center justify-center p-3 py-10 bg-white'>
       <BikeBody  result={result.data} />
     </div>
-    <Pagination/>
+    {/* <Pagination/> */}
     </div>
   //  </div>
   )

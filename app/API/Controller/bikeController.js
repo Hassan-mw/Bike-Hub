@@ -52,6 +52,7 @@ exports.createBike=catchAsync(async(req,res,next)=>{
       category: req.body.category,
       url:req.body.url, 
       price: req.body.price,
+      model: req.body.model,
       mileage: req.body.mileage,
       topSpeed: req.body.topSpeed,
       weight: req.body.weight,
