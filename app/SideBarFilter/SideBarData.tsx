@@ -40,7 +40,7 @@ const SideBarData = () => {
      if (brand!=="all")       params.set("brand",brand);         else params.delete("brand");
      if(category!=="all")     params.set("category",category);   else params.delete("category");
      if (fuelType!=="all")    params.set("fuelType",fuelType);   else params.delete("fuelType");
-     if (milage !== "10") params.set("milage[lt]", milage); else params.delete("milage[lt]");
+     if (milage !== "10") params.set("mileage[lt]", milage); else params.delete("mileage[lt]");
      if (topSpeed !== "10") params.set("topSpeed[lt]", topSpeed); else params.delete("topSpeed[lt]");
      if (price !== "0") params.set("price[lt]", price); else params.delete("price[lt]");
      if (model !== "2000") params.set("model[lt]", model); else params.delete("model[lt]");
@@ -89,9 +89,10 @@ function handleFuleTypeChange(){
                                                      <SelectItem value="Sports">Sports</SelectItem>
                                                     <SelectItem value="Touring">Touring</SelectItem>
                                                     <SelectItem value="Adventure">Adventure</SelectItem>
-                                                    <SelectItem value="Dirt Bike">Dirt Bike</SelectItem>
-                                                    <SelectItem value="Scooter">Scooter</SelectItem>
+                                                    <SelectItem value="Street">Street</SelectItem>
+                                                    <SelectItem value="Cruiser">Cruiser</SelectItem>
                                                     <SelectItem value="Electric">Electric</SelectItem>
+                                                    <SelectItem value="Classic">Classic</SelectItem>
                                                 </SelectContent>
                                            </Select>
                                                </div>
@@ -112,7 +113,11 @@ function handleFuleTypeChange(){
                                                    </SelectTrigger>
                                                    <SelectContent className={` ${jost.className} text-[#888888]  text-xs h-[180px]  w-full`}>
                                                      <SelectItem value="all">All</SelectItem>
-                                                     <SelectItem value="Yahama">Yahama</SelectItem>
+                                                     <SelectItem value="Triumph">Triumph </SelectItem>
+                                                     <SelectItem value="Ducati">Ducati</SelectItem>
+                                                     <SelectItem value="Harley-Davidson">Harley Davidson</SelectItem>
+                                                     <SelectItem value="BMW">BMW</SelectItem>
+                                                     <SelectItem value="Honda">Honda</SelectItem>
                                                 </SelectContent>
                                            </Select>
                                                </div>
@@ -135,6 +140,7 @@ function handleFuleTypeChange(){
                                                    <SelectContent className={` ${jost.className} text-[#888888]  text-xs h-[180px]  w-full`}>
                                                      <SelectItem value="all">All</SelectItem>
                                                      <SelectItem value="Petrol">Petrol</SelectItem>
+                                                     <SelectItem value="Electric">Electric</SelectItem>
                                                 </SelectContent>
                                            </Select>
                                                </div>

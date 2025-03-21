@@ -64,7 +64,7 @@ const BikeBody = ({result}:{result:BikeDataType[]}) => {
              <div className='w-full max-w-screen-xl grid grid-cols-1 2xl:grid-cols-2 xl: gap-10 '>
            { paginatedData.map((data,index:number)=>(
             <div key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border relative shadow-xl'>
-             <div className='absolute top-5 -right-14 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div>
+             <div className='absolute top-8 -right-10 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div>
              {/* <div className='absolute top-5 -left-14 bg-green-500 text-white -rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div> */}
              <img className='h-60  ' src={`${data.image} `} />
              <div className='w-full flex flex-col items-center justify-center space-y-1 '>
