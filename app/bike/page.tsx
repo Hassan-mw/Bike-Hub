@@ -5,6 +5,7 @@ import SideBarFilter from '../SideBarFilter/SideBarFilter'
 import SideBarData from '../SideBarFilter/SideBarData'
 import getAllBike from '../DataFetching/api'
 import Pagination from '@/components/Pagination'
+import BikeBody from './BikeBody'
 // import {getAllBike} from "@/app/DataFetching/api"
 
 interface BikeDataType {
@@ -41,7 +42,7 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
     </div>
   )
  }
-
+const number=[1,2,3,4,5,6]
   return (
     <div className='w-full '>
             {/* Upper Body */}
@@ -51,47 +52,7 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
       </div>
       {/* Down Body */}
       <div className='w-full flex flex-col items-center justify-center p-3 py-10 bg-white'>
-        
-        {/* Left Body */}
-       <div className='w-full   max-w-screen-xl flex items-center justify-between  lg:justify-end pb-16'>
-         <div className='lg:hidden'> <SideBarFilter/></div>
-        <div className={`${jost.className} md:text-xl lg:text-2xl lg:border-b lg:pb-1`}>Showing 1 – 10 of 17 results</div>
-         </div> 
-
-
-        {/* Right Body */}
-         <div className='w-full flex items-start justify-center lg:space-x-6'>
-         <div className='hidden lg:block'><SideBarData/></div>
-          {/* <div className='w-full max-w-screen-xl grid grid-cols-1 2xl:grid-cols-2 xl: gap-4 '> */}
-            {/* data */}
-             
-             {
-              result.data.length>0 ?(
-
-             
-              <div className='w-full max-w-screen-xl grid grid-cols-1 2xl:grid-cols-2 xl: gap-10 '>
-            { result.data.map((data,index:Number)=>(
-             <div key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border relative shadow-xl'>
-              <div className='absolute top-5 -right-14 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div>
-              {/* <div className='absolute top-5 -left-14 bg-green-500 text-white -rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div> */}
-              <img className='h-60  ' src={`${data.image} `} />
-              <div className='w-full flex flex-col items-center justify-center space-y-1 '>
-              <div className={`${jost.className} text-xl`}> {data.name}</div>
-              <div className={`${jost.className} flex items-center justify-between w-full text-[#635f5f]`}>
-                <div >{data.fuelType}</div> <div >{data.price} $</div><div >{data.brand}</div>
-                </div>
-                 </div>
-              </div>
-              ))}
-             </div>
-             )
-             
-               :
-               <div className={`${jost.className}  w-full  h-full flex items-center min-h-[600px] max-w-screen-xl justify-center text-4xl`}>No Data</div>
-            
-            }
-            
-      </div>
+      <BikeBody  result={result.data} />
     </div>
     <Pagination/>
     </div>
