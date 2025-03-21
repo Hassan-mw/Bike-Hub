@@ -12,7 +12,7 @@ const bikeSchema = new mongoose.Schema({
   mileage: Number,  // Changed to Number
   topSpeed: Number, // Changed to Number
   weight: Number,
-  images: String, // Array of image URLs
+  image: String, // Array of image URLs
   description: String,
   slug:String,
   url:String,
