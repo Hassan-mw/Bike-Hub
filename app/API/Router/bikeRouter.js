@@ -9,8 +9,8 @@ const upload=multer({dest:'public'})
 router
 .route('/')
 .get(bikeController.getAllBike)
-.post(bikeController.createBike)
-.patch(bikeController.uploadBikePhoto,bikeController.imageHandler)
+.post(bikeController.uploadBikePhoto,bikeController.createBike)
+// .patch(bikeController.imageHandler)
 
 
 router.route('/imageHandler')

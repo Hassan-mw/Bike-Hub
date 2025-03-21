@@ -37,23 +37,28 @@ exports.uploadBikePhoto=upload.single('image')
 
 
 
-exports.getAllBike=catchAsync(async(req,res,next)=>{
 
-  const features=new APIFeatures(BIKE.find(),req.query).filter().sort().limitedFields()
-  const bike=await features.query;
-  res.status(200).json({
-    status:'sucess',
-    data:bike
-  })
-})
 
 
 exports.createBike=catchAsync(async(req,res,next)=>{
+  console.log("File:", req.file);
+  console.log("Body ✅:", req.body); //  Now should contain text data
 
-    const createdBike=await BIKE.create(req.body)    
+  const newBike = await BIKE.create({
+    name: req.body.name,
+    brand: req.body.brand,
+    category: req.body.category,
+    price: req.body.price,
+    mileage: req.body.mileage,
+    topSpeed: req.body.topSpeed,
+    weight: req.body.weight,
+    fuelType: req.body.fuelType,
+    image: req.file ? req.file.path : "", // Store file path in MongoDB
+  });
+
     res.status(201).json({
     status:'sucess',
-    data:createdBike
+    data:newBike
       })
 })
 
@@ -66,11 +71,21 @@ exports.getBikeByName=catchAsync(async(req,res,next)=>{
    })
 })
 
-exports.imageHandler=catchAsync(async(req,res,next)=>{
-  console.log('🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎')
+// exports.imageHandler=catchAsync(async(req,res,next)=>{
+//   console.log('🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎')
 
- console.log(req.body)
- console.log(req.file)
+//  console.log(req.body)
+//  console.log(req.file)
 
 
+// })
+
+exports.getAllBike=catchAsync(async(req,res,next)=>{
+
+  const features=new APIFeatures(BIKE.find(),req.query).filter().sort().limitedFields()
+  const bike=await features.query;
+  res.status(200).json({
+    status:'sucess',
+    data:bike
+  })
 })

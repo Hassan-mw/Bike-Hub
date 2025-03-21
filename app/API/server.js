@@ -6,11 +6,16 @@ const userRoutes=require('./Router/userRoutes');
 const AppError = require('./Errorhandler/errorHandler');
 const globalErrorhandler = require('./Errorhandler/globalErrorhandler');
 const cors=require('cors')
+
+
 app.use(express.json())
 app.use(cors())
-
+app.use(express.urlencoded({ extended: true }));
 app.use('/api/bike',bikeRouter)
 app.use('/api/user',userRoutes)
+
+
+
 
 mongose.connect("mongodb+srv://ahsanmushtaq7894:j8cz7WgYUnJayW8w@cluster0.6otap.mongodb.net/",{
   useNewUrlParser: true,
