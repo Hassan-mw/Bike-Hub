@@ -3,11 +3,13 @@ const BIKE=require('./../Model/bikdeModel')
 const catchAsync=require('../Errorhandler/catchAsync');
 const AppError = require('../Errorhandler/errorHandler');
 const multer =require('multer');
+const path = require("path");
 
+const uploadPath=path.join(__dirname,"../../../public")
 
 const multerStorage=multer.diskStorage({
   destination:(req,file,cb)=>{
-    cb(null, path.join(__dirname, "public")); 
+    cb(null,uploadPath)
   },
   filename:(req,file,cb)=>{
     const ext =file.mimetype.split('/')[1];
@@ -41,17 +43,9 @@ exports.uploadBikePhoto=upload.single('image')
 
 
 exports.createBike=catchAsync(async(req,res,next)=>{
-  console.log("File:", req.file);
-  console.log("Body ✅:", req.body); //  Now should contain text data
-
-  exports.createBike = async (req, res) => {
   try {
-    console.log("File:", req.file);
-    // console.log("Body:", req.body);
 
-    // ✅ Convert backslashes to forward slashes
-    const imagePath = req.file ? req.file.path.replace(/\\/g, "/") : "";
- console.log(imagePath,'🤖🤖🤖🤖🤖🤖🤖🤖🤖')
+ console.log(req.file,'🤖🤖🤖🤖🤖🤖🤖🤖🤖')
     const newBike = await BIKE.create({
       name: req.body.name,
       brand: req.body.brand,
@@ -61,36 +55,25 @@ exports.createBike=catchAsync(async(req,res,next)=>{
       topSpeed: req.body.topSpeed,
       weight: req.body.weight,
       fuelType: req.body.fuelType,
-      image: imagePath, // Store fixed path
+      image:  req.file.filename, // Store fixed path
     });
 
     res.status(201).json({
       status: "success",
       data: newBike,
     });
-  } catch (error) {
+    } catch (error) {
     res.status(500).json({ status: "error", message: error.message });
-  }
-};
+   }
+  })
 
 
-  const newBike = await BIKE.create({
-    name: req.body.name,
-    brand: req.body.brand,
-    category: req.body.category,
-    price: req.body.price,
-    mileage: req.body.mileage,
-    topSpeed: req.body.topSpeed,
-    weight: req.body.weight,
-    fuelType: req.body.fuelType,
-    image: req.file ? req.file.path : "", // Store file path in MongoDB
-  });
 
-    res.status(201).json({
-    status:'sucess',
-    data:newBike
-      })
-})
+
+
+
+
+
 
 exports.getBikeByName=catchAsync(async(req,res,next)=>{
   console.log(req.params.id,'😍😍😍😍😍😍😍')

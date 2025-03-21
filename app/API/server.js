@@ -6,12 +6,16 @@ const userRoutes=require('./Router/userRoutes');
 const AppError = require('./Errorhandler/errorHandler');
 const globalErrorhandler = require('./Errorhandler/globalErrorhandler');
 const cors=require('cors')
+const path = require("path");
 
 
 app.use(express.json())
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
-app.use("/public", express.static("public"));
+
+
+app.use("/public", express.static(path.join(__dirname, "public")));
+// app.use("/public", express.static("public"));
 app.use('/api/bike',bikeRouter)
 app.use('/api/user',userRoutes)
 

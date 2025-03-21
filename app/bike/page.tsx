@@ -73,7 +73,7 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
              <div key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border relative shadow-xl'>
               <div className='absolute top-5 -right-14 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div>
               {/* <div className='absolute top-5 -left-14 bg-green-500 text-white -rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div> */}
-              <img className='h-60  ' src={`./${data.image}`} />
+              <img className='h-60  ' src={`${data.image} `} />
               <div className='w-full flex flex-col items-center justify-center space-y-1 '>
               <div className={`${jost.className} text-xl`}> {data.name}</div>
               <div className={`${jost.className} flex items-center justify-between w-full text-[#635f5f]`}>
