@@ -4,6 +4,7 @@ import React from 'react'
 import SideBarFilter from '../SideBarFilter/SideBarFilter'
 import SideBarData from '../SideBarFilter/SideBarData'
 import getAllBike from '../DataFetching/api'
+import Pagination from '@/components/Pagination'
 // import {getAllBike} from "@/app/DataFetching/api"
 
 interface BikeDataType {
@@ -92,6 +93,7 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
             
       </div>
     </div>
+    <Pagination/>
     </div>
   //  </div>
   )
