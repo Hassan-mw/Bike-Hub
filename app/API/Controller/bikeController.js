@@ -5,6 +5,7 @@ const AppError = require('../Errorhandler/errorHandler');
 const multer =require('multer');
 const path = require("path");
 
+/////////////////////////////////////////////////////////////////////
 const uploadPath=path.join(__dirname,"../../../public")
 
 const multerStorage=multer.diskStorage({
@@ -17,7 +18,6 @@ const multerStorage=multer.diskStorage({
     // cb(null,`user-${req.user.id}-${Date.now()}.${ext}`)
   }
 })
-
 
 const multerFilter=(req,file,cb)=>{
 console.log(file)
@@ -33,9 +33,9 @@ const upload=multer({
   fileFilter:multerFilter
 })
 
-
 exports.uploadBikePhoto=upload.single('image')
 
+/////////////////////////////////////////////////////////////////////
 
 
 
@@ -69,14 +69,6 @@ exports.createBike=catchAsync(async(req,res,next)=>{
    }
   })
 
-
-
-
-
-
-
-
-
 exports.getBikeByName=catchAsync(async(req,res,next)=>{
   console.log(req.params.id,'😍😍😍😍😍😍😍')
     const bike=await BIKE.findById(req.params.id)
@@ -86,14 +78,7 @@ exports.getBikeByName=catchAsync(async(req,res,next)=>{
    })
 })
 
-// exports.imageHandler=catchAsync(async(req,res,next)=>{
-//   console.log('🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎🦎')
 
-//  console.log(req.body)
-//  console.log(req.file)
-
-
-// })
 
 exports.getAllBike=catchAsync(async(req,res,next)=>{
 

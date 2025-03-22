@@ -3,6 +3,11 @@ import { Jost } from "next/font/google"
 import { useState } from "react";
 import SideBarFilter from "../SideBarFilter/SideBarFilter";
 import SideBarData from "../SideBarFilter/SideBarData";
+import { BsDropletHalf, BsFuelPumpFill } from "react-icons/bs";
+import { GiSteeringWheel } from "react-icons/gi";
+import { IoSpeedometerOutline } from "react-icons/io5";
+import { IoMdSpeedometer } from "react-icons/io";
+
 
 const jost=Jost({
   weight:['500'],
@@ -64,13 +69,26 @@ const BikeBody = ({result}:{result:BikeDataType[]}) => {
              <div className='w-full max-w-screen-xl grid grid-cols-1 2xl:grid-cols-2 xl: gap-10 '>
            { paginatedData.map((data,index:number)=>(
             <div key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border relative shadow-xl'>
-             <div className='absolute top-8 -right-10 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div>
+             <div className='absolute top-8 -right-10 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-lg'>{data.category}</div>
              {/* <div className='absolute top-5 -left-14 bg-green-500 text-white -rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div> */}
              <img className='h-60  ' src={`${data.image} `} />
-             <div className='w-full flex flex-col items-center justify-center space-y-1 '>
-             <div className={`${jost.className} text-xl`}> {data.name}</div>
+             <div className='w-full flex flex-col items-center justify-center space-y-5 '>
+             <div className={`${jost.className} text-4xl tracking-widest`}> {data.name}</div>
              <div className={`${jost.className} flex items-center justify-between w-full text-[#635f5f]`}>
-               <div >{data.fuelType}</div> <div >{data.price} $</div><div >{data.brand}</div>
+                 {/* 1 */}
+               <div className="flex flex-col gap-y-1 items-center justify-center" >
+                <span className="text-blue-400"><BsDropletHalf size={20} /></span> 
+                {data.mileage} MPG </div> 
+                {/* 2 */}
+               <div className="flex flex-col gap-y-1 items-center justify-center" >
+                <span className="text-green-400">{data.fuelType==="Petrol" ? <BsFuelPumpFill/> :<GiSteeringWheel  size={20}/>}</span> 
+                {data.fuelType}  </div> 
+                {/* 3 */}
+               <div className="flex flex-col gap-y-1 items-center justify-center" >
+                <span className="text-[#E60000]"><IoMdSpeedometer  size={25}/></span> 
+                {data.topSpeed} km/h </div> 
+                
+                {/* <div  className="flex items-center justify-center"> {data.price} $</div><div  className="flex items-center justify-center"><IoSpeedometerOutline /> {data.brand}</div> */}
                </div>
                 </div>
              </div>
