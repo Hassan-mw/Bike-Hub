@@ -7,6 +7,7 @@ import { BsDropletHalf, BsFuelPumpFill } from "react-icons/bs";
 import { GiSteeringWheel } from "react-icons/gi";
 import { IoSpeedometerOutline } from "react-icons/io5";
 import { IoMdSpeedometer } from "react-icons/io";
+import Link from "next/link";
 
 
 const jost=Jost({
@@ -68,7 +69,7 @@ const BikeBody = ({result}:{result:BikeDataType[]}) => {
 
              <div className='w-full max-w-screen-xl grid grid-cols-1 2xl:grid-cols-2 xl: gap-10 '>
            { paginatedData.map((data,index:number)=>(
-            <div key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border relative shadow-xl'>
+            <Link href={`/singleBike/${data._id}`} key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border relative shadow-xl'>
              <div className='absolute top-8 -right-10 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-lg'>{data.category}</div>
              {/* <div className='absolute top-5 -left-14 bg-green-500 text-white -rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div> */}
              <img className='h-60  ' src={`${data.image} `} />
@@ -91,7 +92,7 @@ const BikeBody = ({result}:{result:BikeDataType[]}) => {
                 {/* <div  className="flex items-center justify-center"> {data.price} $</div><div  className="flex items-center justify-center"><IoSpeedometerOutline /> {data.brand}</div> */}
                </div>
                 </div>
-             </div>
+             </Link>
              ))}
             </div>
           <div className="flex space-x-2 mt-6">
