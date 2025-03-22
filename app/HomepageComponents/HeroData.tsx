@@ -33,7 +33,7 @@ const HeroData = () => {
     <div  style={{fontWeight:400}}  className='text-[#8a95a0] lg:text-white text-sm lg:text-2xl '>Explore the best motorbikes, accessories, and gear. Find your perfect ride today!</div>
    
    
-<div className=' flex flex-col lg:flex-row lg:w-[65%] 2xl:w-[50%] items-center justify-center bg-white  p-3 rounded-md space-y-6 lg:space-y-0 lg:space-x-3'>
+<div className=' flex flex-col lg:flex-row lg:w-[65%] 2xl:w-[50%] items-center justify-center lg:py-4 bg-white  p-3 rounded-md space-y-6 lg:space-y-0 lg:space-x-3'>
 
 {/*//! Input field */}
 <div className='w-full flex items-center justify-center space-x-6'>
