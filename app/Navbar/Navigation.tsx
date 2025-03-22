@@ -31,7 +31,7 @@ const Navigation = () => {
       
       <div className='hidden sm:block'>
       <div className='flex items-center justify-center space-x-6 lg:text-lg xl:text-xl hover:cursor-pointer '>
-      <div className={` ${jost.className} text-lg   hover:text-[#1967d2] duration-500 `}>Bikes</div>
+        <Link href='/bike' className={` ${jost.className} text-lg   hover:text-[#1967d2] duration-500 `}>Bikes</Link>
         <div className={` ${jost.className} text-lg   hover:text-[#1967d2] duration-500 `}>Gears</div>
         <div className={` ${jost.className} text-lg   hover:text-[#1967d2] duration-500 `}>Campare</div>
         <div className={` ${jost.className} text-lg  hover:text-[#1967d2] duration-500 `}>FAQ</div>
