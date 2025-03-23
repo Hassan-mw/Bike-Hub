@@ -33,7 +33,7 @@ const page = async({params}:{params:{bikeName:any}}) => {
   return (
     <div className='w-full flex items-center justify-center'>
       <div className='w-full flex flex-col items-center justify-center max-w-screen-xl'>
-      <div ><BikeImages/> </div>
+      <div ><BikeImages  image={image}/> </div>
      
       </div>
       </div>

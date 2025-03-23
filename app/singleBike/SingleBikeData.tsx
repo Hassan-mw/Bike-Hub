@@ -8,7 +8,28 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/carousel"
-const SingleBikeData = () => {
+
+interface bikeDataType{
+   
+    brand:string;
+    category:string;
+    fuelType:string;
+    image:string;
+    mileage:number;
+    model:number;
+    name:string;
+    price:number
+    slug:string;
+    topSpeed:number;
+    url:string;
+    weight:number;
+    
+    
+    }
+    
+    
+
+const SingleBikeData = ({image}:bikeDataType) => {
   return (
     <div> 
     <Carousel className="w-full max-w-xl mb-36 ">
@@ -18,7 +39,7 @@ const SingleBikeData = () => {
             <div className="p-1">
               <Card>
                 <CardContent className="flex items-center justify-center p-6 w-[500px] h-[400px]">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
+               <img src={image}  />
                 </CardContent>
               </Card>
             </div>
