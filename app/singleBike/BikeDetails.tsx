@@ -30,13 +30,13 @@ const BikeDetails = ({brand,price,category,fuelType,mileage,model,name,topSpeed,
   {const bikeDataArray=[
 
   {property:"Company",value:brand},
-  {property:"price",value:price},
+  {property:"price",value:price ,postfix:'$'},
   {property:"Category",value:category},
-  {property:"Fueltype",value:fuelType},
+  {property:"Fueltype",value:fuelType },
   {property:"Mileage",value:mileage},
   {property:"Model",value:model},
-  {property:"Topspeed",value:topSpeed},
-  {property:"Weight",value:weight}
+  {property:"Topspeed",value:topSpeed ,postfix:'km/h'},
+  {property:"Weight",value:weight,postfix:"kg"}
 ]
   return (
     <div className='w-full flex flex-col space-y-16 p-8'>
@@ -71,7 +71,7 @@ const BikeDetails = ({brand,price,category,fuelType,mileage,model,name,topSpeed,
          
             <div className={`${jost.className} flex items-center justify-between `}>
                <div style={{fontWeight:400}} className={`${jost.className} `}>{data.property}</div> 
-               <div style={{fontWeight:400}} className={`${jost.className} text-[#80898f] `}>{data.value}</div> 
+               <div style={{fontWeight:400}} className={`${jost.className} text-[#80898f] `}>{data.value} {data?.postfix}</div> 
             </div>
               )  }
         </div>
