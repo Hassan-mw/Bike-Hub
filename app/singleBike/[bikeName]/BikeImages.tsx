@@ -1,3 +1,4 @@
+import { Jost } from "next/font/google";
 import SingleBikeData from "../SingleBikeData";
 
 
@@ -7,7 +8,7 @@ interface bikeDataType{
     
     }
     
-    
+
 
 
 const BikeImages = ({image}:bikeDataType) => {
