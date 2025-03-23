@@ -25,9 +25,12 @@ const SingleBikeData = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-    
-      <CarouselPrevious  className="opacity-0 md:opacity-100"/>
-      <CarouselNext  className="opacity-0 md:opacity-100" />
+
+
+      <div className="hidden md:opacity-100">
+      <CarouselPrevious />
+      <CarouselNext />
+      </div>
     </Carousel> </div>
   )
 }

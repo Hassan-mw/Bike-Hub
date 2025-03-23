@@ -1,42 +1,40 @@
 import React from 'react'
 import BikeImages from './BikeImages'
+import { Search } from 'lucide-react'
+import { getBikeById } from '@/app/DataFetching/api'
 
-const page = () => {
+interface bikeDataType{
+bike:{
+brand:string;
+category:string;
+fuelType:string;
+image:string;
+mileage:number;
+model:number;
+name:string;
+price:number
+slug:string;
+topSpeed:number;
+url:string;
+weight:number;
+}
+
+}
+
+
+const page = async({params}:{params:{bikeName:any}}) => {
+
+  const bikeNames=await params.bikeName
+  const {bike}=await getBikeById({bikeNames})
+  const {name,brand,image,fuelType,model,mileage,price,weight,topSpeed,category}=bike
+
+ 
+
   return (
     <div className='w-full flex items-center justify-center'>
       <div className='w-full flex flex-col items-center justify-center max-w-screen-xl'>
       <div ><BikeImages/> </div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsa quia nulla! Soluta nobis deserunt consequatur minus earum necessitatibus perferendis blanditiis nam ad, tempore ratione fuga fugit quae nisi nesciunt.</div>
-      
+     
       </div>
       </div>
   )

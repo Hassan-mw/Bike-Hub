@@ -18,7 +18,8 @@ router.route('/imageHandler')
 
 router
 .route('/:id')
-.get(authController.protect,bikeController.getBikeByName)
+.get(bikeController.getBikeByName)
+// .get(authController.protect,bikeController.getBikeByName)
 
 
 
