@@ -12,14 +12,11 @@ interface bikeDataType{
   brand:string;
   category:string;
   fuelType:string;
-  image:string;
   mileage:number;
   model:number;
   name:string;
   price:number
-  slug:string;
   topSpeed:number;
-  url:string;
   weight:number;
 }
 
@@ -32,8 +29,8 @@ const BikeDetails = ({brand,price,category,fuelType,mileage,model,name,topSpeed,
   {property:"Company",value:brand},
   {property:"price",value:price ,postfix:'$'},
   {property:"Category",value:category},
-  {property:"Fueltype",value:fuelType },
-  {property:"Mileage",value:mileage},
+  {property:"Fueltype",value:fuelType},
+  {property:"Mileage",value:mileage,postfix:"km/l"},
   {property:"Model",value:model},
   {property:"Topspeed",value:topSpeed ,postfix:'km/h'},
   {property:"Weight",value:weight,postfix:"kg"}

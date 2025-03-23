@@ -5,7 +5,7 @@ import { getBikeById } from '@/app/DataFetching/api'
 import BikeDetails from '../BikeDetails'
 
 interface bikeDataType{
-bike:{
+
 brand:string;
 category:string;
 fuelType:string;
@@ -14,11 +14,9 @@ mileage:number;
 model:number;
 name:string;
 price:number
-slug:string;
 topSpeed:number;
-url:string;
 weight:number;
-}
+
 
 }
 
@@ -27,7 +25,7 @@ const page = async({params}:{params:{bikeName:any}}) => {
 
   const bikeNames=await params.bikeName
   const {bike}=await getBikeById({bikeNames})
-  const {name,brand,image,fuelType,model,mileage,price,weight,topSpeed,category}=bike
+  const {name,brand,image,fuelType,model,mileage,price,weight,topSpeed,category}:bikeDataType=bike
 
  
 console.log(bike)
@@ -35,7 +33,7 @@ console.log(bike)
     <div className='w-full   flex items-center justify-center'>
       <div className='w-full flex flex-col items-center justify-center max-w-screen-xl'>
      <BikeImages  image={image}/> 
-      <BikeDetails brand={brand} category={category} fuelType={fuelType} mileage={mileage} model={model}  name={name} price={price}  price={price} topSpeed={topSpeed} weight={weight} />
+      <BikeDetails brand={brand} category={category} fuelType={fuelType} mileage={mileage} model={model}  name={name} price={price}   topSpeed={topSpeed} weight={weight} />
       </div>
       </div>
   )
