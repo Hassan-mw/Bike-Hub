@@ -11,13 +11,9 @@ import {
 
 interface bikeDataType{
    
-  
-    
     }
     
-    
-
-const SingleBikeData = ( => {
+const SingleBikeData = ( )=> {
     // console.log(image,'👺👺👺👺👺👺👺👺👺👺👺')
   return (
     <div> 

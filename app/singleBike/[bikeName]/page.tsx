@@ -2,6 +2,7 @@ import React from 'react'
 import BikeImages from './BikeImages'
 import { Search } from 'lucide-react'
 import { getBikeById } from '@/app/DataFetching/api'
+import BikeDetails from '../BikeDetails'
 
 interface bikeDataType{
 bike:{
@@ -34,7 +35,7 @@ console.log(bike)
     <div className='w-full   flex items-center justify-center'>
       <div className='w-full flex flex-col items-center justify-center max-w-screen-xl'>
      <BikeImages  image={image}/> 
- 
+      <BikeDetails/>
       </div>
       </div>
   )
