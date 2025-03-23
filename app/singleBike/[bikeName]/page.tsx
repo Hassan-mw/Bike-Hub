@@ -29,12 +29,12 @@ const page = async({params}:{params:{bikeName:any}}) => {
   const {name,brand,image,fuelType,model,mileage,price,weight,topSpeed,category}=bike
 
  
-
+console.log(bike)
   return (
-    <div className='w-full flex items-center justify-center'>
+    <div className='w-full   flex items-center justify-center'>
       <div className='w-full flex flex-col items-center justify-center max-w-screen-xl'>
-      <div ><BikeImages  image={image}/> </div>
-     
+     <BikeImages  image={image}/> 
+ 
       </div>
       </div>
   )

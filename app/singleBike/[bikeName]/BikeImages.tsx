@@ -1,20 +1,9 @@
-import SingleBikeData from "../singleBikeData"
+import SingleBikeData from "../SingleBikeData";
+
 
 interface bikeDataType{
    
-    brand:string;
-    category:string;
-    fuelType:string;
-    image:string;
-    mileage:number;
-    model:number;
-    name:string;
-    price:number
-    slug:string;
-    topSpeed:number;
-    url:string;
-    weight:number;
-    
+  image:String;
     
     }
     
@@ -26,9 +15,10 @@ const BikeImages = ({image}:bikeDataType) => {
 
     // const bikeData=await getBikeByID()
   return (
-    <div className="w-full flex flex-col space-y-2">
-    <SingleBikeData  image={image} />
- 
+    <div className="w-full flex flex-col space-y-10">
+        <div className="w-full    overflow-hidden ">
+         <img className="w-full object-cover max-w-[1100px] scale-90 max-h-[600px]" src={`/${image}`} />
+        </div>
      </div>
   )
 }
