@@ -1,33 +1,13 @@
-'use client'
+import SingleBikeData from "../singleBikeData"
 
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/carousel"
 
 const BikeImages = () => {
+    
   return (
-    <Carousel className="w-full max-w-xl mb-36 overflow-hidden">
-      <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex items-center justify-center p-6 w-[500px] h-[400px]">
-                  <span className="text-4xl font-semibold">{index + 1}</span>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-    </Carousel>
+    <div className="w-full flex flex-col space-y-2">
+    <SingleBikeData/>
+ 
+     </div>
   )
 }
 
