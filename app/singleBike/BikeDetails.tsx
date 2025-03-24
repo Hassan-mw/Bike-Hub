@@ -37,8 +37,8 @@ const BikeDetails = ({brand,price,category,fuelType,mileage,model,name,topSpeed,
 ]
   return (
     <div className='w-full flex flex-col space-y-16 pb-24 p-8'>
-        <div className={`${jost.className} text-6xl w-full flex items-center justify-center  `}>
-         <div className='border-4 p-3 rounded-xl bg-amber-500 '> {name} </div>
+        <div className={`${jost.className} text-8xl w-full flex items-center justify-center  `}>
+          {name}
           </div>
         <div className='grid grid-cols-1 lg:grid-cols-[70%_30%] gap-y-20 lg:gap-x-10'>
          <div className='lg:w-full   flex flex-col space-y-16 items-start justify-start text-xl'>

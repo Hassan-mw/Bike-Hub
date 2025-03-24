@@ -20,7 +20,6 @@ const page = () => {
       <Carousels/>
        <Status/>
        <AppDownload/>
-       <BikeCardAnimation/>
       <Testmonials/>
     </div>
   )
