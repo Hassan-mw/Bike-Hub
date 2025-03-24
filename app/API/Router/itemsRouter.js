@@ -3,7 +3,7 @@ const router=express.Router();
 const ItemsController=require('./../Controller/')
 
 router.route('/items')
-.get(itemsController.getAllItems)
+.get(ItemsController.getAllItems)
 
 
 

@@ -3,6 +3,7 @@ const app=express()
 const mongose=require("mongoose");
 const bikeRouter=require('./Router/bikeRouter');
 const userRoutes=require('./Router/userRoutes');
+const itemsRoutes=require('./Router/itemsRouter');
 const AppError = require('./Errorhandler/errorHandler');
 const globalErrorhandler = require('./Errorhandler/globalErrorhandler');
 const cors=require('cors')
@@ -18,6 +19,7 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 // app.use("/public", express.static("public"));
 app.use('/api/bike',bikeRouter)
 app.use('/api/user',userRoutes)
+app.use('/api/items',itemsRoutes)
 
 
 
