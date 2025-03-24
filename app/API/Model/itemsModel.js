@@ -1,5 +1,4 @@
 const mongoose=require('mongoose');
-const { type } = require('os');
 
 
 const itemsModel=new mongoose.Schema({
@@ -18,11 +17,11 @@ company:{
     require:[true,'A item must belong to some company']
 },
 size:{
-    type:string,
+    type:String,
     enum:['small','medium','large']
 },
-color:string,
-matchedBike:string
+color:String,
+matchedBike:String
 
 
 
