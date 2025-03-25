@@ -1,4 +1,5 @@
-import {Autocomplete, AutocompleteItem} from "@heroui/react";
+'use client';
+import {Autocomplete, AutocompleteItem} from "@heroui/autocomplete";
 
 export const animals = [
   {label: "Cat", key: "cat", description: "The second most popular pet in the world"},
@@ -28,15 +29,17 @@ export const animals = [
   {label: "Crocodile", key: "crocodile", description: "A large semiaquatic reptile"},
 ];
 
-export default function App() {
+const AutoCompleteinput=()=> {
   return (
     <Autocomplete
-      className="max-w-xs"
+      className="max-w-xs focus:outline-none border-white text-black p-3"
       defaultItems={animals}
-      label="Favorite Animal"
+      disabledKeys={["zebra", "tiger", "lion", "elephant", "crocodile", "whale"]}
+    //   label="Favorite Animal"
       placeholder="Search an animal"
     >
-      {(animal) => <AutocompleteItem key={animal.key}>{animal.label}</AutocompleteItem>}
+      {(item) => <AutocompleteItem  className=" bg-white" key={item.key}>{item.label}</AutocompleteItem>}
     </Autocomplete>
   );
 }
+export default AutoCompleteinput;

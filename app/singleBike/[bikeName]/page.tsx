@@ -19,6 +19,7 @@ weight:number;
 
 
 }
+      
 
 
 const page = async({params}:{params:{bikeName:any}}) => {
@@ -34,7 +35,18 @@ console.log(bike)
       <div className='w-full flex flex-col items-center justify-center max-w-screen-xl'>
      <BikeImages  image={image}/> 
       <BikeDetails brand={brand} category={category} fuelType={fuelType} mileage={mileage} model={model}  name={name} price={price}   topSpeed={topSpeed} weight={weight} />
+
+
+      <div className="flex w-52 flex-col gap-4">
+  <div className="skelti h-32 w-full">f</div>
+  <div className="skeleton h-4 w-28"></div>
+  <div className="skeleton h-4 w-full"></div>
+  <div className="skeleton h-4 w-full"></div>
+</div>
+   
+
       </div>
+
       </div>
   )
 }

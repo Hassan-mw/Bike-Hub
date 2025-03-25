@@ -23,6 +23,7 @@ import { Jost } from 'next/font/google'
 import { CiSearch } from 'react-icons/ci';
 import { RiEBikeLine } from 'react-icons/ri';
 import Link from 'next/link';
+import AutoCompleteINput from '../components-usage/AutoCompleteInput';
 
 
 const HeroData = () => {
@@ -37,9 +38,10 @@ const HeroData = () => {
 
 {/*//! Input field */}
 
-<div className='w-full flex items-center justify-center space-x-6'>
+<div className='w-full flex items-center justify-center space-x-6 '>
 <CiSearch size={25} />
 <input style={{fontWeight:400}}  className=' bg-white py-5 text-xl  text-black placeholder:text-slate-600 w-full focus:outline-none'  placeholder='Search by name'/>
+{/* <AutoCompleteINput/> */}
 </div>    
 
 {/*//! Select field */}
