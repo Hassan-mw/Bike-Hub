@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express=require('express')
 const app=express()
 const mongose=require("mongoose");
@@ -9,22 +10,18 @@ const globalErrorhandler = require('./Errorhandler/globalErrorhandler');
 const cors=require('cors')
 const path = require("path");
 
-
 app.use(express.json())
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
-
-
 app.use("/public", express.static(path.join(__dirname, "public")));
-// app.use("/public", express.static("public"));
+
+
 app.use('/api/bike',bikeRouter)
 app.use('/api/user',userRoutes)
 app.use('/api/items',itemsRoutes)
 
 
-
-
-mongose.connect("mongodb+srv://ahsanmushtaq7894:j8cz7WgYUnJayW8w@cluster0.6otap.mongodb.net/",{
+mongose.connect(process.env.DATABASE_URL,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {

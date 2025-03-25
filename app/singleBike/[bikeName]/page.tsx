@@ -36,7 +36,7 @@ console.log(bike)
       <div className='w-full flex flex-col items-center justify-center max-w-screen-xl'>
        <BikeImages  image={image}/> 
       <BikeDetails brand={brand} category={category} fuelType={fuelType} mileage={mileage} model={model}  name={name} price={price}   topSpeed={topSpeed} weight={weight} /> 
-       <OtherMatchingStuff/>
+       <OtherMatchingStuff name={name} brand={brand}/>
        
        
 

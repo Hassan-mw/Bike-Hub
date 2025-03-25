@@ -26,6 +26,7 @@
     "clsx": "^2.1.1",
     "cors": "^2.8.5",
     "daisyui": "^5.0.9",
+    "dotenv": "^16.4.7",
     "embla-carousel-react": "^8.5.2",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
