@@ -3,11 +3,8 @@ import { Jost } from "next/font/google"
 import { useState } from "react";
 import SideBarFilter from "../SideBarFilter/SideBarFilter";
 import SideBarData from "../SideBarFilter/SideBarData";
-import { BsDropletHalf, BsFuelPumpFill } from "react-icons/bs";
-import { GiSteeringWheel } from "react-icons/gi";
-import { IoSpeedometerOutline } from "react-icons/io5";
-import { IoMdSpeedometer } from "react-icons/io";
 import Link from "next/link";
+import { FaHeart } from "react-icons/fa";
 
 
 const jost=Jost({
@@ -31,9 +28,6 @@ interface BikeDataType {
     image:string;
   }
 
-  interface APIResponse {
-    data:BikeDataType[]
-  }
 
 const ItemsBody = ({result}:{result:BikeDataType[]}) => {
 
@@ -66,32 +60,17 @@ const ItemsBody = ({result}:{result:BikeDataType[]}) => {
 
             <div className='w-full max-w-screen-xl flex flex-col items-center justify-center space-y-16'>
 
-             <div className='w-full max-w-screen-xl grid grid-cols-1 2xl:grid-cols-2 xl: gap-10 '>
+             <div className='w-full max-w-screen-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl: gap-10 '>
            { paginatedData.map((data,index:number)=>(
-            <Link href={`/singleBike/${data._id}`} key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border group relative shadow-xl'>
-             <div className='absolute top-8 -right-10 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-lg'>{data.category}</div>
-             {/* <div className='absolute top-5 -left-14 bg-green-500 text-white -rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div> */}
-             <img className='h-60  ' src={`${data.image} `} />
-             <div className='w-full flex flex-col items-center justify-center space-y-5 '>
-             <div className={`${jost.className} text-4xl tracking-widest group-hover:text-green-500 duration-500`}> {data.name}</div>
-             <div className={`${jost.className} flex items-center justify-between w-full text-[#635f5f]`}>
-                 {/* 1 */}
-               <div className="flex flex-col gap-y-1 items-center justify-center" >
-                <span className="text-blue-400"><BsDropletHalf size={20} /></span> 
-                {data.mileage} MPG </div> 
-                {/* 2 */}
-               <div className="flex flex-col gap-y-1 items-center justify-center" >
-                <span className="text-green-400">{data.fuelType==="Petrol" ? <BsFuelPumpFill/> :<GiSteeringWheel  size={20}/>}</span> 
-                {data.fuelType}  </div> 
-                {/* 3 */}
-               <div className="flex flex-col gap-y-1 items-center justify-center" >
-                <span className="text-[#E60000]"><IoMdSpeedometer  size={25}/></span> 
-                {data.topSpeed} km/h </div> 
-                
-                {/* <div  className="flex items-center justify-center"> {data.price} $</div><div  className="flex items-center justify-center"><IoSpeedometerOutline /> {data.brand}</div> */}
-               </div>
-                </div>
-             </Link>
+            <Link href="/" className='w-full flex flex-col items-center justify-center space-y-1 bg-[#f4f7fc] rounded-xl p-2 py-4 relative'>
+                      <div className={`${jost.className} top-3 left-5 absolute bg-[#2d972f] px-1 py-2 flex items-center justify-center text-xs rounded-full text-white`}>50%</div>
+                      <div className={`${jost.className} top-5 right-5 absolute text-[#2d972f] text-xl hover:text-blue-600 duration-500 hover:cursor-pointer`}><FaHeart  /></div>
+                  <img loading='lazy' className='size-48' src="/helmet.png"/>
+                  <div className={`${jost.className} text-xl`}>Aerion Carrbo Helmet</div>
+                  <div style={{fontWeight:200}} className={`${jost.className} text-xs`}> (Fashion,Twin Disc)</div>
+                  <div className={`${jost.className} flex items-end justify-end space-x-0.5 `}><span className='text-xl text-[#2d972f]'>$699</span><span className='text-sm'>$899</span></div>
+                  <div className={`${jost.className} w-5/6 flex items-center justify-center bg-[#2d972f] rounded-lg p-3 text-white hover:cursor-pointer hover:bg-green-700 duration-500`}>Buy Now</div>
+                  </Link>
              ))}
             </div>
           <div className="flex space-x-2 mt-6">
