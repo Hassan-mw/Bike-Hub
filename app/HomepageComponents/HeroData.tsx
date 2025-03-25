@@ -36,6 +36,7 @@ const HeroData = () => {
 <div className=' flex flex-col lg:flex-row lg:w-[65%] 2xl:w-[50%] items-center justify-center lg:py-4 bg-white  p-3 rounded-md space-y-6 lg:space-y-0 lg:space-x-3'>
 
 {/*//! Input field */}
+
 <div className='w-full flex items-center justify-center space-x-6'>
 <CiSearch size={25} />
 <input style={{fontWeight:400}}  className=' bg-white py-5 text-xl  text-black placeholder:text-slate-600 w-full focus:outline-none'  placeholder='Search by name'/>
