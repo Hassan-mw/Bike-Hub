@@ -3,6 +3,7 @@ import BikeImages from './BikeImages'
 import { Search } from 'lucide-react'
 import { getBikeById } from '@/app/DataFetching/api'
 import BikeDetails from '../BikeDetails'
+import OtherMatchingStuff from '../OtherMatchingStuff'
 
 interface bikeDataType{
 
@@ -35,7 +36,7 @@ console.log(bike)
       <div className='w-full flex flex-col items-center justify-center max-w-screen-xl'>
        <BikeImages  image={image}/> 
       <BikeDetails brand={brand} category={category} fuelType={fuelType} mileage={mileage} model={model}  name={name} price={price}   topSpeed={topSpeed} weight={weight} /> 
-     
+       <OtherMatchingStuff/>
        
        
 
