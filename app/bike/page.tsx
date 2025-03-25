@@ -1,6 +1,6 @@
 import { Jost } from 'next/font/google'
 import Link from 'next/link'
-import React from 'react'
+import React, { Suspense } from 'react'
 import SideBarFilter from '../SideBarFilter/SideBarFilter'
 import SideBarData from '../SideBarFilter/SideBarData'
 import getAllBike from '../DataFetching/api'
@@ -29,6 +29,27 @@ const jost=Jost({
   subsets:['latin']
 })
 
+const Loading=()=>{
+
+return (
+  <div className='w-full h-full flex items-center justify-center'>
+
+    
+    <div className="flex w-52 flex-col gap-4">
+    <div className="skeleton h-32 w-full"></div>
+    <div className="skeleton h-4 w-28"></div>
+    <div className="skeleton h-4 w-full"></div>
+    <div className="skeleton h-4 w-full"></div>
+  </div>
+  </div>
+
+)
+
+
+
+}
+
+
 
 const page = async({searchParams}:{searchParams:URLSearchParams}) => {
 
@@ -53,12 +74,26 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
       </div>
       {/* Down Body */}
       <div className='w-full flex flex-col items-center justify-center p-3 py-10 lg:py-24 bg-white'>
+     <Suspense  fallback={<div className='w-full h-full flex items-center justify-center'>
+
+    
+<div className="flex w-52 flex-col gap-4">
+<div className="skeleton h-32 w-full"></div>
+<div className="skeleton h-4 w-28"></div>
+<div className="skeleton h-4 w-full"></div>
+<div className="skeleton h-4 w-full"></div>
+</div>
+</div>}>
+
+    
       <BikeBody  result={result.data} />
+     </Suspense>
     </div>
 
     </div>
 
   )
 }
+
 
 export default page
