@@ -42,7 +42,7 @@ const BikeDetails = ({brand,price,category,fuelType,mileage,model,name,topSpeed,
 ]
   return (
     <div className='w-full flex flex-col space-y-16 pb-24 p-8'>
-        <div className={`${jost.className} text-6xl w-full flex items-center justify-center  `}>
+        <div className={`${jost.className} text-4xl md:text-6xl w-full flex items-center justify-center  `}>
           {name}
           </div>
           {/* //!  Below Image detaisl */}
@@ -96,12 +96,12 @@ const BikeDetails = ({brand,price,category,fuelType,mileage,model,name,topSpeed,
         </div>
 
 
-        <div className='grid grid-cols-1 lg:grid-cols-[70%_30%] gap-y-20 lg:gap-x-10'>
+        <div className='grid grid-cols-1 lg:grid-cols-[70%_30%] gap-y-20 lg:gap-x-10 '>
           {/* //! Left */}
        <LeftBikeDetails/>
        
         {/* //!  Right */}
-        <div className='flex flex-col items-center justify-center space-y-10'>
+        <div className='flex flex-col items-start justify-start space-y-10'>
           {/* Top */}
         <div className='w-full  flex flex-col space-y-4 md:space-y-8 rounded-lg bg-[#f1f4fb] p-5  text-xl '>
           <div style={{fontWeight:500}} className={`${jost.className} w-full flex items-center justify-center text-3xl border-b-4 pb-3`}>Bike Overview</div>
