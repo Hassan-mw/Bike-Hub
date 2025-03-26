@@ -21,6 +21,7 @@ import Link from 'next/link';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { BsFuelPump } from 'react-icons/bs';
 const SideBarData = () => {
+    const [currentPage,setCurrentPage]=useState(true)    
      const [name,setName]=useState('')
      const [brand,setBrand]=useState('all')
      const [category,setCategory]=useState('all')
@@ -29,11 +30,17 @@ const SideBarData = () => {
      const [topSpeed,setTopSpeed]=useState('10')
      const [price,setPrice]=useState('0')
      const [model,setModel]=useState('2000')
-     
      const searchParams=useSearchParams();
      const pathname=usePathname()
      const router=useRouter();
-     console.log(pathname,'😍😍😍😍😍😍😍😍')
+     useEffect(()=>{
+  if(pathname==='/gear'){
+    setCurrentPage(false)
+  }
+
+     },[])
+
+
       useEffect(()=>{
       const params=new URLSearchParams(searchParams)
      if(name!=="")            params.set("name",name) ;          else params.delete("name");
@@ -159,34 +166,34 @@ function handleFuleTypeChange(){
            </div>
 
            {/* Radii Model*/}
-           <div className='w-full flex flex-col space-y-1 group'>
+          {currentPage && <div className='w-full flex flex-col space-y-1 group'>
           <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Model</div>
               <div style={{fontWeight:500}} className={` ${jost.className} w-full flex items-center justify-center text-sm text-blue-500`}> {model} Model </div>
                     <div className='w-full'>
                        <input type='range' min='2000'   value={model} max='2025'   onChange={(e) => setModel(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
                           </div>
                 
-           </div>
+           </div>}
 
            {/* Radii milage*/}
-           <div className='w-full flex flex-col space-y-1 group'>
+         {currentPage &&  <div className='w-full flex flex-col space-y-1 group'>
           <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Milage</div>
               <div style={{fontWeight:500}} className={` ${jost.className} w-full flex items-center justify-center text-sm text-blue-500`}> {milage} Milage </div>
                     <div className='w-full'>
                        <input type='range' min='10'   value={milage} max='400'   onChange={(e) => setMilage(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
                           </div>
                 
-           </div>
+           </div>}
 
            {/* Radii TopSpeed*/}
-           <div className='w-full flex flex-col space-y-1 group'>
+          {currentPage && <div className='w-full flex flex-col space-y-1 group'>
           <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Top Speed</div>
               <div style={{fontWeight:500}} className={` ${jost.className} w-full flex items-center justify-center text-sm text-blue-500`}> {topSpeed} km/h </div>
                     <div className='w-full'>
                        <input type='range' min='10'   value={topSpeed} max='400'   onChange={(e) => setTopSpeed(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
                           </div>
                 
-           </div>
+           </div>}
   
   
         </div>      

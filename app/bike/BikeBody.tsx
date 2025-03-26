@@ -5,7 +5,6 @@ import SideBarFilter from "../SideBarFilter/SideBarFilter";
 import SideBarData from "../SideBarFilter/SideBarData";
 import { BsDropletHalf, BsFuelPumpFill } from "react-icons/bs";
 import { GiSteeringWheel } from "react-icons/gi";
-import { IoSpeedometerOutline } from "react-icons/io5";
 import { IoMdSpeedometer } from "react-icons/io";
 import Link from "next/link";
 
