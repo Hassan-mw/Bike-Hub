@@ -72,7 +72,7 @@ const BikeBody = ({result}:{result:BikeDataType[]}) => {
              {/* <div className='absolute top-5 -left-14 bg-green-500 text-white -rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div> */}
              <img className='h-60  ' src={`${data.image} `} />
              <div className='w-full flex flex-col items-center justify-center space-y-5 '>
-             <div className={`${jost.className} text-4xl tracking-widest group-hover:text-green-500 duration-500`}> {data.name}</div>
+             <div className={`${jost.className} text-4xl tracking-widest `}> {data.name}</div>
              <div className={`${jost.className} flex items-center justify-between w-full text-[#635f5f]`}>
                  {/* 1 */}
                <div className="flex flex-col gap-y-1 items-center justify-center" >
