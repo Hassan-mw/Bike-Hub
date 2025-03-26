@@ -39,7 +39,7 @@ app.all('*',(req,res,next)=>{
 //! GLobal Error Middleware
 app.use(globalErrorhandler)
 
-const port = 5000;
+const port = 5500;
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);

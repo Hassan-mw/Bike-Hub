@@ -13,3 +13,14 @@ res.status(200).json({
     data:items
 })
 })
+
+
+exports.createItem=catchAsync(async(req,res,next)=>{
+
+    const newItem=await ITEMS.create(req.body)
+
+    res.status(201).json({
+        status:'success',
+        data:newItem
+    })
+})

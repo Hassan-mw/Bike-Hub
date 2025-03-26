@@ -4,6 +4,7 @@ const ItemsController=require('./../Controller/itemsController')
 
 router.route('/items')
 .get(ItemsController.getAllItems)
+.post(ItemsController.createItem)
 
 
 
