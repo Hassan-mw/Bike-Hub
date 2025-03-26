@@ -8,20 +8,20 @@ discount:Number,
 image:String,
 name:{
     type:String,
-    require:[true,'A item must have name']
+    required:[true,'A item must have name']
 },
 subtitle:String,
 price:{
     type:Number,
-    require:[true,'A item must have price']
+    required:[true,'A item must have price']
 },
 company:{
     type:String,
-    require:[true,'A item must belong to some company']
+    required:[true,'A item must belong to some company']
 },
 category:{
 type:String,
-require:[true,'A item mssut have category']
+required:[true,'A item mssut have category']
 },
 size:{
     type:String,

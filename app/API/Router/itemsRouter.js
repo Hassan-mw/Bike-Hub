@@ -2,7 +2,7 @@ const express=require('express');
 const router=express.Router();
 const ItemsController=require('./../Controller/itemsController')
 
-router.route('/items')
+router.route('/')
 .get(ItemsController.getAllItems)
 .post(ItemsController.createItem)
 

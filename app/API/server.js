@@ -16,9 +16,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/public", express.static(path.join(__dirname, "public")));
 
 
+app.use('/api/item',itemsRoutes)
 app.use('/api/bike',bikeRouter)
 app.use('/api/user',userRoutes)
-app.use('/api/items',itemsRoutes)
 
 
 mongose.connect(process.env.DATABASE_URL,{
@@ -39,7 +39,7 @@ app.all('*',(req,res,next)=>{
 //! GLobal Error Middleware
 app.use(globalErrorhandler)
 
-const port = 5500;
+const port = 5000;
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
