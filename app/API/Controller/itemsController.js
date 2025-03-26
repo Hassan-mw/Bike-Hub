@@ -44,7 +44,9 @@ exports.uploadItemPhoto=upload.single('image')
 
 
 exports.getAllItems=catchAsync(async(req,res,next)=>{
-const items=new APIFeatures(ITEMS.find(),req.query).filter().sort().limitedFields()
+const features=new APIFeatures(ITEMS.find(),req.query).filter().sort().limitedFields()
+const items=await features.query
+// const items=await ITEMS.find();
 
 res.status(200).json({
     status:'success',

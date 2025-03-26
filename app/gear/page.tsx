@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { Suspense } from 'react'
 import SideBarFilter from '../SideBarFilter/SideBarFilter'
 import SideBarData from '../SideBarFilter/SideBarData'
-import getAllBike from '../DataFetching/api'
+import { getAllItems } from '../DataFetching/api'
 import Pagination from '@/components/Pagination'
 import ItemsBody from './ItemsBody'
 // import BikeBody from './BikeBody'
@@ -55,7 +55,7 @@ return (
 const page = async({searchParams}:{searchParams:URLSearchParams}) => {
 
   const filter=await searchParams
- const result:{status:String,message:string,data:BikeDataType[]}=await getAllBike({filter})
+ const result:{status:String,message:string,data:BikeDataType[]}=await getAllItems({filter})
  console.log(result)
  if(result.status==='fail'){
   return (

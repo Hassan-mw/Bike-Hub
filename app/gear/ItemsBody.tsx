@@ -63,11 +63,11 @@ const ItemsBody = ({result}:{result:BikeDataType[]}) => {
              <div className='w-full max-w-screen-xl grid grid-cols-1 sm:grid-cols-2  xl: gap-10 '>
            { paginatedData.map((data,index:number)=>(
             <Link href="/" className='w-full flex flex-col items-center justify-center space-y-1 bg-[#f4f7fc] rounded-xl p-2 py-4 relative'>
-                      <div className={`${jost.className} top-3 left-5 absolute bg-[#2d972f] px-1 py-2 flex items-center justify-center text-xs rounded-full text-white`}>50%</div>
+                      <div className={`${jost.className} top-3 left-5 absolute bg-[#2d972f] px-1 py-2 flex items-center justify-center text-xs rounded-full text-white`}>{data.discount}%</div>
                       <div className={`${jost.className} top-5 right-5 absolute text-[#2d972f] text-xl hover:text-blue-600 duration-500 hover:cursor-pointer`}><FaHeart  /></div>
-                  <img loading='lazy' className='size-48' src="/helmet.png"/>
-                  <div className={`${jost.className} text-xl`}>Aerion Carrbo Helmet</div>
-                  <div style={{fontWeight:300}} className={`${jost.className} text-sm`}> (Fashion,Twin Disc)</div>
+                  <img loading='lazy' className='size-48' src={` /${data.image}`}/>
+                  <div className={`${jost.className} text-xl`}>{data.name}</div>
+                  <div style={{fontWeight:300}} className={`${jost.className} text-sm`}> {data.subtitle}</div>
                   <div className={`${jost.className} flex items-end justify-end space-x-0.5 `}><span className='text-xl text-[#2d972f]'>$699</span><span className='text-sm'>$899</span></div>
                   <div className={`${jost.className} w-5/6 flex items-center justify-center bg-[#2d972f] rounded-lg p-3 text-white hover:cursor-pointer hover:bg-green-700 duration-500`}>Buy Now</div>
                   </Link>
