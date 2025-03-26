@@ -56,6 +56,7 @@ res.status(200).json({
 exports.createItem=catchAsync(async(req,res,next)=>{
 
     const newItem=await ITEMS.create({
+        name: req.body.name,
         discount: req.body.discount,
         image:  req.file.filename, // Store fixed path
         subtitle: req.body.subtitle,

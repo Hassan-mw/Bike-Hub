@@ -25,7 +25,7 @@ required:[true,'A item mssut have category']
 },
 size:{
     type:String,
-    enum:['small','medium','large']
+    enum:['Small','Medium','Large']
 },
 matchedBike:String
 
