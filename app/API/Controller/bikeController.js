@@ -45,7 +45,6 @@ exports.uploadBikePhoto=upload.single('image')
 exports.createBike=catchAsync(async(req,res,next)=>{
   try {
 
- console.log(req.file,'🤖🤖🤖🤖🤖🤖🤖🤖🤖')
     const newBike = await BIKE.create({
       name: req.body.name,
       brand: req.body.brand,
@@ -68,6 +67,7 @@ exports.createBike=catchAsync(async(req,res,next)=>{
     res.status(500).json({ status: "error", message: error.message });
    }
   })
+
 
 exports.getBikeByName=catchAsync(async(req,res,next)=>{
   console.log(req.params.id,'😍😍😍😍😍😍😍')
