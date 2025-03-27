@@ -41,7 +41,7 @@ const ItemsBody = ({result}:{result:BikeDataType[]}) => {
         {/* Left Body */}
         <div className='w-full   max-w-screen-xl flex items-center justify-between  lg:justify-end pb-16'>
         <div className='lg:hidden'> <ItemSideBarFilter/></div>
-       <div className={`${jost.className} md:text-xl lg:text-2xl lg:border-b lg:pb-1`}>Showing {initial} – {final} of {result.length} results</div>
+       {/* <div className={`${jost.className} md:text-xl lg:text-2xl lg:border-b lg:pb-1`}>Showing {initial} – {final} of {result.length} results</div> */}
         </div> 
 
 
@@ -54,7 +54,21 @@ const ItemsBody = ({result}:{result:BikeDataType[]}) => {
              paginatedData.length>0 ?(
 
             <div className='w-full max-w-screen-xl flex flex-col items-center justify-center space-y-16'>
+               {/* Top NAv BAR */}
+         <div className="w-full flex items-center justify-between">
+         <div style={{fontWeight:300}} className={`${jost.className} text-smlg:border-b lg:pb-1`}>Showing {initial} – {final} of {result.length} results</div>
+         
+        
+         <div className="">
+  
+          <select className="w-36 md:w-52 border px-3 py-2 rounded-md focus:border-blue-400">
+            <option>All</option>
+            <option>Oldest</option>
+            <option>Newest</option>
+          </select>
 
+          </div>
+          </div> 
              <div className='w-full max-w-screen-xl grid grid-cols-1 sm:grid-cols-2  xl: gap-10 '>
            { paginatedData.map((data,index:number)=>(
             <Link href="/" key={index} className='w-full flex flex-col items-center justify-center space-y-1 bg-[#f4f7fc] rounded-xl p-2 py-4 relative'>

@@ -60,7 +60,11 @@ const RightBody = ({paginatedData,number,setCount,count,initial,final,result}:Da
         
          <div className="">
   
-          <select></select>
+          <select className="w-36 md:w-52 border px-3 py-2 rounded-md focus:border-blue-400">
+            <option>All</option>
+            <option>Oldest</option>
+            <option>Newest</option>
+          </select>
 
           </div>
           </div> 
