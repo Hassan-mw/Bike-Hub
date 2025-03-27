@@ -63,7 +63,7 @@ const ItemsBody = ({result}:{result:BikeDataType[]}) => {
                   <img loading='lazy' className='size-48' src={` /${data.image}`}/>
                   <div className={`${jost.className} text-xl`}>{data.name}</div>
                   <div style={{fontWeight:300}} className={`${jost.className} text-sm`}> {data.subtitle}</div>
-                  <div className={`${jost.className} flex items-end justify-end space-x-0.5 `}><span className='text-xl text-[#2d972f]'>$699</span><span className='text-sm'>$899</span></div>
+                  <div className={`${jost.className} flex items-end justify-end space-x-0.5 `}><span className='text-xl text-[#2d972f]'>${data.price*0.8}</span><span className='text-sm'>${data.price}</span></div>
                   <div className={`${jost.className} w-5/6 flex items-center justify-center bg-[#2d972f] rounded-lg p-3 text-white hover:cursor-pointer hover:bg-green-700 duration-500`}>Buy Now</div>
                   </Link>
              ))}
