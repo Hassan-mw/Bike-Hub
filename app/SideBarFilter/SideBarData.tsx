@@ -58,6 +58,19 @@ function handleFuleTypeChange(){
     <div>
         
         <div className='w-full h-full flex flex-col  space-y-8  bg-white lg:border lg:rounded-lg p-4  min-w-[350px]'>
+   
+        <div  className={`${jost.className} w-full  grid grid-cols-3 gap-4 text-sm text-[#898989]`}>
+       {category!=='all' && <div onClick={()=>setCategory('all')} className='bg-[#eaeffa] rounde-lg px-3  py-2  flex items-center justify-between w-full hover:cursor-pointer'> {category } <span className='text-red-500'>x</span></div>} 
+       {brand!=='all' && <div  onClick={()=>setBrand('all')} className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'> {brand}<span className='text-red-500'>x</span></div>}
+       {fuelType!=='all' && <div  onClick={()=>setFuelType('all')}  className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'>{ fuelType} <span className='text-red-500'>x</span> </div>}
+       {milage!=='10' && <div  onClick={()=>setMilage('10')}  className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'>{milage} <span className='text-red-500'>x</span></div>}
+       {topSpeed!=='10' && <div  onClick={()=>setTopSpeed('10')}  className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'>{topSpeed} <span className='text-red-500'>x</span></div>}
+       {price!=='0' && <div  onClick={()=>setPrice('0')}  className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'>${price} <span className='text-red-500'>x</span></div>}
+       {model!=='2000' && <div  onClick={()=>setModel('2000')}  className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'>{model} <span className='text-red-500'>x</span></div>}
+
+     </div>
+   
+   
     {/* input fields */}
     <div className='flex flex-col w-full space-y-7 p-4 rounded-md bg-slate-100'>
 
