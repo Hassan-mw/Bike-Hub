@@ -20,7 +20,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { IoResizeOutline } from 'react-icons/io5';
 
 const ItemSideBarData = () => {
-  const [category,setCategory]=useState('all')
+     const [category,setCategory]=useState('all')
      const [company,setCompany]=useState('all')
      const [size,setSize]=useState('all')
      const [discount,setDiscount]=useState('all')
@@ -32,6 +32,7 @@ const ItemSideBarData = () => {
 
 
       useEffect(()=>{
+       
       const params=new URLSearchParams(searchParams)
      if (company!=="all")       params.set("company",company);         else params.delete("company");
      if (discount!=="all")       params.set("discount",discount);         else params.delete("discount");
@@ -42,15 +43,21 @@ const ItemSideBarData = () => {
       },[company,discount,category,size,price])
 
 
-     
-function handleFuleTypeChange(){
 
-}
 
   return (
     <div>
         
         <div className='w-full h-full flex flex-col  space-y-8  bg-white lg:border lg:rounded-lg p-4  min-w-[350px]'>
+      <div  className={`${jost.className} w-full  grid grid-cols-3 gap-4 text-sm text-[#898989]`}>
+       {category!=='all' && <div onClick={()=>setCategory('all')} className='bg-[#eaeffa] rounde-lg px-3  py-2  flex items-center justify-between w-full hover:cursor-pointer'> {category } <span className='text-red-500'>x</span></div>} 
+       {discount!=='all' && <div  onClick={()=>setDiscount('all')} className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'> {discount}%<span className='text-red-500'>x</span></div>}
+       {company!=='all' && <div  onClick={()=>setCompany('all')}  className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'>{ company} <span className='text-red-500'>x</span> </div>}
+       {size!=='all' && <div  onClick={()=>setSize('all')}  className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'>{size} <span className='text-red-500'>x</span></div>}
+       {price!=='0' && <div  onClick={()=>setPrice('0')}  className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'>${price} <span className='text-red-500'>x</span></div>}
+
+     </div>
+   
     {/* input fields */}
     <div className='flex flex-col w-full space-y-7 p-4 rounded-md bg-slate-100'>
 

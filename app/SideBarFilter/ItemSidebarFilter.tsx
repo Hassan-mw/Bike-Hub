@@ -9,7 +9,6 @@ const jost=Jost({
 })
 
 
-
 import {
   Sheet,
   SheetClose,
@@ -20,9 +19,11 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-import SideBarData from './SideBarData'
+
+
 import { Jost } from 'next/font/google';
 import { RxHamburgerMenu } from "react-icons/rx";
+import ItemSideBarData from './ItemSideBarData';
 const ItemSidebarFilter = () => {
   return (
     <div> 
@@ -36,7 +37,7 @@ const ItemSidebarFilter = () => {
            <SheetClose className={` ${jost.className} hover:cursor-pointer  flex items-center justify-center text-sm text-red-600 `}><div><IoMdClose  size={20} /> </div>Close</SheetClose>
            </div></SheetTitle>
         <SheetDescription>
-          <SideBarData/>
+          <ItemSideBarData/>
         </SheetDescription>
       </SheetHeader>
       <SheetFooter>
