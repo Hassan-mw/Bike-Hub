@@ -9,6 +9,15 @@ const jost=Jost({
   })
 
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+ 
+
+
 const LeftBikeDetails = () => {
 
     const engineData=[
@@ -65,13 +74,27 @@ const LeftBikeDetails = () => {
 
    </div>    
    {/* Full Bike details */}
+
    <div className='w-full flex flex-col space-y-9 items-start justify-start '>
-   <div  className={`${jost.className} text-3xl md:text-4xl`}> Full Bike Details</div>
+   <Accordion type="single" className='w-full' collapsible>
+  <AccordionItem value="item-1">
+    <AccordionTrigger>  <div  className={`${jost.className} text-3xl md:text-4xl`}> Full Bike Details</div></AccordionTrigger>
+    <AccordionContent  className='flex flex-col items-start justify-start space-y-10  w-full '>
+ 
    {/* Coloum of details */}
-   <div className='flex flex-col items-start justify-start space-y-10  w-full'>
+   {/* <div> */}
     {/* 1 */}
-    <div className='flex flex-col w-full space-y-4 '>
-     <div className={`${jost.className}`}>Engine</div>
+
+    {/* <div className='flex flex-col w-full space-y-4 '> */}
+    {/* 1 */}
+    <Accordion type="single" className='w-full' collapsible>
+  <AccordionItem value="item-2">
+    <AccordionTrigger> 
+    <div className={`${jost.className} text-xl`}>Engine</div>
+
+         </AccordionTrigger>
+    <AccordionContent  className='flex flex-col items-start justify-start space-y-10  w-full '>
+ 
     <div className='flex flex-col space-y-1  w-full bg-red-40fg0'>
         { 
         engineData.map((data,index)=>
@@ -81,12 +104,22 @@ const LeftBikeDetails = () => {
         </div>
     ) }
      </div>
-    </div>
-    {/* 2 */}
-    <div className='flex flex-col w-full space-y-4 '>
-     <div className={`${jost.className}`}>Deive Train</div>
+    {/* </div> */}
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+
+     {/* 2 */}
+    <Accordion type="single" className='w-full' collapsible>
+  <AccordionItem value="item-2">
+    <AccordionTrigger> 
+    <div className={`${jost.className} text-xl`}>Driver Train</div>
+
+         </AccordionTrigger>
+    <AccordionContent  className='flex flex-col items-start justify-start space-y-10  w-full '>
+ 
     <div className='flex flex-col space-y-1  w-full bg-red-40fg0'>
-        { 
+    { 
        deiveTrain.map((data,index)=>
         <div key={index} className={`${jost.className} flex items-center justify-between bg-[#f7f7f7] p-3 rounded-sm`}>
      <div  className='text-xs md:text-sm'>{data.leftValue}</div>
@@ -94,12 +127,22 @@ const LeftBikeDetails = () => {
         </div>
     ) }
      </div>
-    </div>
-    {/* 3 */}
-    <div className='flex flex-col w-full space-y-4 '>
-     <div className={`${jost.className}`}>Chassis Suspension Brakes</div>
+    {/* </div> */}
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+
+     {/* 3 */}
+    <Accordion type="single" className='w-full' collapsible>
+  <AccordionItem value="item-2">
+    <AccordionTrigger> 
+    <div className={`${jost.className} text-xl`}>Chassis Suspension Brakes</div>
+
+         </AccordionTrigger>
+    <AccordionContent  className='flex flex-col items-start justify-start space-y-10  w-full '>
+ 
     <div className='flex flex-col space-y-1  w-full bg-red-40fg0'>
-        { 
+    { 
        brake.map((data,index)=>
         <div key={index} className={`${jost.className} flex items-center justify-between bg-[#f7f7f7] p-3 rounded-sm`}>
      <div  className='text-xs md:text-sm'>{data.leftValue}</div>
@@ -107,12 +150,21 @@ const LeftBikeDetails = () => {
         </div>
     ) }
      </div>
-    </div>
-    {/* 4 */}
-    <div className='flex flex-col w-full space-y-4 '>
-     <div className={`${jost.className}`}>Dimensions</div>
+    {/* </div> */}
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+     {/* 4 */}
+    <Accordion type="single" className='w-full' collapsible>
+  <AccordionItem value="item-2">
+    <AccordionTrigger> 
+    <div className={`${jost.className} text-xl `}>Dimensions</div>
+
+         </AccordionTrigger>
+    <AccordionContent  className='flex flex-col items-start justify-start space-y-10  w-full '>
+ 
     <div className='flex flex-col space-y-1  w-full bg-red-40fg0'>
-        { 
+    { 
        dimension.map((data,index)=>
         <div key={index} className={`${jost.className} flex items-center justify-between bg-[#f7f7f7] p-3 rounded-sm`}>
      <div  className='text-xs md:text-sm'>{data.leftValue}</div>
@@ -120,10 +172,16 @@ const LeftBikeDetails = () => {
         </div>
     ) }
      </div>
-    </div>
+    {/* </div> */}
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
 
-   </div>
-  
+
+   {/* </div> */}
+   </AccordionContent>
+  </AccordionItem>
+</Accordion>
    </div>
    </div>
   )
