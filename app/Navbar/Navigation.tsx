@@ -1,3 +1,4 @@
+
 import { Jost } from 'next/font/google'
 import Link from 'next/link'
 import React from 'react'
@@ -17,6 +18,7 @@ import { IoPerson } from 'react-icons/io5'
 
 
 
+
 const jost=Jost({
   weight:['500'],
   subsets:['latin']
@@ -25,6 +27,8 @@ const jost=Jost({
 
 
 const Navigation = () => {
+
+ 
   return (
     <div className={` ${jost.className} h-24 flex items-center justify-between w-full p-4  `}>
       <Link href="/"><img className='h-12 w-32 lg:w-40 rounded-4xl' src="./logo.png" alt='logo' /></Link>

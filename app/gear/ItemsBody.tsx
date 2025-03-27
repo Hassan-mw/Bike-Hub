@@ -56,7 +56,8 @@ const ItemsBody = ({result}:{result:BikeDataType[]}) => {
             <div className='w-full max-w-screen-lg flex flex-col items-center justify-center space-y-8'>
                {/* Top NAv BAR */}
          <div className="w-full flex items-center justify-between">
-         <div style={{fontWeight:300}} className={`${jost.className} text-sm lg:border-b lg:pb-1`}>Showing  {initial} – {final} of {result.length} results</div>
+         <div style={{fontWeight:300}} className={`${jost.className} text-smlg:border-b lg:pb-1`}>Showing {initial} – {final} of {result.length} results</div>
+
          
         
          <div className="">
