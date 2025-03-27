@@ -69,7 +69,7 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
        <div style={{fontWeight:400}} className={`${jost.className} text-md md:text-xl text-[#202124]`}> <Link className='text-[#888888]' href="/">Home</Link> / Bike Gear & Accessories</div>
       </div>
       {/* Down Body */}
-      <div className='w-full flex flex-col items-center justify-center p-3 py-10 bg-white'>
+      <div className='w-full flex flex-col items-center justify-center p-3 py-0 bg-white'>
      <Suspense  fallback={<div className='w-full h-full flex items-center justify-center'>
 
     

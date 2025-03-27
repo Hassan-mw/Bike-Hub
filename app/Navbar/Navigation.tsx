@@ -30,12 +30,12 @@ const Navigation = () => {
       <Link href="/"><img className='h-12 w-32 lg:w-40 rounded-4xl' src="./logo.png" alt='logo' /></Link>
       
       <div className='hidden sm:block'>
-      <div className='flex items-center justify-center space-x-6 lg:text-lg xl:text-xl hover:cursor-pointer '>
-        <Link href='/bike' className={` ${jost.className} text-lg   hover:text-[#1967d2] duration-500 `}>Bikes</Link>
-        <Link href='/gear' className={` ${jost.className} text-lg   hover:text-[#1967d2] duration-500 `}>Gears</Link>
-        <div className={` ${jost.className} text-lg   hover:text-[#1967d2] duration-500 `}>Campare</div>
-        <div className={` ${jost.className} text-lg  hover:text-[#1967d2] duration-500 `}>FAQ</div>
-        <div className='border-2 py-2 px-5 duration-500 hover:border-white  rounded-2xl border-[#1967d2] hover:bg-[#1967d2] hover:text-white'>Login / Signup</div>
+      <div className='flex items-center justify-center space-x-7 lg:space-x-12 lg:text-lg xl:text-xl hover:cursor-pointer '>
+        <Link style={{fontWeight:300}} href='/bike' className={` ${jost.className} text-md   hover:text-[#1967d2] duration-500 `}>Bikes</Link>
+        <Link  style={{fontWeight:300}}  href='/gear' className={` ${jost.className} text-md   hover:text-[#1967d2] duration-500 `}>Gears</Link>
+        <div  style={{fontWeight:300}}  className={` ${jost.className} text-md   hover:text-[#1967d2] duration-500 `}>Campare</div>
+        <div  style={{fontWeight:300}}  className={` ${jost.className} text-md  hover:text-[#1967d2] duration-500 `}>FAQ</div>
+        <div  style={{fontWeight:300}}  className='border-2 py-2 px-5 duration-500 hover:border-white  rounded-2xl border-[#1967d2] hover:bg-[#1967d2] hover:text-white'>Login / Signup</div>
       </div>
       </div>
       <div className=" sm:hidden ">

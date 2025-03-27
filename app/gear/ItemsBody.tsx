@@ -56,12 +56,12 @@ const ItemsBody = ({result}:{result:BikeDataType[]}) => {
             <div className='w-full max-w-screen-lg flex flex-col items-center justify-center space-y-8'>
                {/* Top NAv BAR */}
          <div className="w-full flex items-center justify-between">
-         <div style={{fontWeight:300}} className={`${jost.className} text-smlg:border-b lg:pb-1`}>Showing {initial} – {final} of {result.length} results</div>
+         <div style={{fontWeight:300}} className={`${jost.className} text-sm lg:border-b lg:pb-1`}>Showing  {initial} – {final} of {result.length} results</div>
          
         
          <div className="">
   
-          <select style={{fontWeight:300}} className={`${jost.className} w-36 md:w-52 border px-3 py-2 rounded-md focus:border-blue-400`}>
+          <select style={{fontWeight:300}} className={`${jost.className} w-36 md:w-52 border-4 px-3 py-2 rounded-md focus:border-blue-400`}>
             <option>All</option>
             <option>Oldest</option>
             <option>Newest</option>
@@ -71,8 +71,9 @@ const ItemsBody = ({result}:{result:BikeDataType[]}) => {
           </div> 
              <div className='w-full max-w-screen-lg grid grid-cols-1 sm:grid-cols-2  xl: gap-10 '>
            { paginatedData.map((data,index:number)=>(
+            
             <Link href="/" key={index} className='w-full border-4 flex flex-col items-center justify-center space-y-1 bg-[#f4f7fc] rounded-xl p-2 py-4 relative'>
-                      <div className={`${jost.className} top-3 left-5 absolute bg-[#2d972f] ${data.discount.length===1?' px-2' :  'px-1'} py-2 flex items-center justify-center text-xs rounded-full text-white`}>{data.discount}%</div>
+                      <div className={`${jost.className} top-3 left-5 absolute bg-[#2d972f] size-9 flex items-center justify-center text-xs rounded-full text-white`}>{data.discount}%</div>
                       <div className={`${jost.className} top-5 right-5 absolute text-[#2d972f] text-xl hover:text-blue-600 duration-500 hover:cursor-pointer`}><FaHeart  /></div>
                   <img loading='lazy' className='size-48' src={` /${data.image}`}/>
                   <div className={`${jost.className} text-xl`}>{data.name}</div>
