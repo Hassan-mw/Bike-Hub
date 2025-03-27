@@ -22,7 +22,7 @@ export default getAllBike;
 
 
 export const getAllItems=async({filter}:{filter:URLSearchParams})=>{
-    console.log(filter)
+    console.log(filter,'🐴🐴🐴🐴🐴🐴🐴🐴🐴🐴🐴🐴🐴🐴🐴🐴🐴🐴🐴')
 try{ 
 const queryString=new URLSearchParams(filter).toString()
 

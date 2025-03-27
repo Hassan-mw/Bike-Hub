@@ -161,7 +161,7 @@ function handleFuleTypeChange(){
           <div style={{fontWeight:500}} className={` ${jost.className} text-lg`}>Price</div>
               <div style={{fontWeight:500}} className={` ${jost.className} w-full flex items-center justify-center text-sm text-blue-500`}>$ {price} </div>
                     <div className='w-full'>
-                       <input type='range' min='0'   value={price} max='50000'   onChange={(e) => setPrice(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
+                       <input type='range' min='0'   value={price} max='500'   onChange={(e) => setPrice(e.target.value)} placeholder='City or postcode' className={`w-full h-1 placeholder:${jost.className}`}  />       
                           </div>
                 
            </div>
