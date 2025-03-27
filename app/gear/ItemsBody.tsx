@@ -15,17 +15,12 @@ const jost=Jost({
 interface BikeDataType {
     _id:number;
     name: string;
-    brand: string;
     category: string;
     price: number; // ✅ Fix: Change 'Number' to 'number'
-    mileage: number; // ✅ Fix: Change 'Number' to 'number'
-    topSpeed: number; // ✅ Fix: Change 'Number' to 'number'
-    weight: number; // ✅ Fix: Change 'Number' to 'number'
-    url: string;
-    fuelType: string;
-    slug: string;
-    status: string;
+    discount: string;
+    subtitle: string;
     image:string;
+    size:string;
   }
 
 
