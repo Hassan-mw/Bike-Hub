@@ -77,13 +77,9 @@ console.log(left,right,'🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬')
 </div>
 </div>}>
 
-   { 
-   left!=='none' || right!=='none' ?
-      <CompareBikeBody/>
-    :
-    <div>You selected boyh bikes.</div>
 
-    }
+      <CompareBikeBody left={left} right={right}/>
+
      </Suspense>
     </div>
 

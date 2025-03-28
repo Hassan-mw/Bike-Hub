@@ -45,7 +45,7 @@ const BikeSelector = ({value,type,border}:{value:string,type:string,border:strin
   return (
 
     <div className={`${jost.className} w-full flex items-center justify-center h-80 ${border} relative group hover:cursor-pointer `}>
-
+{selectBike==='none' ?
     <DropdownMenu >
     <DropdownMenuTrigger asChild>
       <div  className='border-none hover:cursor-pointer bg-none hover:bg-none shadow-none'> 
@@ -69,7 +69,12 @@ const BikeSelector = ({value,type,border}:{value:string,type:string,border:strin
       </DropdownMenuGroup>
     </DropdownMenuContent>
   </DropdownMenu>   
-    
+  :
+<div className='flex flex-col space-y-3'>
+  {selectBike}
+  <div className='text-red-500' onClick={()=>setSelectBike('none')}>Cancel</div>
+  </div>
+  }
      <div className={`${jost.className} ${type} `}>vs</div>
       </div>
 

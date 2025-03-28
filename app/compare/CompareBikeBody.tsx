@@ -9,16 +9,16 @@ const jost=Jost({
   subsets:['latin']
 })
 
-const CompareBikeBody =() => {
-
+const CompareBikeBody =({left,right}:{left:string,right:string}) => {
+console.log(left,right,'🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺🐺')
   return (
     <div className='w-full flex flex-col space-y-5 items-center justify-center '> 
 
     <div className='w-full max-w-screen-xl flex items-center justify-between   '>
-        <BikeLeft/>
+        <BikeLeft />
         <BikeRight/>
     </div>
-    <div className={`${jost.className} bg-green-400 text-white hover:cursor-pointer hover:bg-green-600 duration-500 rounded-md px-4 py-2`}>Compare Bikes</div>
+  { (left!=='none' && right!=='none') && <div className={`${jost.className} bg-green-400 text-white hover:cursor-pointer hover:bg-green-600 duration-500 rounded-md px-4 py-2`}>Compare Bikes</div>}
     </div>
   )
 }
