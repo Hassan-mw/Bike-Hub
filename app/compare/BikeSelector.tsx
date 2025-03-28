@@ -29,7 +29,7 @@ const jost=Jost({
 })
 
 
-const BikeLeftSelector = ({value,type,border}:{value:string,type:string,border:string}) => {
+const BikeSelector = ({value,type,border}:{value:string,type:string,border:string}) => {
     const [selectBike,setSelectBike]=useState('none')
     console.log(selectBike)
     const pathname=usePathname();
@@ -76,4 +76,4 @@ const BikeLeftSelector = ({value,type,border}:{value:string,type:string,border:s
   )
 }
 
-export default BikeLeftSelector
+export default BikeSelector
