@@ -54,7 +54,8 @@ return (
 
 const page = async({searchParams}:{searchParams:{left:string,right:string}}) => {
 
-  const {left,right}=await searchParams
+  const left = searchParams.left || "none";  // ✅ No need to await
+  const right = searchParams.right || "none"; 
 console.log(left,right,'🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬')
 
   return (

@@ -1,3 +1,4 @@
+'use client';
 import BikeSelector from "./BikeSelector"
 
 const BikeLeft =async () => {

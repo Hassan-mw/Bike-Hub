@@ -1,3 +1,5 @@
+'use client';
+
 import { Jost } from 'next/font/google'
 import React from 'react'
 import BikeSelector from './BikeSelector'

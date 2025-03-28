@@ -38,9 +38,11 @@ const BikeSelector = ({value,type,border}:{value:string,type:string,border:strin
  
 
     useEffect(()=>{
+      if(selectBike!=='none'){
         const params=new URLSearchParams(searchParams);
         params.set(value,selectBike)
           router.replace(`${pathname}?${params.toString()}`)
+        }
     },[selectBike])
   return (
 
