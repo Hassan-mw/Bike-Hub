@@ -52,19 +52,10 @@ return (
 
 
 
-const page = async({searchParams}:{searchParams:URLSearchParams}) => {
+const page = async({searchParams}:{searchParams:{left:string,right:string}}) => {
 
-  const filter=await searchParams
- const result:{status:String,message:string,data:BikeDataType[]}=await getAllBike({filter})
- console.log(result)
- if(result.status==='fail'){
-  return (
-    <div className='w-full flex items-center justify-center h-[90vh] text-4xl'>
-     There was some probleam in data fetching
-    </div>
-  )
- }
-
+  const {left,right}=await searchParams
+console.log(left,right,'🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬')
 
   return (
     <div className='w-full '>
@@ -86,8 +77,13 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
 </div>
 </div>}>
 
-    
+   { 
+   left!=='none' || right!=='none' ?
       <CompareBikeBody/>
+    :
+    <div>You selected boyh bikes.</div>
+
+    }
      </Suspense>
     </div>
 
