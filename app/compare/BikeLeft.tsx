@@ -6,7 +6,7 @@ const BikeLeft =async () => {
     <div className='w-full flex flex-col space-y-3'>
 
     <div>
-      <BikeLeftSelector value={value}/>
+      <BikeLeftSelector border='z-20 border-y-4 border-l-4 rounded-md rounded-r-none' type='absolute top-1/2 -right-7 text-2xl  size-12 border-4 bg-white rounded-full text-red-400 flex items-center justify-center' value={value}/>
       </div> 
     </div>
   )

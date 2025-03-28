@@ -29,7 +29,7 @@ const jost=Jost({
 })
 
 
-const BikeLeftSelector = ({value}:{value:string}) => {
+const BikeLeftSelector = ({value,type,border}:{value:string,type:string,border:string}) => {
     const [selectBike,setSelectBike]=useState('none')
     console.log(selectBike)
     const pathname=usePathname();
@@ -44,7 +44,7 @@ const BikeLeftSelector = ({value}:{value:string}) => {
     },[selectBike])
   return (
 
-    <div className={`${jost.className} w-full flex items-center justify-center h-80 border-y-4 border-l-4 rounded-md rounded-r-none relative group hover:cursor-pointer `}>
+    <div className={`${jost.className} w-full flex items-center justify-center h-80 ${border} relative group hover:cursor-pointer `}>
 
     <DropdownMenu >
     <DropdownMenuTrigger asChild>
@@ -70,7 +70,7 @@ const BikeLeftSelector = ({value}:{value:string}) => {
     </DropdownMenuContent>
   </DropdownMenu>   
     
-     <div className={`${jost.className} absolute top-1/2 -right-7 text-2xl  size-12 border-4 bg-white rounded-full text-red-400 flex items-center justify-center`}>vs</div>
+     <div className={`${jost.className} ${type} `}>vs</div>
       </div>
 
   )
