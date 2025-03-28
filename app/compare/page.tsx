@@ -69,9 +69,9 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
   return (
     <div className='w-full '>
             {/* Upper Body */}
-      <div className='w-full flex flex-col space-y-2 py-10 lg:py-20 items-center justify-center bg-[#f4f7fc] border-t'>
-       <div className={`${jost.className} text-5xl text-[#202124]`}>Bike List</div>
-       <div style={{fontWeight:400}} className={`${jost.className} text-2xl text-[#202124]`}> <Link className='text-[#888888]' href="/">Home</Link> / Bike List</div>
+      <div className='w-full flex flex-col space-y-2 py-10 items-center justify-center bg-[#f4f7fc] border-t'>
+       <div className={`${jost.className} text-3xl text-[#202124]`}>Bike Compare</div>
+       <div style={{fontWeight:400}} className={`${jost.className} text-xl text-[#202124]`}> <Link className='text-[#888888]' href="/">Home</Link> / Bike Compare</div>
       </div>
       {/* Down Body */}
       <div className='w-full flex flex-col items-center justify-center p-3  bg-white'>

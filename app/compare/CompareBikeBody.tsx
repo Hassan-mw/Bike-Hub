@@ -1,8 +1,13 @@
 import React from 'react'
+import BikeLeft from './BikeLeft'
+import BikeRight from './BikeRight'
 
 const CompareBikeBody = () => {
   return (
-    <div>CompareBikeBody</div>
+    <div className='w-full grid grid-cols-2'>
+        <BikeLeft/>
+        <BikeRight/>
+    </div>
   )
 }
 
