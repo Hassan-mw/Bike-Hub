@@ -56,7 +56,7 @@ const page = async({searchParams}:{searchParams:{left:string,right:string}}) => 
 
   const left = searchParams.left || "none";  // ✅ No need to await
   const right = searchParams.right || "none"; 
-console.log(left,right,'🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬')
+
 
   return (
     <div className='w-full '>
@@ -67,21 +67,11 @@ console.log(left,right,'🤬🤬🤬🤬🤬🤬🤬🤬🤬🤬')
       </div>
       {/* Down Body */}
       <div className='w-full flex flex-col items-center justify-center p-3  bg-white'>
-     <Suspense  fallback={<div className='w-full h-full flex items-center justify-center'>
-
-    
-<div className="flex w-52 flex-col gap-4">
-<div className="skeleton h-32 w-full"></div>
-<div className="skeleton h-4 w-28"></div>
-<div className="skeleton h-4 w-full"></div>
-<div className="skeleton h-4 w-full"></div>
-</div>
-</div>}>
-
+  
 
       <CompareBikeBody left={left} right={right}/>
 
-     </Suspense>
+
     </div>
 
     </div>

@@ -1,7 +1,7 @@
 'use client';
 import BikeSelector from "./BikeSelector"
 
-const BikeLeft =async () => {
+const BikeLeft = () => {
     const value="left";
   return (
     <div className='w-full flex flex-col space-y-3'>

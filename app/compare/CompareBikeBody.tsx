@@ -15,7 +15,7 @@ const CompareBikeBody =({left,right}:{left:string,right:string}) => {
   return (
     <div className='w-full flex flex-col space-y-5 items-center justify-center '>
   {   !showResult ? (
-<div className='w-full flex items-center justify-center'>
+<div className='w-full flex flex-col items-center justify-center'>
     <div className='w-full max-w-screen-xl flex items-center justify-between   '>
         <BikeLeft />
         <BikeRight/>

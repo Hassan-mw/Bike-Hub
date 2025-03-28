@@ -17,7 +17,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { usePathname, useSearchParams } from 'next/navigation';
-import path from 'path';
 import { useRouter } from 'next/navigation';
  
 
@@ -31,19 +30,18 @@ const jost=Jost({
 
 const BikeSelector = ({value,type,border}:{value:string,type:string,border:string}) => {
     const [selectBike,setSelectBike]=useState('none')
-    console.log(selectBike)
     const pathname=usePathname();
     const searchParams=useSearchParams()
     const router=useRouter()
  
 
-    useEffect(()=>{
-      if(selectBike!=='none'){
-        const params=new URLSearchParams(searchParams);
-        params.set(value,selectBike)
-          router.replace(`${pathname}?${params.toString()}`)
-        }
-    },[selectBike])
+    function  updateBikeSelection (bike: string)  {
+      setSelectBike(bike);
+      const params = new URLSearchParams(searchParams);
+      params.set(value, bike);
+      router.replace(`${pathname}?${params.toString()}`);
+    };
+    
   return (
 
     <div className={`${jost.className} w-full flex items-center justify-center h-80 ${border} relative group hover:cursor-pointer `}>
@@ -61,7 +59,10 @@ const BikeSelector = ({value,type,border}:{value:string,type:string,border:strin
           <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
-              <DropdownMenuItem onClick={()=>setSelectBike('YBR 125')}>Email</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => updateBikeSelection('YBR 125')}>Email</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => updateBikeSelection('Honda 125')}>Email</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => updateBikeSelection('Suzuki 150')}>Email</DropdownMenuItem>
+
               <DropdownMenuItem>Message</DropdownMenuItem>
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
