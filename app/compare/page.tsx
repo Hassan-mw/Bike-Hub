@@ -59,6 +59,12 @@ const page = async({searchParams}:{searchParams:{left:string,right:string}}) => 
 
   const leftBike=await getBikeById({bikeNames:left}) || []
   const rightBike=await getBikeById({bikeNames:right}) || []
+  console.log(left,right)
+  
+  if(left!=='none' && right!=='none'){
+    console.log('🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇')
+  }
+
 
   return (
     <div className='w-full '>

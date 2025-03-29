@@ -47,6 +47,7 @@ interface parametersTyes{
 
 
 const CompareBikeBody =({leftBike,rightBike,left,right}:parametersTyes) => {
+  
    const [showResult,setShowResult]=useState(false)
   return (
     <div className='w-full flex flex-col space-y-5 items-center justify-center '>

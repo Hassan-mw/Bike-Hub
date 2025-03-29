@@ -29,34 +29,35 @@ const jost=Jost({
 
 
 const BikeSelector = ({value,type,border}:{value:string,type:string,border:string}) => {
-
-    const [selectBike,setSelectBike]=useState('')
-    const [selectedBikeName,setSelectedBikeName]=useState('')
-    const pathname=usePathname();
-    const searchParams=useSearchParams()
-    const router=useRouter()
+  const [selectBike,setSelectBike]=useState('')
+  const [selectedBikeName,setSelectedBikeName]=useState('')
+  const pathname=usePathname();
+  const searchParams=useSearchParams()
+  const router=useRouter()
+  console.log(selectBike,selectedBikeName,'🐖🐖🐖🐖🐖🐖🐖🐖🐖🐖')
 
 
     function  updateBikeSelection (bike: string,name:string)  {
       setSelectedBikeName(name);
       setSelectBike(bike);
+      // console.log(selectBike,bike)
+      // const params = new URLSearchParams(searchParams);
+      // if (bike !== '' ) {
+        // params.set(value, bike);
+      // } else {
+
+      //   params.delete(value);
+      // }
+    
+      // router.replace(`${pathname}?${params.toString()}`, { scroll: false });
     };
 
 
     useEffect(() => {
       const params = new URLSearchParams(searchParams);
-    
-      if (selectBike !== '' && selectedBikeName !== '') {
-        // If both are set, update the query param
-        params.set(value, selectBike);
-      } else {
-        // If either is empty, remove the param
-        params.delete('left');
-        params.delete('right');
-      }
-    
+      params.set(value, selectBike);
       router.replace(`${pathname}?${params.toString()}`, { scroll: false });
-    }, [selectBike, selectedBikeName, value]);
+    }, [selectBike]);
     
     
   return (
