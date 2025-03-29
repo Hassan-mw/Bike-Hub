@@ -71,7 +71,7 @@ console.log(rightBike,'😈👺👺👺👺👺👺👺👺👺👺💩💩💩�
       <div className='w-full flex flex-col items-center justify-center p-3  bg-white'>
   
 
-      <CompareBikeBody leftBike={leftBike} rightBike={rightBike}  left={left} right={right}/>
+      <CompareBikeBody leftBike={leftBike.bike} rightBike={rightBike.bike}  left={left} right={right}/>
 
 
     </div>

@@ -21,8 +21,8 @@ interface BikeDataType {
 interface parametersTyes{
   left:string;
   right:string;
-  leftBike:BikeDataType[];
-  rightBike:BikeDataType[];
+  leftBike:BikeDataType;
+  rightBike:BikeDataType;
 }
 
 const CompareBothBike = ({leftBike,rightBike}:parametersTyes) => {
