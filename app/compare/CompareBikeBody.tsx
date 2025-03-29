@@ -11,15 +11,31 @@ const jost=Jost({
   subsets:['latin']
 })
 
-interface ParametersTyoes{
+interface BikeDataType {
+  _id:number;
+  name: string;
+  brand: string;
+  category: string;
+  price: number; // ✅ Fix: Change 'Number' to 'number'
+  mileage: number; // ✅ Fix: Change 'Number' to 'number'
+  topSpeed: number; // ✅ Fix: Change 'Number' to 'number'
+  weight: number; // ✅ Fix: Change 'Number' to 'number'
+  url: string;
+  fuelType: string;
+  slug: string;
+  status: string;
+  image:string;
+}
+
+interface parametersTyes{
   left:string;
   right:string;
-  leftBike:bikeParamsDataType[]
-  rightBike:bikeParamsDataType[]
+  leftBike:BikeDataType[];
+  rightBike:BikeDataType[];
 }
 
 
-const CompareBikeBody =({leftBike,rightBike,left,right}:{left:string,right:string}) => {
+const CompareBikeBody =({leftBike,rightBike,left,right}:parametersTyes) => {
    const [showResult,setShowResult]=useState(false)
   return (
     <div className='w-full flex flex-col space-y-5 items-center justify-center '>
@@ -34,7 +50,7 @@ const CompareBikeBody =({leftBike,rightBike,left,right}:{left:string,right:strin
  :
  
  
-<CompareBothBike/>
+<CompareBothBike leftBike={leftBike} rightBike={rightBike}    />
 
  }
    
