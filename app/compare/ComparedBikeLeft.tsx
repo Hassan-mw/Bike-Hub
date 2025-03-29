@@ -17,19 +17,18 @@ interface BikeDataType {
     image:string;
   }
 
-  interface ParamsDatType{
+  interface ParamsDataType{
     data:BikeDataType
   }
 
-const ComparedBikeLeft = ({data}:ParamsDatType) => {
-    console.log(data)
+const ComparedBikeLeft = ({data}:ParamsDataType) => {
+
     const {brand,image}=data
-console.log(brand,image,'🐆🐆🐆🐆🐆🐆🐆🐆🐆🐆🐆🐆🐆🐆🐆🐆🐆🐆')
+
 
   return (
     <div className='w-full flex flex-col space-y-3'>
-        <CompareBikeData/>
-        <img src={`/${image}`}/>
+        <CompareBikeData image={image} />
 
     </div>
   )
