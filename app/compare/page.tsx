@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React, { Suspense } from 'react'
 import SideBarFilter from '../SideBarFilter/SideBarFilter'
 import SideBarData from '../SideBarFilter/SideBarData'
-import getAllBike from '../DataFetching/api'
+import getAllBike, { getBikeById } from '../DataFetching/api'
 import Pagination from '@/components/Pagination'
 import CompareBikeBody from './CompareBikeBody'
 
@@ -56,8 +56,10 @@ const page = async({searchParams}:{searchParams:{left:string,right:string}}) => 
 
   const left = searchParams.left || "none";  // ✅ No need to await
   const right = searchParams.right || "none"; 
-
-
+  const leftBike=await getBikeById({bikeNames:left})
+  const rightBike=await getBikeById({bikeNames:right})
+console.log(leftBike,'😈😈😈😈😈😈😈😈😈😈😈😈😈')
+console.log(rightBike,'😈👺👺👺👺👺👺👺👺👺👺💩💩💩💩💩💩💩💩💩')
   return (
     <div className='w-full '>
             {/* Upper Body */}
@@ -69,7 +71,7 @@ const page = async({searchParams}:{searchParams:{left:string,right:string}}) => 
       <div className='w-full flex flex-col items-center justify-center p-3  bg-white'>
   
 
-      <CompareBikeBody left={left} right={right}/>
+      <CompareBikeBody leftBike={leftBike} rightBike={rightBike}  left={left} right={right}/>
 
 
     </div>
