@@ -2,6 +2,9 @@ import React from 'react'
 import ComparedBikeLeft from './ComparedBikeLeft'
 import ComparedBikeRight from './ComparedBikeRight'
 
+import { MdCompareArrows } from "react-icons/md";
+
+
 interface BikeDataType {
   _id:number;
   name: string;
@@ -29,9 +32,9 @@ interface parametersTyes{
 const CompareBothBike = ({leftBike,rightBike}:parametersTyes) => {
   return (
     <div className='w-full flex flex-col items-center justify-center space-y-4 py-20 px-5'>
-    <div className='w-full max-w-screen-xl flex items-center justify-between   '>
+    <div className='w-full max-w-screen-xl flex items-center justify-between space-x-4  '>
         <ComparedBikeLeft data={leftBike} />
-        <div className='text-4xl text-red-500 '>vs</div>
+        <MdCompareArrows />
         <ComparedBikeRight data={rightBike}/>
     </div>
  

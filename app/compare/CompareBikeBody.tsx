@@ -25,13 +25,14 @@ interface BikeDataType {
   slug: string;
   status: string;
   image:string;
+  model:string
 }
 
 interface parametersTyes{
   left:string;
   right:string;
-  leftBike:BikeDataType[];
-  rightBike:BikeDataType[];
+  leftBike:BikeDataType;
+  rightBike:BikeDataType;
 }
 
 
@@ -50,7 +51,7 @@ const CompareBikeBody =({leftBike,rightBike,left,right}:parametersTyes) => {
  :
  
  
-<CompareBothBike leftBike={leftBike} rightBike={rightBike}    />
+<CompareBothBike leftBike={leftBike} rightBike={rightBike} left={''} right={''}    />
 
  }
    
