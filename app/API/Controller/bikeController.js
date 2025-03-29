@@ -69,8 +69,7 @@ exports.createBike=catchAsync(async(req,res,next)=>{
   })
 
 
-exports.getBikeByName=catchAsync(async(req,res,next)=>{
-  console.log(req.params.id,'😍😍😍😍😍😍😍')
+exports.getBikeById=catchAsync(async(req,res,next)=>{
     const bike=await BIKE.findById(req.params.id)
     res.status(200).json({
     status:'success',

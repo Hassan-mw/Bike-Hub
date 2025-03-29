@@ -54,15 +54,51 @@ const BikeSelector = ({value,type,border}:{value:string,type:string,border:strin
     </DropdownMenuTrigger>
     <DropdownMenuContent className="w-56">
       <DropdownMenuGroup>
-        
+        {/* 1 */}
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger>Invite users</DropdownMenuSubTrigger>
+          <DropdownMenuSubTrigger>Triump</DropdownMenuSubTrigger>
           <DropdownMenuPortal>
             <DropdownMenuSubContent>
-            <DropdownMenuItem onClick={() => updateBikeSelection('YBR 125')}>Email</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => updateBikeSelection('Honda 125')}>Email</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => updateBikeSelection('Suzuki 150')}>Email</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => updateBikeSelection('Tiger 900')}>Tiger 900</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => updateBikeSelection('Bonneville T100')}>Bonneville T100</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => updateBikeSelection('Speed Triple 1200 RS')}>Speed Triple 1200 RS</DropdownMenuItem>
 
+              <DropdownMenuItem>Message</DropdownMenuItem>
+            </DropdownMenuSubContent>
+          </DropdownMenuPortal>
+        </DropdownMenuSub>
+     
+        {/* 2 */}
+        <DropdownMenuSub>
+          <DropdownMenuSubTrigger>Ducati</DropdownMenuSubTrigger>
+          <DropdownMenuPortal>
+            <DropdownMenuSubContent>
+            <DropdownMenuItem onClick={() => updateBikeSelection('Panigale V 4')}>Panigale V 4</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => updateBikeSelection('multistrada V 4')}>multistrada V 4</DropdownMenuItem>
+              <DropdownMenuItem>Message</DropdownMenuItem>
+            </DropdownMenuSubContent>
+          </DropdownMenuPortal>
+        </DropdownMenuSub>
+     
+        {/* 2 */}
+        <DropdownMenuSub>
+          <DropdownMenuSubTrigger>Ducati</DropdownMenuSubTrigger>
+          <DropdownMenuPortal>
+            <DropdownMenuSubContent>
+            <DropdownMenuItem onClick={() => updateBikeSelection('Panigale V 4')}>Panigale V 4</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => updateBikeSelection('multistrada V 4')}>multistrada V 4</DropdownMenuItem>
+              <DropdownMenuItem>Message</DropdownMenuItem>
+            </DropdownMenuSubContent>
+          </DropdownMenuPortal>
+        </DropdownMenuSub>
+     
+        {/* 2 */}
+        <DropdownMenuSub>
+          <DropdownMenuSubTrigger>Harley Davidson</DropdownMenuSubTrigger>
+          <DropdownMenuPortal>
+            <DropdownMenuSubContent>
+            <DropdownMenuItem onClick={() => updateBikeSelection('panigale-v-4')}>Panigale V 4</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => updateBikeSelection('multistrada-v-4')}>multistrada V 4</DropdownMenuItem>
               <DropdownMenuItem>Message</DropdownMenuItem>
             </DropdownMenuSubContent>
           </DropdownMenuPortal>

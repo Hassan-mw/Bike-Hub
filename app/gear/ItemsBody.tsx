@@ -40,14 +40,14 @@ const ItemsBody = ({result}:{result:BikeDataType[]}) => {
        <>
         {/* Left Body */}
         <div className='w-full   max-w-screen-xl flex items-center justify-between  lg:justify-end pb-16'>
-        <div className='lg:hidden'> <ItemSideBarFilter/></div>
+        <div className='lg:hidden p-6'> <ItemSideBarFilter/></div>
        {/* <div className={`${jost.className} md:text-xl lg:text-2xl lg:border-b lg:pb-1`}>Showing {initial} – {final} of {result.length} results</div> */}
         </div> 
 
 
        {/* Right Body */}
         <div className='w-full  flex  items-start justify-center lg:space-x-6'>
-        <div className='hidden lg:block'><ItemSideBarData/></div>
+        <div className='hidden lg:block '><ItemSideBarData/></div>
            {/* data */}
             
             {
