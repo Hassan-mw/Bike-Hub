@@ -16,6 +16,7 @@ interface BikeDataType {
   slug: string;
   status: string;
   image:string;
+  model:string;
 }
 
 interface parametersTyes{
@@ -30,6 +31,7 @@ const CompareBothBike = ({leftBike,rightBike}:parametersTyes) => {
     <div className='w-full flex flex-col items-center justify-center space-y-4 py-20 px-5'>
     <div className='w-full max-w-screen-xl flex items-center justify-between   '>
         <ComparedBikeLeft data={leftBike} />
+        <div className='text-4xl text-red-500 '>vs</div>
         <ComparedBikeRight data={rightBike}/>
     </div>
  
