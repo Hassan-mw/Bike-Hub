@@ -27,11 +27,14 @@ interface parametersTyes{
   right:string;
   leftBike:BikeDataType;
   rightBike:BikeDataType;
+  showResult:boolean;
+  setShowResult:any
 }
 
-const CompareBothBike = ({leftBike,rightBike}:parametersTyes) => {
+const CompareBothBike = ({showResult,setShowResult,leftBike,rightBike}:parametersTyes) => {
   return (
     <div className='w-full flex flex-col items-center justify-center space-y-4 py-20 px-5'>
+      <div onClick={()=>setShowResult(!showResult)}>Go Back</div>
     <div className='w-full max-w-screen-xl flex items-center justify-between space-x-4  '>
         <ComparedBikeLeft data={leftBike} />
         <MdCompareArrows />

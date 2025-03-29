@@ -29,23 +29,35 @@ const jost=Jost({
 
 
 const BikeSelector = ({value,type,border}:{value:string,type:string,border:string}) => {
+
     const [selectBike,setSelectBike]=useState('')
     const [selectedBikeName,setSelectedBikeName]=useState('')
     const pathname=usePathname();
     const searchParams=useSearchParams()
     const router=useRouter()
- console.log(selectBike,'🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀')
+
 
     function  updateBikeSelection (bike: string,name:string)  {
       setSelectedBikeName(name);
       setSelectBike(bike);
-      // if(selectBike!=='none'){
-        console.log('😽😽😽😽😽😽😽😽😽😽😽😽😽😽😽😽😽😽😽😽😽😽😽😽')
-      const params = new URLSearchParams(searchParams);
-     if(selectBike==='')  params.set(value, bike) ; else params.delete(value);
-      router.replace(`${pathname}?${params.toString()}`,{scroll:false});
-    // }
     };
+
+
+    useEffect(() => {
+      const params = new URLSearchParams(searchParams);
+    
+      if (selectBike !== '' && selectedBikeName !== '') {
+        // If both are set, update the query param
+        params.set(value, selectBike);
+      } else {
+        // If either is empty, remove the param
+        params.delete('left');
+        params.delete('right');
+      }
+    
+      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+    }, [selectBike, selectedBikeName, value]);
+    
     
   return (
 
@@ -53,8 +65,9 @@ const BikeSelector = ({value,type,border}:{value:string,type:string,border:strin
 {selectBike==='' ?
     <DropdownMenu >
     <DropdownMenuTrigger asChild>
-      <div  className='border-none hover:cursor-pointer bg-none hover:bg-none shadow-none'> 
-      <div className='size-16 flex items-center justify-center border-4 text-2xl rounded-full group-hover:border-green-500  duration-500  '>+</div>
+      <div  className='border-none hover:cursor-pointer bg-none hover:bg-none shadow-none flex flex-col items-center justify-center '> 
+      <div className='size-12 md:size-16 flex items-center justify-center border-4  text-xl md:text-2xl rounded-full group-hover:border-green-500  duration-500  '>+</div>
+      <div style={{fontWeight:300}} className={`${jost.className} text-sm`}>Select Bike</div>
     </div>
     </DropdownMenuTrigger>
     <DropdownMenuContent className={`${jost.className}  w-56 text-2xl`}>
