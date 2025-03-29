@@ -41,9 +41,7 @@ const ItemSidebarFilter = () => {
         </SheetDescription>
       </SheetHeader>
       <SheetFooter>
-        <SheetClose asChild>
-          <Button type="submit">Save changes</Button>
-        </SheetClose>
+      
       </SheetFooter>
     </SheetContent>
   </Sheet></div>

@@ -57,9 +57,9 @@ function handleFuleTypeChange(){
   return (
     <div>
         
-        <div className='w-full h-full flex flex-col  space-y-8  bg-white lg:border-4 lg:rounded-lg p-4  min-w-[350px]'>
+        <div className='w-full  flex flex-col  space-y-8  bg-white lg:border-4 lg:rounded-lg p-4  min-w-[350px]'>
    
-        <div  className={`${jost.className} w-full  grid grid-cols-3 gap-4 text-sm text-[#898989]`}>
+        <div  className={`${jost.className} w-full  grid grid-cols-3 gap-4 text-sm text-[#898989] `}>
        {category!=='all' && <div onClick={()=>setCategory('all')} className='bg-[#eaeffa] rounde-lg px-3  py-2  flex items-center justify-between w-full hover:cursor-pointer'> {category } <span className='text-red-500'>x</span></div>} 
        {brand!=='all' && <div  onClick={()=>setBrand('all')} className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'> {brand}<span className='text-red-500'>x</span></div>}
        {fuelType!=='all' && <div  onClick={()=>setFuelType('all')}  className='bg-[#eaeffa] rounde-lg px-3  py-2 flex items-center justify-between w-full hover:cursor-pointer'>{ fuelType} <span className='text-red-500'>x</span> </div>}
@@ -72,7 +72,7 @@ function handleFuleTypeChange(){
    
    
     {/* input fields */}
-    <div className='flex flex-col w-full space-y-7 p-4 rounded-md bg-slate-100'>
+    <div className='flex flex-col w-full h-full  space-y-7 p-4 rounded-md bg-slate-100 '>
 
 
            {/*  input Name  1*/}

@@ -75,7 +75,7 @@ const BikeSelector = ({value,type,border}:{value:string,type:string,border:strin
   :
 <div className='flex flex-col space-y-3'>
   {selectBike}
-  <div className='text-red-500' onClick={()=>setSelectBike('none')}>Cancel</div>
+  <div className='text-red-500' onClick={()=>updateBikeSelection('none')}>Cancel</div>
   </div>
   }
      <div className={`${jost.className} ${type} `}>vs</div>

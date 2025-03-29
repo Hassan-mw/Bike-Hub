@@ -25,12 +25,12 @@ import { Jost } from 'next/font/google';
 import { RxHamburgerMenu } from "react-icons/rx";
 const SideBarFilter = () => {
   return (
-    <div> 
+    <div className='  overflow-y-auto'> 
          <Sheet>
     <SheetTrigger asChild>
       <Button className='border-none hover:cursor-pointer shadow-none bg-[#f3f6fb] text-blue-500' variant="outline"><RxHamburgerMenu /> Show Sidebar</Button>
     </SheetTrigger>
-    <SheetContent>
+    <SheetContent className='h-full overflow-auto'>
       <SheetHeader>
         <SheetTitle> <div className="flex items-center justify-center  border-b py-3 ">
            <SheetClose className={` ${jost.className} hover:cursor-pointer  flex items-center justify-center text-sm text-red-600 `}><div><IoMdClose  size={20} /> </div>Close</SheetClose>
@@ -40,9 +40,6 @@ const SideBarFilter = () => {
         </SheetDescription>
       </SheetHeader>
       <SheetFooter>
-        <SheetClose asChild>
-          <Button type="submit">Save changes</Button>
-        </SheetClose>
       </SheetFooter>
     </SheetContent>
   </Sheet></div>
