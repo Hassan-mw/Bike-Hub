@@ -25,25 +25,25 @@ const PopularCompany = () => {
                             speed={40}
                             gap={112}>
                             <div className="flex">
-                            <img className='h-25' src='./c-h.png'/>
+                            <img className='h-20' src='./c-h.png'/>
                             </div>
 
                             <div className="flex">
-                            <img className='h-25  ' src='./c-s.png'/>
+                            <img className='h-20  ' src='./c-s.png'/>
                             </div>
                             <div className="flex">
-                           <img className='h-25  ' src="./c-bmw.png" />
+                           <img className='h-20  ' src="./c-bmw.png" />
                             </div>
                             <div className="flex">
-                            <img className='h-25  ' src="./c-d.png" />
+                            <img className='h-20  ' src="./c-d.png" />
 
                             </div>
                             <div className="flex">
-                            <img className='h-25  ' src="./c-y.png" />
+                            <img className='h-20  ' src="./c-y.png" />
 
                             </div>
                             <div className="flex">
-                            <img className='h-25 ' src="./c-hd.png" />
+                            <img className='h-20 ' src="./c-hd.png" />
 
                             </div>
                           

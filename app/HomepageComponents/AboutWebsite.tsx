@@ -1,6 +1,13 @@
 "use client";
 
 import Carousel from "@/components/ui/carousel";
+import { Jost } from "next/font/google";
+
+const jost=Jost({
+  weight:['500'],
+  subsets:['latin']
+})
+
 const AboutWebsite=() =>{
   const slideData = [
     {
@@ -31,7 +38,9 @@ const AboutWebsite=() =>{
   return (
     <div className="w-full flex items-center justify-center">
 
-    <div className=" overflow-hidden w-full max-w-screen-xl h-1/2 py-20  flex items-center justify-center">
+    <div className=" overflow-hidden w-full max-w-screen-xl h-1/2 py-20  flex flex-col space-y-14 items-center justify-center">
+    <div className={`${jost.className} text-black/80 text-3xl md:text-4xl`}> Your Ultimate Bike Hub</div>
+
       <Carousel slides={slideData} />
     </div>
     </div>

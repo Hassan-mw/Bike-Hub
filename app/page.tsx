@@ -15,7 +15,7 @@ import AboutWebsite from './HomepageComponents/AboutWebsite'
 
 const page = () => {
   return (
-    <div className='flex flex-col space-y-24 md:space-y-32 scroll-smooth'>
+    <div className='flex flex-col space-y-12 scroll-smooth'>
       <Hero/>
       <AboutWebsite/>
       <BikeDetails/>
