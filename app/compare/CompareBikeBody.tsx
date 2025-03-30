@@ -100,7 +100,7 @@ const value3='third';
         </div>
       <div className='w-full flex items-center justify-between'>
         <div onClick={handleClearAll} className={`${jost.className} bg-red-500 px-4 py-1 rounded-md text-white flex items-center justify-center`}>Clear All</div>
-           <div onClick={(pre)=>setShowResult(!pre)} className={`${jost.className} hover:cursor-pointer bg-green-500 px-4 py-1 rounded-md text-white flex items-center justify-center`}>Compare</div>
+           <div onClick={()=>setShowResult(true)} className={`${jost.className} hover:cursor-pointer bg-green-500 px-4 py-1 rounded-md text-white flex items-center justify-center`}>Compare</div>
         </div>  
     </div>
     </div>
@@ -108,7 +108,7 @@ const value3='third';
  :
  
  
-<CompareBothBike showResult={showResult} setShowResult={setShowResult} firstBike={firstBike} secondBike={secondBike} thirdBike={thiredBike}    />
+<CompareBothBike showResult={showResult} setShowResult={setShowResult} firstBike={firstBike} secondBike={secondBike} thirdBike={thirdBike}    />
 
  }
    

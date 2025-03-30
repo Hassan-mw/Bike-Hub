@@ -52,15 +52,15 @@ return (
 
 
 
-const page = async({searchParams}:{searchParams:{left:string,right:string}}) => {
+const page = async({searchParams}:{searchParams:{first:string,second:string,third:string}}) => {
 
   const first = searchParams.first || "none";  // ✅ No need to await
   const second = searchParams.second || "none"; 
-  const thired = searchParams.thired || "none"; 
+  const thired = searchParams.third || "none"; 
 
   const firstBike=await getBikeById({bikeNames:first}) || []
   const secondBike=await getBikeById({bikeNames:second}) || []
-  const thiredBike=await getBikeById({bikeNames:thired}) || []
+  const thirdBike=await getBikeById({bikeNames:thired}) || []
 
  
 
@@ -75,7 +75,7 @@ const page = async({searchParams}:{searchParams:{left:string,right:string}}) => 
       <div className='w-full flex flex-col items-center justify-center p-3  bg-white'>
   
 
-      <CompareBikeBody leftBike={leftBike.bike} rightBike={rightBike.bike}  />
+      <CompareBikeBody firstBike={firstBike.bike} secondBike={secondBike.bike}  thirdBike={thirdBike.bike} />
 
 
     </div>

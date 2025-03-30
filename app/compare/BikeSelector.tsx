@@ -44,7 +44,8 @@ const BikeSelector = ({bike,setBike,value}:{value:string,bike:{name:string,id:st
     useEffect(() => {
       const params = new URLSearchParams(searchParams);
       const storedBike = params.get(value);
-      if (bike.id ==='' ) {
+      console.log(bike.id,'👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽👽')
+      if (bike.id) {
         params.set(value, bike.id);
       } else {
         params.delete(value);
@@ -52,7 +53,7 @@ const BikeSelector = ({bike,setBike,value}:{value:string,bike:{name:string,id:st
     
       router.replace(`${pathname}?${params.toString()}`, { scroll: false });
 
-    }, [bike.id,bike.name, value]);
+    }, [bike.id,bike.name,bike,value]);
 
 
     

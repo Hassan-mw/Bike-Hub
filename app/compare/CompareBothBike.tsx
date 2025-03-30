@@ -33,13 +33,14 @@ const jost=Jost({
 interface parametersTyes{
   left:string;
   right:string;
-  leftBike:BikeDataType;
-  rightBike:BikeDataType;
+  firstBike:BikeDataType;
+  secondBike:BikeDataType;
+  thirdBike:BikeDataType;
   showResult:boolean;
   setShowResult:any
 }
 
-const CompareBothBike = ({showResult,setShowResult,leftBike,rightBike}:parametersTyes) => {
+const CompareBothBike = ({showResult,setShowResult,firstBike,secondBike,thirdBike}:parametersTyes) => {
 
   const handleGoBack = () => {
     setShowResult(false); // Ensure this only hides the comparison, not resets selection
@@ -51,9 +52,9 @@ const CompareBothBike = ({showResult,setShowResult,leftBike,rightBike}:parameter
      <div  className={`${jost.className} bg-blue-500 rounded-md px-2 hover:cursor-pointer text-white hover:bg-blue-600`}>Save it</div>
      </div> 
     <div className='w-full max-w-screen-xl flex items-center justify-between space-x-4  '>
-        <ComparedBikeLeft data={leftBike} />
+        <ComparedBikeLeft data={firstBike} />
         <MdCompareArrows />
-        <ComparedBikeRight data={rightBike}/>
+        <ComparedBikeRight data={secondBike}/>
     </div>
  
    </div>)
