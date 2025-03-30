@@ -41,11 +41,13 @@ interface parametersTyes{
 
 const CompareBothBike = ({showResult,setShowResult,leftBike,rightBike}:parametersTyes) => {
 
-
+  const handleGoBack = () => {
+    setShowResult(false); // Ensure this only hides the comparison, not resets selection
+  };
   return (
     <div className='w-full flex flex-col items-center justify-center space-y-6 py-20 px-5'>
     <div className='w-full max-w-screen-xl bg-[#f0f5f7] p-2 rounded-md  flex items-center justify-between'>
-     <div onClick={()=>setShowResult(!showResult)}>Go Back</div>  
+    <div onClick={handleGoBack}>Go Back</div> 
      <div  className={`${jost.className} bg-blue-500 rounded-md px-2 hover:cursor-pointer text-white hover:bg-blue-600`}>Save it</div>
      </div> 
     <div className='w-full max-w-screen-xl flex items-center justify-between space-x-4  '>

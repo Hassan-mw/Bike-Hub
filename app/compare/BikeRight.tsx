@@ -17,7 +17,7 @@ const value='right';
   return (
     <div className='w-full flex flex-col space-y-3'>
   <div>
-  <BikeSelector border='border-4 border-r-4 rounded-md ' type='hidden' value={value}/>
+  <BikeSelector border='border-4 border-r-4 rounded-y-md border-slate-600 ' type='hidden' value={value}/>
 
   </div>
     </div>
