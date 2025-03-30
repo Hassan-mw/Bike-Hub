@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import BikeLeft from './BikeLeft'
+import BikeLeft from './BikeOneSelector'
 import BikeRight from './BikeRight'
 import { Jost } from 'next/font/google'
 import CompareBothBike from './CompareBothBike'
@@ -75,13 +75,18 @@ const CompareBikeBody =({leftBike,rightBike,left,right}:parametersTyes) => {
     <div className={`${jost.className} text-2xl `}>Select Bike for Comparision</div>
     <div style={{fontWeight:300}} className={`${jost.className} text-sm  `}>Compare any bike that you like</div>
     </div>
-    <div className='w-full flex items-center justify-between  shadow-2xl bg-[#f2f3f3] p-3  '>
+       <div className='w-full flex flex-col space-y-4 shadow-2xl bg-[#f2f3f3] p-3'>
+    <div className='w-full flex items-center justify-between    '>
+
         <BikeLeft />
         <BikeRight/>
-        <div className='flex flex-col w-1/2'>
-           <div className='bg-green-500 w-full h-40 rounded-tr-md text-white flex items-center justify-center'>Compare</div>
-           {/* <div className='bg-red-500  w-full h-20  rounded-br-md text-white  flex items-center justify-center'>Cancel</div> */}
         </div>
+      <div className='w-full flex items-center justify-between'>
+        <div className='text-blue-500'>Clear</div>
+           <div className='bg-green-500 px-4 py-2 rounded-tr-md text-white flex items-center justify-center'>Compare</div>
+        </div>  
+           {/* <div className='bg-red-500  w-full h-20  rounded-br-md text-white  flex items-center justify-center'>Cancel</div> */}
+      
     </div>
     </div>
 

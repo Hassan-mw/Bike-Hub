@@ -78,12 +78,12 @@ const BikeSelector = ({value,type,border}:{value:string,type:string,border:strin
     
   return (
 
-    <div className={`${jost.className} w-full flex items-center justify-center h-40 ${border} relative group hover:cursor-pointer `}>
+    <div className={`${jost.className} w-full flex items-center justify-center h-16 ${border} relative group hover:cursor-pointer `}>
 {selectedBikeName===undefined ?
     <DropdownMenu >
     <DropdownMenuTrigger asChild>
       <div  className='border-none hover:cursor-pointer bg-none hover:bg-none shadow-none flex flex-col items-center justify-center '> 
-      <div className='size-12 md:size-16 flex items-center justify-center border-4  text-xl md:text-2xl rounded-full group-hover:border-green-500  duration-500  '>+</div>
+      {/* <div className='size-12 md:size-16 flex items-center justify-center   text-xl md:text-2xl rounded-full group-hover:border-green-500  duration-500  '>+</div> */}
       <div style={{fontWeight:300}} className={`${jost.className} text-sm`}>Select Bike</div>
     </div>
     </DropdownMenuTrigger>
