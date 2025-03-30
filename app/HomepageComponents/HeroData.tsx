@@ -29,18 +29,21 @@ import AutoCompleteINput from '../components-usage/AutoCompleteInput';
 const HeroData = () => {
   return (
     // <div className='flex space-y-3 xl:space-y-6 flex-col absolute  top-[50%]  left-9 text-white  font-extrabold w-full'>
-    <div className='flex space-y-3 xl:space-y-6  flex-col lg:absolute lg:top-[30%] lg:left-9  lg:text-white  font-extrabold w-full lg:w-5/6 bg-[#e5ebf5] lg:bg-transparent  text-[#494a4f]  px-7 lg:px-0 lg:py-0 py-14 '>
-    <div style={{fontWeight:500}} className={`${jost.className} text-2xl lg:text-5xl  z-20 `}>Ride the Future, Own the Road</div>
-    <div  style={{fontWeight:400}}  className='text-[#8a95a0] lg:text-white text-sm lg:text-2xl '>Explore the best motorbikes, accessories, and gear. Find your perfect ride today!</div>
+    <div className='flex space-y-3 xl:space-y-8  flex-col lg:absolute lg:top-[30%] lg:left-9  lg:space-y-6  lg:text-white  font-extrabold w-full lg:w-5/6 bg-[#e5ebf5] lg:bg-transparent  text-[#494a4f]  px-7 lg:px-0 lg:py-0 py-14 '>
+   <div className='w-full flex flex-col items-start justify-start space-y-3'>
+
+    <div style={{fontWeight:600}} className={`${jost.className} text-2xl lg:text-3xl  xl:text-4xl 2xl:text-5xl z-20 `}>Ride the Future, Own the Road</div>
+    <div  style={{fontWeight:200}}  className={`${jost.className} text-[#8a95a0] lg:text-white text-sm lg:text-2xl `}>Explore the best motorbikes, accessories, and gear. Find your perfect ride today!</div>
+   </div>
    
    
-<div className=' flex flex-col lg:flex-row lg:w-[65%] 2xl:w-[50%] items-center justify-center  bg-white  p-3 lg:p-1 rounded-md space-y-6 lg:space-y-0 lg:space-x-3'>
+<div className=' flex flex-col lg:flex-row lg:w-[65%] 2xl:w-[50%] items-center justify-center  bg-white  p-3 lg:p-2 rounded-md space-y-6 lg:space-y-0 lg:space-x-3'>
 
 {/*//! Input field */}
 
 <div className='w-full flex items-center justify-center space-x-6 '>
 <CiSearch size={25} />
-<input style={{fontWeight:400}}  className=' bg-white py-5 text-xl  text-black placeholder:text-slate-600 w-full focus:outline-none'  placeholder='Search by name'/>
+<input style={{fontWeight:400}}  className=' bg-white py-5 lg:py-2 text-xl  text-black placeholder:text-slate-600 w-full focus:outline-none'  placeholder='Search by name'/>
 {/* <AutoCompleteINput/> */}
 </div>    
 
@@ -63,7 +66,13 @@ const HeroData = () => {
 
  <Link href="/bike" className='w-1/2 flex items-center justify-center lg:w-5/6 text-black'><Button  />
   </Link>
+
     </div>
+  {/* //! Pppular Search */}
+  <div className='w-full  flex items-start justify-start space-x-3'>
+    <div style={{fontWeight:300}} className={`${jost.className} text-md text-white border-b border-white`}>Popular Searches : </div> 
+    <div  style={{fontWeight:300}} className={`${jost.className} text-md text-white`}>Yamaha, Honda, BMW, Suzuki.  </div>
+  </div>
 
 </div>
   )
