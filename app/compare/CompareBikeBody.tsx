@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
-import BikeLeft from './BikeOneSelector'
-import BikeRight from './BikeRight'
+import BikeOneSelector from './BikeOneSelector'
+import BikeRight from './BikeSecondSelector'
 import { Jost } from 'next/font/google'
 import CompareBothBike from './CompareBothBike'
 
@@ -78,8 +78,9 @@ const CompareBikeBody =({leftBike,rightBike,left,right}:parametersTyes) => {
        <div className='w-full flex flex-col space-y-4 shadow-2xl bg-[#f2f3f3] p-3'>
     <div className='w-full flex items-center justify-between    '>
 
-        <BikeLeft />
+        <BikeOneSelector />
         <BikeRight/>
+        <BikeOneSelector />
         </div>
       <div className='w-full flex items-center justify-between'>
         <div className='text-blue-500'>Clear</div>
