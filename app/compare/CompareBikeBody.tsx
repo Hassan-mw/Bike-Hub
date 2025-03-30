@@ -21,6 +21,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import BikeSelector from './BikeSelector'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import Link from 'next/link'
+
 
 interface BikeDataType {
   _id:number;
@@ -43,10 +46,16 @@ interface parametersTyes{
   firstBike:BikeDataType;
   secondBike:BikeDataType;
   thirdBike:BikeDataType;
+  first:string;
+  second:string;
+  third:string;
 }
 
 
-const CompareBikeBody =({firstBike,secondBike,thirdBike}:parametersTyes) => {
+const CompareBikeBody =({ first,second,third,firstBike,secondBike,thirdBike}:parametersTyes) => {
+    const pathname=usePathname();
+    const searchParams=useSearchParams()
+    const router=useRouter()
        const [bike1,setBike1]=useState({id:'',name:''})
        const [bike2,setBike2]=useState({id:'',name:''})
        const [bike3,setBike3]=useState({id:'',name:''})
@@ -55,16 +64,30 @@ const [showResult,setShowResult]=useState(false)
 const value1='first';
 const value2='second';
 const value3='third';
+const x=searchParams.get('first')
+console.log(x,'👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾👾')
+const handleClearAll = () => {
+  console.log(bike1,bike2,bike3,'😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈😈')
+  const params = new URLSearchParams(searchParams.toString()); // Clone search params
 
-  const handleClearAll=()=>{
-    setBike1({id:'',name:''})
-    setBike2({id:'',name:''})
-    setBike3({id:'',name:''})
-  }
+  // Remove parameters from the URL
+  params.delete("first");
+  params.delete("second");
+  params.delete("third");
+
+  // Reset state for selected bikes
+  setBike1({ id: "", name: "" });
+  setBike2({ id: "", name: "" });
+  setBike3({ id: "", name: "" });
+
+  // Push new URL without selected bikes
+  router.replace(`${pathname}`, { scroll: false });
+};
+
 
   return (
     <div className='w-full  flex flex-col space-y-5 items-center justify-center '>
-  {   !showResult ? (
+  {/* {   !showResult ? ( */}
 <div className='w-full flex flex-col items-center justify-center space-y-8 py-14 px-5'>
   {/* Top */}
   <div className='w-full  max-w-screen-xl flex items-center justify-between bg-[#f0f5f7] px-4 rounded-md'>
@@ -83,34 +106,30 @@ const value3='third';
   </div>
 
   <div className="w-full max-w-screen-xl flex flex-col space-y-4   ">
-    <div className='w-full flex flex-col bg-[#f0f5f7] spacey-2 p-3 rounded-md'>
+    <div className='w-full flex flex-col items-center justify-center spacey-2 p-3 rounded-md'>
 
     <div className={`${jost.className} text-2xl `}>Select Bike for Comparision</div>
     <div style={{fontWeight:300}} className={`${jost.className} text-sm  `}>Compare any bike that you like</div>
     </div>
        <div className='w-full flex flex-col space-y-4  bg-white p-3'>
     <div className='w-full flex gap-x-6 items-center justify-between    '>
-
-        {/* <BikeOneSelector />
-        <BikeRight/>
-        <BikeOneSelector /> */}
         <BikeSelector bike={bike1} setBike={setBike1}  value={value1}   />
         <BikeSelector bike={bike2}  setBike={setBike2} value={value2}    />
         <BikeSelector bike={bike3}  setBike={setBike3} value={value3}    />
         </div>
       <div className='w-full flex items-center justify-between'>
         <div onClick={handleClearAll} className={`${jost.className} bg-red-500 px-4 py-1 rounded-md text-white flex items-center justify-center`}>Clear All</div>
-           <div onClick={()=>setShowResult(true)} className={`${jost.className} hover:cursor-pointer bg-green-500 px-4 py-1 rounded-md text-white flex items-center justify-center`}>Compare</div>
+           <Link href={`/nestedcompare/${bike1.name}`}  className={`${jost.className} hover:cursor-pointer bg-green-500 px-4 py-1 rounded-md text-white flex items-center justify-center w-32`}>Compare</Link>
         </div>  
     </div>
     </div>
-   </div>)
- :
+   </div>
+{/* //  : */}
  
  
-<CompareBothBike showResult={showResult} setShowResult={setShowResult} firstBike={firstBike} secondBike={secondBike} thirdBike={thirdBike}    />
+{/* // <CompareBothBike showResult={showResult} setShowResult={setShowResult} firstBike={firstBike} secondBike={secondBike} thirdBike={thirdBike}    /> */}
 
- }
+{/* //  } */}
    
     </div>
   )

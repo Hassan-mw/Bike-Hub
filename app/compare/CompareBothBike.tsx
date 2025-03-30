@@ -6,7 +6,6 @@ import ComparedBikeRight from './ComparedBikeRight'
 import { MdCompareArrows } from "react-icons/md";
 import { Jost } from 'next/font/google';
 
-
 interface BikeDataType {
   _id:number;
   name: string;
@@ -41,7 +40,6 @@ interface parametersTyes{
 }
 
 const CompareBothBike = ({showResult,setShowResult,firstBike,secondBike,thirdBike}:parametersTyes) => {
-
   const handleGoBack = () => {
     setShowResult(false); // Ensure this only hides the comparison, not resets selection
   };
