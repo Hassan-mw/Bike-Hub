@@ -12,7 +12,7 @@ import { ProgressiveBlur } from '@/components/ui//progressive-blur'
 const PopularCompany = () => {
   return (
 
-    <section className="bg-background overflow-hidden py-16">
+    <section className="bg-background overflow-hidden py-10">
             <div className="group relative m-auto max-w-7xl px-6 pb-9 border-b ">
                 <div className="flex flex-col items-center space-y-9 ">
                     <div className="w-full flex items-start justify-center">

@@ -17,8 +17,8 @@ const page = () => {
   return (
     <div className='flex flex-col space-y-12 scroll-smooth'>
       <Hero/>
-      <AboutWebsite/>
       <BikeDetails/>
+      <AboutWebsite/>
       <PopularCompany/>
       <Carousels/>
        <Status/>

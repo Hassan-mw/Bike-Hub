@@ -39,7 +39,7 @@ const AboutWebsite=() =>{
     <div className="w-full flex items-center justify-center">
 
     <div className=" overflow-hidden w-full max-w-screen-xl h-1/2 py-20  flex flex-col space-y-14 items-center justify-center">
-    <div className={`${jost.className} text-black/80 text-3xl md:text-4xl`}> Your Ultimate Bike Hub</div>
+    <div className={`${jost.className} text-black/80 text-3xl md:text-4xl border-b-4 pb-2`}> Your Ultimate Bike Hub</div>
 
       <Carousel slides={slideData} />
     </div>

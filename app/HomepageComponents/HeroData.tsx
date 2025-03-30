@@ -33,7 +33,7 @@ const HeroData = () => {
    <div className='w-full flex flex-col items-start justify-start space-y-3'>
 
     <div style={{fontWeight:600}} className={`${jost.className} text-2xl lg:text-3xl  xl:text-4xl 2xl:text-5xl z-20 `}>Ride the Future, Own the Road</div>
-    <div  style={{fontWeight:200}}  className={`${jost.className} text-[#8a95a0] lg:text-white text-sm lg:text-2xl `}>Explore the best motorbikes, accessories, and gear. Find your perfect ride today!</div>
+    <div  style={{fontWeight:200}}  className={`${jost.className} text-[#8a95a0] lg:text-white text-sm lg:text-sm xl:text-xl `}>Explore the best motorbikes, accessories, and gear. Find your perfect ride today!</div>
    </div>
    
    
