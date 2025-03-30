@@ -25,11 +25,11 @@ const PopularCompany = () => {
                             speed={40}
                             gap={112}>
                             <div className="flex">
-                            <SiHonda size={40} />
+                            <img className='h-20 rounded-full' src='./c-h.png'/>
                             </div>
 
                             <div className="flex">
-                            <SiYamahacorporation size={40}  />
+                            <img className='h-20 rounded-full m-4' src='./c-s.png'/>
                             </div>
                             <div className="flex">
                             <SiSuzuki  size={40} /> 
