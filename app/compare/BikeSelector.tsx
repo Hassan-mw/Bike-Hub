@@ -28,7 +28,7 @@ const jost=Jost({
 })
 
 
-const BikeSelector = ({value,type,border}:{value:string,type:string,border:string}) => {
+const BikeSelector = ({value,border}:{value:string,border:string}) => {
   console.log(value)
   const [selectBike,setSelectBike]=useState('')
   const [selectedBikeName,setSelectedBikeName]=useState('')
@@ -147,10 +147,10 @@ const BikeSelector = ({value,type,border}:{value:string,type:string,border:strin
   :
 <div className='flex flex-col items-center justify-center space-y-3'>
   {selectedBikeName}
-  <div className=' bg-red-500 rounded-md text-white hover:bg-red-600 flex items-center justify-center px-3 py-1' onClick={()=>updateBikeSelection('','')}>Cancel</div>
+  {/* <div className=' bg-red-500 rounded-md text-white hover:bg-red-600 flex items-center justify-center px-3 py-1' onClick={()=>updateBikeSelection('','')}>Cancel</div> */}
   </div>
   }
-     <div className={`${jost.className} ${type} `}>vs</div>
+     
       </div>
 
   )

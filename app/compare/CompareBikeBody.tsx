@@ -20,6 +20,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import BikeSelector from './BikeSelector'
 
 interface BikeDataType {
   _id:number;
@@ -49,6 +50,9 @@ interface parametersTyes{
 const CompareBikeBody =({leftBike,rightBike,left,right}:parametersTyes) => {
   
    const [showResult,setShowResult]=useState(false)
+const value3='third';
+
+
   return (
     <div className='w-full  flex flex-col space-y-5 items-center justify-center '>
   {   !showResult ? (
@@ -75,12 +79,13 @@ const CompareBikeBody =({leftBike,rightBike,left,right}:parametersTyes) => {
     <div className={`${jost.className} text-2xl `}>Select Bike for Comparision</div>
     <div style={{fontWeight:300}} className={`${jost.className} text-sm  `}>Compare any bike that you like</div>
     </div>
-       <div className='w-full flex flex-col space-y-4 shadow-2xl bg-[#f2f3f3] p-3'>
-    <div className='w-full flex items-center justify-between    '>
+       <div className='w-full flex flex-col space-y-4  bg-white p-3'>
+    <div className='w-full flex gap-x-6 items-center justify-between    '>
 
         <BikeOneSelector />
         <BikeRight/>
         <BikeOneSelector />
+        <BikeSelector value={value3} border='border  rounded-md border-[#e6e6e6] '   />
         </div>
       <div className='w-full flex items-center justify-between'>
         <div className='text-blue-500'>Clear</div>
