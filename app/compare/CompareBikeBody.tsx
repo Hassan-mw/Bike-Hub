@@ -40,18 +40,27 @@ interface BikeDataType {
 }
 
 interface parametersTyes{
-  left:string;
-  right:string;
-  leftBike:BikeDataType;
-  rightBike:BikeDataType;
+  firstBike:BikeDataType;
+  secondBike:BikeDataType;
+  thirdBike:BikeDataType;
 }
 
 
-const CompareBikeBody =({leftBike,rightBike,left,right}:parametersTyes) => {
+const CompareBikeBody =({firstBike,secondBike,thirdBike}:parametersTyes) => {
+       const [bike1,setBike1]=useState({id:'',name:''})
+       const [bike2,setBike2]=useState({id:'',name:''})
+       const [bike3,setBike3]=useState({id:'',name:''})
   
-   const [showResult,setShowResult]=useState(false)
+const [showResult,setShowResult]=useState(false)
+const value1='first';
+const value2='second';
 const value3='third';
 
+  const handleClearAll=()=>{
+    setBike1({id:'',name:''})
+    setBike2({id:'',name:''})
+    setBike3({id:'',name:''})
+  }
 
   return (
     <div className='w-full  flex flex-col space-y-5 items-center justify-center '>
@@ -82,38 +91,24 @@ const value3='third';
        <div className='w-full flex flex-col space-y-4  bg-white p-3'>
     <div className='w-full flex gap-x-6 items-center justify-between    '>
 
-        <BikeOneSelector />
+        {/* <BikeOneSelector />
         <BikeRight/>
-        <BikeOneSelector />
-        <BikeSelector value={value3} border='border  rounded-md border-[#e6e6e6] '   />
+        <BikeOneSelector /> */}
+        <BikeSelector bike={bike1} setBike={setBike1}  value={value1}   />
+        <BikeSelector bike={bike2}  setBike={setBike2} value={value2}    />
+        <BikeSelector bike={bike3}  setBike={setBike3} value={value3}    />
         </div>
       <div className='w-full flex items-center justify-between'>
-        <div className='text-blue-500'>Clear</div>
-           <div className='bg-green-500 px-4 py-2 rounded-tr-md text-white flex items-center justify-center'>Compare</div>
+        <div onClick={handleClearAll} className={`${jost.className} bg-red-500 px-4 py-1 rounded-md text-white flex items-center justify-center`}>Clear All</div>
+           <div onClick={(pre)=>setShowResult(!pre)} className={`${jost.className} hover:cursor-pointer bg-green-500 px-4 py-1 rounded-md text-white flex items-center justify-center`}>Compare</div>
         </div>  
-           {/* <div className='bg-red-500  w-full h-20  rounded-br-md text-white  flex items-center justify-center'>Cancel</div> */}
-      
     </div>
     </div>
-
-
-  {/* { (left!=='none' && right!=='none') &&  */}
-  <div>
-  <Button
-    borderRadius="1rem"
-     onClick={()=>setShowResult(true)} 
-    className={`${jost.className}bg-white w-full font-bold text-blue-500 hover:cursor-pointer hover:bg-blue-700 hover:text-white text-xl duration-500 rounded-md`}
-  >
-    Compare Bike
-  </Button>
-</div>
-
-  {/* } */}
    </div>)
  :
  
  
-<CompareBothBike showResult={showResult} setShowResult={setShowResult} leftBike={leftBike} rightBike={rightBike} left={''} right={''}    />
+<CompareBothBike showResult={showResult} setShowResult={setShowResult} firstBike={firstBike} secondBike={secondBike} thirdBike={thiredBike}    />
 
  }
    

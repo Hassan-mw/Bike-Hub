@@ -54,17 +54,15 @@ return (
 
 const page = async({searchParams}:{searchParams:{left:string,right:string}}) => {
 
-  const left = searchParams.left || "none";  // ✅ No need to await
-  const right = searchParams.right || "none"; 
+  const first = searchParams.first || "none";  // ✅ No need to await
+  const second = searchParams.second || "none"; 
+  const thired = searchParams.thired || "none"; 
 
-  const leftBike=await getBikeById({bikeNames:left}) || []
-  const rightBike=await getBikeById({bikeNames:right}) || []
-  console.log(left,right)
-  
-  if(left!=='none' && right!=='none'){
-    console.log('🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🦨🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇')
-  }
+  const firstBike=await getBikeById({bikeNames:first}) || []
+  const secondBike=await getBikeById({bikeNames:second}) || []
+  const thiredBike=await getBikeById({bikeNames:thired}) || []
 
+ 
 
   return (
     <div className='w-full '>
@@ -77,7 +75,7 @@ const page = async({searchParams}:{searchParams:{left:string,right:string}}) => 
       <div className='w-full flex flex-col items-center justify-center p-3  bg-white'>
   
 
-      <CompareBikeBody leftBike={leftBike.bike} rightBike={rightBike.bike}  left={left} right={right}/>
+      <CompareBikeBody leftBike={leftBike.bike} rightBike={rightBike.bike}  />
 
 
     </div>
