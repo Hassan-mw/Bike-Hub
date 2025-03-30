@@ -18,7 +18,7 @@ const BikeDetails = () => {
    <div className=' md:w-[40%] '>
     
     
-    <img className='object-cover min-h-full  rounded-md' src="./bike-logo.jpeg"/>
+    <img className='object-cover min-h-full  rounded-md' src="./bike-detail-image.jpg"/>
     </div>
    </div>
     </div>
