@@ -25,23 +25,26 @@ const PopularCompany = () => {
                             speed={40}
                             gap={112}>
                             <div className="flex">
-                            <img className='h-20 rounded-full' src='./c-h.png'/>
+                            <img className='h-25' src='./c-h.png'/>
                             </div>
 
                             <div className="flex">
-                            <img className='h-20 rounded-full m-4' src='./c-s.png'/>
+                            <img className='h-25  ' src='./c-s.png'/>
                             </div>
                             <div className="flex">
-                            <SiSuzuki  size={40} /> 
+                           <img className='h-25  ' src="./c-bmw.png" />
                             </div>
                             <div className="flex">
-                            <CgBmw  size={40} />
+                            <img className='h-25  ' src="./c-d.png" />
+
                             </div>
                             <div className="flex">
-                            <SiKtm  size={40} />
+                            <img className='h-25  ' src="./c-y.png" />
+
                             </div>
                             <div className="flex">
-                            <SiDucati  size={40} /> 
+                            <img className='h-25 ' src="./c-hd.png" />
+
                             </div>
                           
                         </InfiniteSlider>
