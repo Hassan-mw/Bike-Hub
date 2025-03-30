@@ -89,7 +89,7 @@ const handleClearAll = () => {
     <div className='w-full  flex flex-col space-y-5 items-center justify-center '>
   {/* {   !showResult ? ( */}
 <div className='w-full flex flex-col items-center justify-center space-y-8 py-14 px-5'>
-  {/* Top */}
+  {/* Comparision History */}
   <div className='w-full  max-w-screen-xl flex items-center justify-between bg-[#f0f5f7] px-4 rounded-md'>
  
       <Accordion type="single" collapsible>
@@ -105,32 +105,46 @@ const handleClearAll = () => {
 
   </div>
 
+{/* Comparision Select */}
   <div className="w-full max-w-screen-xl flex flex-col space-y-4   ">
     <div className='w-full flex flex-col items-center justify-center spacey-2 p-3 rounded-md'>
 
-    <div className={`${jost.className} text-2xl `}>Select Bike for Comparision</div>
-    <div style={{fontWeight:300}} className={`${jost.className} text-sm  `}>Compare any bike that you like</div>
     </div>
-       <div className='w-full flex flex-col space-y-4  bg-white p-3'>
-    <div className='w-full flex gap-x-6 items-center justify-between    '>
+       <div className='w-full flex flex-col space-y-4  p-5 rounded-md  border-1 bg-[#f2f3f3]'>
+    <div className={`${jost.className} text-3xl w-full flex items-center  justify-center `}>Select Bike for Comparision</div>
+    <div className='w-full flex flex-col md:flex-row space-y-6 md:space-y-0 md:gap-x-6 items-center justify-center  p-6  '>
         <BikeSelector bike={bike1} setBike={setBike1}  value={value1}   />
         <BikeSelector bike={bike2}  setBike={setBike2} value={value2}    />
         <BikeSelector bike={bike3}  setBike={setBike3} value={value3}    />
         </div>
-      <div className='w-full flex items-center justify-between'>
+      <div className='w-full flex items-center justify-between px-6'>
         <div onClick={handleClearAll} className={`${jost.className} bg-red-500 px-4 py-1 rounded-md text-white flex items-center justify-center`}>Clear All</div>
-           <Link href={`/nestedcompare/${bike1.name}`}  className={`${jost.className} hover:cursor-pointer bg-green-500 px-4 py-1 rounded-md text-white flex items-center justify-center w-32`}>Compare</Link>
+           <Link href={`/nestedcompare/${bike1.id}-vs-${bike2.id}`}  className={`${jost.className} hover:cursor-pointer bg-green-500 px-4 py-1 rounded-md text-white flex items-center justify-center w-32`}>Compare</Link>
         </div>  
     </div>
     </div>
-   </div>
-{/* //  : */}
- 
- 
-{/* // <CompareBothBike showResult={showResult} setShowResult={setShowResult} firstBike={firstBike} secondBike={secondBike} thirdBike={thirdBike}    /> */}
+  
+{/*Hot Comparision  */}
 
-{/* //  } */}
+<div className="w-full max-w-screen-xl flex flex-col space-y-4   ">
+    <div className='w-full flex flex-col items-center justify-center spacey-2 p-3 rounded-md'>
+
+    </div>
+       <div className='w-full flex flex-col space-y-4  p-5 rounded-md  border-1 bg-[#f2f3f3]'>
+    <div className={`${jost.className} text-3xl w-full flex items-center  justify-center `}>Select Bike for Comparision</div>
+    <div className='w-full flex flex-col md:flex-row space-y-6 md:space-y-0 md:gap-x-6 items-center justify-center  p-6  '>
+        <BikeSelector bike={bike1} setBike={setBike1}  value={value1}   />
+        <BikeSelector bike={bike2}  setBike={setBike2} value={value2}    />
+        <BikeSelector bike={bike3}  setBike={setBike3} value={value3}    />
+        </div>
+      <div className='w-full flex items-center justify-between px-6'>
+        <div onClick={handleClearAll} className={`${jost.className} bg-red-500 px-4 py-1 rounded-md text-white flex items-center justify-center`}>Clear All</div>
+           <Link href={`/nestedcompare/${bike1.id}-vs-${bike2.id}`}  className={`${jost.className} hover:cursor-pointer bg-green-500 px-4 py-1 rounded-md text-white flex items-center justify-center w-32`}>Compare</Link>
+        </div>  
+    </div>
    
+</div>
+    </div>
     </div>
   )
 }

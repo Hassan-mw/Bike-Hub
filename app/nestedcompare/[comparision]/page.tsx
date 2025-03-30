@@ -5,6 +5,9 @@
 
 import { MdCompareArrows } from "react-icons/md";
 import { Jost } from 'next/font/google';
+import { getBikeById } from "@/app/DataFetching/api";
+import ComparedBikeLeft from "@/app/compare/ComparedBikeLeft";
+import ComparedBikeRight from "@/app/compare/ComparedBikeRight";
 
 
 
@@ -15,9 +18,13 @@ const jost=Jost({
 
 
 
-const page = async({params}:{params:URLSearchParams}) => {
+const page = async({params}:{params:{comparision:string}}) => {
 const x=await params.comparision
-console.log(x)
+const splitingValue=x.toString()
+const [bike1,bike2]=splitingValue.split('-vs-')
+const firstBikeData=await getBikeById({bikeNames:bike1})
+const secondBikeData=await getBikeById({bikeNames:bike2})
+
   return (
     <div className='w-full flex flex-col items-center justify-center space-y-6 py-20 px-5'>
     {/* <div className='w-full max-w-screen-xl bg-[#f0f5f7] p-2 rounded-md  flex items-center justify-between'>
@@ -25,9 +32,9 @@ console.log(x)
      <div  className={`${jost.className} bg-blue-500 rounded-md px-2 hover:cursor-pointer text-white hover:bg-blue-600`}>Save it</div>
      </div>  */}
     <div className='w-full max-w-screen-xl flex items-center justify-between space-x-4  '>
-        {/* <ComparedBikeLeft data={firstBike} /> */}
+        <ComparedBikeLeft data={firstBikeData.bike} />
         <MdCompareArrows />
-        {/* <ComparedBikeRight data={secondBike}/> */}
+        <ComparedBikeRight data={secondBikeData.bike}/>
     </div>
  
    </div>)

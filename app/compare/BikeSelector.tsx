@@ -71,7 +71,7 @@ const BikeSelector = ({bike,setBike,value}:{value:string,bike:{name:string,id:st
     
   return (
 
-    <div className={`${jost.className} w-full flex items-center justify-center h-16 border  rounded-md border-[#e6e6e6]  relative group hover:cursor-pointer `}>
+    <div className={`${jost.className} w-full flex items-center justify-center h-16 border  rounded-md border-[#e6e6e6]  bg-white relative group hover:cursor-pointer `}>
 {bike.name==='' ?
     <DropdownMenu >
     <DropdownMenuTrigger asChild>

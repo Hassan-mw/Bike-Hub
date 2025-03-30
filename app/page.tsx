@@ -9,12 +9,15 @@ import Carousels from './HomepageComponents/Carousels'
 import HoverCard from './HomepageComponents/HoverCard'
 import AppDownload from './HomepageComponents/AppDownload'
 import BrowseByStyle from './HomepageComponents/BrowseByStyle'
+import AboutWebsite from './HomepageComponents/AboutWebsite'
+
 
 
 const page = () => {
   return (
     <div className='flex flex-col space-y-24 md:space-y-32 scroll-smooth'>
       <Hero/>
+      <AboutWebsite/>
       <BikeDetails/>
       <PopularCompany/>
       <Carousels/>
