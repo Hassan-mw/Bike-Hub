@@ -10,25 +10,24 @@ export default function Status() {
 
             <div className="w-full  mx-auto max-w-screen-xl space-y-8 px-6 md:space-y-16">
                 <div className="w-full flex flex-col items-center justify-center space-y-4">
-                    <h2 className={`${jost.className} text-black/80 text-3xl md:text-4xl`}>Bike-Hub in Numbers</h2>
-                    <p className={`${jost.className} text-[#828282]`}>Connecting riders with the best motorcycles and gear worldwide</p>
+                    <h2 className={`${jost.className} text-black/80 text-3xl md:text-4xl border-b-4 pb-2`}>Bike-Hub in Numbers</h2>
                 </div>
 
-                <div className="w-full grid gap-6 *:text-center sm:grid-cols-2 lg:grid-cols-4">
-                    <div className="rounded-(--radius) space-y-4 border py-12">
-                        <div className={`${jost.className} text-5xl font-bold`}>+10,000</div>
+                <div className="w-full grid gap-6 *:text-center grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 md:gap-16">
+                    <div className="rounded-(--radius) space-y-4 border py-8">
+                        <div className={`${jost.className} text-2xl font-bold`}>+10,000</div>
                         <p className={`${jost.className} text-[#828282]`}>Motorcycles Listed</p>
                     </div>
-                    <div className="rounded-(--radius) space-y-4 border py-12">
-                        <div className={`${jost.className} text-5xl font-bold`}>85%</div>
+                    <div className="rounded-(--radius) space-y-4 border py-8">
+                        <div className={`${jost.className} text-2xl font-bold`}>85%</div>
                         <p  className={`${jost.className} text-[#828282]`}>Customer Satisfaction Rate</p>
                     </div>
-                    <div className="rounded-(--radius) space-y-4 border py-12">
-                        <div className={`${jost.className} text-5xl font-bold`}>+5,000</div>
+                    <div className="rounded-(--radius) space-y-4 border py-8">
+                        <div className={`${jost.className} text-2xl font-bold`}>+5,000</div>
                         <p className={`${jost.className} text-[#828282]`}>Accessories & Gear Available</p>
                     </div>
-                    <div className="rounded-(--radius) space-y-4 border py-12">
-                        <div  className={`${jost.className} text-5xl font-bold`}>2015</div>
+                    <div className="rounded-(--radius) space-y-4 border py-8">
+                        <div  className={`${jost.className} text-2xl font-bold`}>2015</div>
                         <p className={`${jost.className} text-[#828282]`}>Trusted by Riders for Years</p>
                     </div>
                 </div>
