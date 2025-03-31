@@ -8,7 +8,7 @@ module.exports = {
     theme: {
       extend: {
         screens: {
-          'md-lg':'850px'
+          'mdl':'850px'
         },
       },
     },
