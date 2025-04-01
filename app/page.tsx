@@ -10,6 +10,7 @@ import HoverCard from './HomepageComponents/HoverCard'
 import AppDownload from './HomepageComponents/AppDownload'
 import BrowseByStyle from './HomepageComponents/BrowseByStyle'
 import AboutWebsite from './HomepageComponents/AboutWebsite'
+import PopularBikeSearch from './HomepageComponents/PopularBikeSearch'
 
 
 
@@ -17,9 +18,10 @@ const page = () => {
   return (
     <div className='flex flex-col space-y-12 scroll-smooth'>
       <Hero/>
+      <PopularCompany/>
+      <PopularBikeSearch/>
       <BikeDetails/>
       <AboutWebsite/>
-      <PopularCompany/>
       <Carousels/>
        <Status/>
       <Testmonials/>
