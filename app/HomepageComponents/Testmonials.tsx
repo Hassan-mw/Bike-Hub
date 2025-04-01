@@ -179,9 +179,9 @@ const content = [
 const Testmonials=()=> {
   return (
 
-    <div className="w-full py-16 ">
-    <div className="w-full flex items-center justify-center border-b pb-5">
-           <div className={`${jost.className} text-black/80 text-3xl md:text-4xl border-b-4 pb-2 `}>Testmonials</div>
+    <div className="w-full py-16 bg-[#f0f5f7]">
+    <div className="w-full flex items-center justify-center">
+           <div className={`${jost.className} text-black/80 text-3xl md:text-4xl border-b-4 pb-2 `}>Testimonials From Our Customers</div>
     </div>
       <div className="w-full">
       <StickyScroll content={content} />

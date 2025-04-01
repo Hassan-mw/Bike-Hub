@@ -18,9 +18,10 @@ const page = () => {
   return (
     <div className='flex flex-col space-y-12 scroll-smooth'>
       <Hero/>
-      <PopularCompany/>
       <PopularBikeSearch/>
-      <BikeDetails/>
+      <PopularBikeSearch/>
+      <PopularCompany/>
+      {/* <BikeDetails/> */}
       <AboutWebsite/>
       <Carousels/>
        <Status/>
