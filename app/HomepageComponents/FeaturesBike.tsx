@@ -26,7 +26,7 @@ const FeaturesBike = () => {
       {/* 1 */}
       <div className="flex flex-col border p-3 rounded-md">
       <div className={`${jost.className} w-full flex items-center justify-center text-xl`}> Electric-Powered for Effortless Rides</div>
-      <img className="h-60 sm:h-40  lg:h-72 w-full object-cover rounded-t-md " src="./c-1.jpeg"/>
+      <img className="h-60 sm:h-40  lg:h-60 w-full object-cover rounded-t-md " src="./c-1.jpeg"/>
       <div className="flex flex-col items-center justify-center space-y-2 bg-white rounded-b-md border-t  p-3">
       <div className={`${jost.className} text-md`}>Harley-Davidson Sportster 883</div>
       <div style={{fontWeight:300}} className={`${jost.className} text-[#504d4d]`}>A classic cruiser motorcycle with a robust V-twin engine, known for its raw power and iconic design.</div>
@@ -36,7 +36,7 @@ const FeaturesBike = () => {
       {/* 2 */}
       <div className="flex flex-col border p-3 rounded-md">
       <div className={`${jost.className} w-full flex items-center justify-center text-xl`}>Perfect for City Commuting</div>
-      <img className="h-60 sm:h-40  lg:h-72 w-full object-cover rounded-t-md " src="./c-2.jpeg"/>
+      <img className="h-60 sm:h-40  lg:h-60 w-full object-cover rounded-t-md " src="./c-2.jpeg"/>
       <div className="flex flex-col items-center justify-center space-y-2 bg-white rounded-b-md border-t  p-3">
       <div className={`${jost.className} text-md`}>Harley-Davidson Sportster 883</div>
       <div style={{fontWeight:300}} className={`${jost.className} text-[#504d4d]`}>A classic cruiser motorcycle with a robust V-twin engine, known for its raw power and iconic design.</div>
@@ -46,7 +46,7 @@ const FeaturesBike = () => {
       {/* 3*/}
       <div className="flex flex-col border p-3 rounded-md">
       <div className={`${jost.className} w-full flex items-center justify-center text-xl`}>Best for Off-Road Adventures</div>
-      <img className="h-60 sm:h-40  lg:h-72 w-full object-cover " src="./c3.jpeg"/>
+      <img className="h-60 sm:h-40  lg:h-60 w-full object-cover " src="./c3.jpeg"/>
       <div className="flex flex-col items-center justify-center space-y-2 bg-white rounded-b-md border-t  p-3">
       <div className={`${jost.className} text-md`}>Harley-Davidson Sportster 883</div>
       <div style={{fontWeight:300}} className={`${jost.className} text-[#504d4d]`}>A classic cruiser motorcycle with a robust V-twin engine, known for its raw power and iconic design.</div>
