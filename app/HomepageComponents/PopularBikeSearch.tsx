@@ -14,8 +14,8 @@ const PopularBikeSearch = () => {
 
         {/* Upper Test */}
     <div className={`${jost.className} flex flex-col items-center justify-center space-y-3 `}>
-    <div className={`${jost.className} text-[#252629] text-3xl md:text-4xl border-b-4 pb-2 `}>Popular Bike Categories</div>
-   <div style={{fontWeight:400}} className={`${jost.className}  text-md text-[#a1a9b2] `}>2025 bikes available – 50 added today. </div> 
+    <div className={`${jost.className} text-[#252629] text-3xl md:text-4xl border-b-4 pb-2 `}>Featured Bikes</div>
+   <div style={{fontWeight:400}} className={`${jost.className}  text-md text-[#a1a9b2] `}>Find the perfect ride that matches your lifestyle and adventure. </div> 
     </div>
 
 
