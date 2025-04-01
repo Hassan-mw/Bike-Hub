@@ -10,11 +10,12 @@ const jost=Jost({
 
 const AboutWebsite=() =>{
   const slideData = [
-    {
-      title: "Find Your Perfect Bike",
-      button: "Explore Bike",
-      src: "./1-carsole.jpeg",
-      url:'/bike'
+  {
+      title: "Got Questions? We’ve Got Answers!",
+      button: "Visit FAQs",
+      src: "./4-carsole.jpeg",
+        url:'/'
+   
     },
     {
       title: " Gear Up for the Ride",
@@ -28,12 +29,12 @@ const AboutWebsite=() =>{
         url:'/compare'
     },
     {
-      title: "Got Questions? We’ve Got Answers!",
-      button: "Visit FAQs",
-      src: "./4-carsole.jpeg",
-        url:'/'
-   
+      title: "Find Your Perfect Bike",
+      button: "Explore Bike",
+      src: "./1-carsole.jpeg",
+      url:'/bike'
     },
+    
   ];
   return (
     <div className="w-full flex items-center justify-center">
