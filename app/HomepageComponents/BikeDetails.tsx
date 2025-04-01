@@ -42,7 +42,7 @@ const BikeDetails = () => {
       <Link
         href="/bike"
         style={{ fontWeight: 400 }}
-        className={`${jost.className} hover:cursor-pointer text-white w-full flex items-center justify-center bg-green-500 text-xl py-3 rounded-md`}
+        className={`${jost.className} hover:cursor-pointer text-white w-full xl:w-5/6 flex items-center justify-center bg-blue-500 duration-500 hover:bg-blue-700 text-xl py-3 rounded-md`}
       >
         Explore Bikes
       </Link>

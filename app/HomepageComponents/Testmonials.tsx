@@ -97,30 +97,28 @@
 //         </section>
 //     )
 // }
+
 "use client";
 import React from "react";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
+import { Jost } from "next/font/google";
+
+const jost=Jost({
+    weight:['500'],
+    subsets:['latin']
+})
+
 
 const content = [
   {
-    title: "Collaborative Editing",
+    title: " Alex R.",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+    "I was looking for a high-quality yet affordable bike, and Bike-Hub made the process so easy. Their collection is fantastic, and the customer support is top-notch. Highly recommend!",
     content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Collaborative Editing
-      </div>
-    ),
-  },
-  {
-    title: "Real time changes",
-    description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
-    content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
+        <div className="flex h-full w-full items-center justify-center text-white">
         <Image
-          src="/linear.webp"
+          src="/p-1.jpeg"
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -130,31 +128,64 @@ const content = [
     ),
   },
   {
-    title: "Version control",
+    title: "Daniel S.",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    "I compared multiple sites before buying my road bike, and Bike-Hub had the best deals. The bike arrived in perfect condition, and the performance is outstanding. Absolutely worth it!",
     content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
-        Version control
+      <div className="flex h-full w-full items-center justify-center text-white">
+        <Image
+          src="/p-2.jpeg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
       </div>
     ),
   },
   {
-    title: "Running out of content",
+    title: " Sam L",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "If you're a cycling enthusiast like me, Bike-Hub is the ultimate destination! From accessories to premium bikes, they have it all. I’m impressed with their quality and service.",
     content: (
-      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Running out of content
+        <div className="flex h-full  w-full items-center justify-center text-white">
+        <Image
+          src="/p-3.jpeg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Michael T.",
+    description:
+      "Bike-Hub exceeded my expectations! The bike I purchased is sturdy, stylish, and rides smoothly. Their customer service was very helpful in guiding me to the right choice. Highly recommended!",
+    content: (
+        <div className="flex h-full  w-full items-center justify-center text-white">
+        <Image
+          src="/p-4.jpeg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
       </div>
     ),
   },
 ];
 const Testmonials=()=> {
   return (
-    <div className="w-full py-4">
-      <StickyScroll content={content} />
+
+    <div className="w-full py-16 ">
+    <div className="w-full flex items-center justify-center border-b pb-5">
+           <div className={`${jost.className} text-black/80 text-3xl md:text-4xl border-b-4 pb-2 `}>Testmonials</div>
     </div>
+      <div className="w-full">
+      <StickyScroll content={content} />
+    </div></div>
   );
 }
 

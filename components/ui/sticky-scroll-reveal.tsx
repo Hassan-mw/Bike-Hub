@@ -3,6 +3,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { Jost } from "next/font/google";
+
+const jost=Jost({
+    weight:['500'],
+    subsets:['latin']
+})
+
 
 export const StickyScroll = ({
   content,
@@ -41,9 +48,9 @@ export const StickyScroll = ({
   });
 
   const backgroundColors = [
-    "#0f172a", // slate-900
-    "#000000", // black
-    "#171717", // neutral-900
+    "#ffffff", // slate-900
+    "#ffffff", // black
+    "#ffffff", // neutral-900
   ];
   const linearGradients = [
     "linear-gradient(to bottom right, #06b6d4, #10b981)", // cyan-500 to emerald-500
@@ -78,7 +85,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-2xl font-bold text-slate-100"
+                className={`${jost.className} text-2xl font-bold text-black`}
               >
                 {item.title}
               </motion.h2>
@@ -89,7 +96,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg mt-10 max-w-sm text-slate-300"
+                className={`${jost.className} text-kg mt-10 max-w-sm text-black`}
               >
                 {item.description}
               </motion.p>

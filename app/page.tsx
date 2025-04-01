@@ -22,8 +22,8 @@ const page = () => {
       <PopularCompany/>
       <Carousels/>
        <Status/>
-       <AppDownload/>
       <Testmonials/>
+       <AppDownload/>
     </div>
   )
 }
