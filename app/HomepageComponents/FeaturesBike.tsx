@@ -22,31 +22,31 @@ const FeaturesBike = () => {
 
     {/* Data */}
     <div className='w-full grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 px-4'>
-    <div   className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border-4 group relative '>
-         <div className='absolute top-8 -right-10 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-lg'>Honda 125</div>
-         {/* <div className='absolute top-5 -left-14 bg-green-500 text-white -rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div> */}
-         <img className='h-60  ' src="./user-1742578600336.jpeg" />
+      {/* 1 */}
+    <div   className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border group relative border-green-500'>
+        <div style={{fontWeight:400}} className={`${jost.className} text-xl border-b`}> Best for Off-Road Adventures</div>
+         <img className='h-60  ' src="./user-1742579208356.jpeg" />
          <div className='w-full flex flex-col items-center justify-center space-y-5 '>
          <div className={`${jost.className} text-4xl tracking-widest `}>Honda 150</div>
-         <div className={`${jost.className} flex items-center justify-between w-full text-[#635f5f]`}>
-             {/* 1 */}
-           <div className="flex flex-col gap-y-1 items-center justify-center" >
-            {/* <span className="text-blue-400"><BsDropletHalf size={20} /></span>  */}
-            {/* {data.mileage} MPG </div>  */}
-            {/* 2 */}
-           <div className="flex flex-col gap-y-1 items-center justify-center" >
-            {/* <span className="text-green-400">{data.fuelType==="Petrol" ? <BsFuelPumpFill/> :<GiSteeringWheel  size={20}/>}</span>  */}
-            {/* {data.fuelType}  </div>  */}
-            {/* 3 */}
-           <div className="flex flex-col gap-y-1 items-center justify-center" >
-            {/* <span className="text-[#E60000]"><IoMdSpeedometer  size={25}/></span>  */}
-            {/* {data.topSpeed} km/h </div>  */}
-            
-            {/* <div  className="flex items-center justify-center"> {data.price} $</div><div  className="flex items-center justify-center"><IoSpeedometerOutline /> {data.brand}</div> */}
-           </div>
-            </div>
-         </div>
+       
     </div>
+    </div>
+      {/* 2 */}
+    <div   className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border group relative border-green-500'>
+        <div style={{fontWeight:400}} className={`${jost.className} text-xl border-b`}>Perfect for City Commuting</div>
+         <img className='h-60  ' src="./user-1742578949550.jpeg" />
+         <div className='w-full flex flex-col items-center justify-center space-y-5 '>
+         <div className={`${jost.className} text-4xl tracking-widest `}>Honda 150</div>
+       
+    </div>
+    </div>
+      {/* 3 */}
+    <div   className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border group relative border-green-500'>
+        <div style={{fontWeight:400}} className={`${jost.className} text-xl border-b`}> Electric-Powered for Effortless Rides</div>
+         <img className='h-60  ' src="./user-1742580402393.jpeg" />
+         <div className='w-full flex flex-col items-center justify-center space-y-5 '>
+         <div className={`${jost.className} text-4xl tracking-widest `}>Honda 150</div>
+       
     </div>
     </div>
     </div>
