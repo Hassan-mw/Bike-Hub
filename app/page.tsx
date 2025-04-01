@@ -11,6 +11,7 @@ import AppDownload from './HomepageComponents/AppDownload'
 import BrowseByStyle from './HomepageComponents/BrowseByStyle'
 import AboutWebsite from './HomepageComponents/AboutWebsite'
 import PopularBikeSearch from './HomepageComponents/PopularBikeSearch'
+import FeaturesBike from './HomepageComponents/FeaturesBike'
 
 
 
@@ -19,7 +20,7 @@ const page = () => {
     <div className='flex flex-col space-y-12 scroll-smooth'>
       <Hero/>
       <PopularBikeSearch/>
-      <PopularBikeSearch/>
+      <FeaturesBike/>
       <PopularCompany/>
       {/* <BikeDetails/> */}
       <AboutWebsite/>
