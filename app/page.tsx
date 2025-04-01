@@ -24,7 +24,7 @@ const page = () => {
       <PopularCompany/>
       {/* <BikeDetails/> */}
       <AboutWebsite/>
-      <Carousels/>
+      {/* <Carousels/> */}
        <Status/>
       <Testmonials/>
        <AppDownload/>

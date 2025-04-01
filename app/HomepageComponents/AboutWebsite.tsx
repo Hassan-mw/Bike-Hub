@@ -39,9 +39,12 @@ const AboutWebsite=() =>{
   return (
     <div className="w-full flex items-center justify-center">
 
-    <div className=" overflow-hidden w-full max-w-screen-xl h-1/2 py-20  flex flex-col space-y-14 items-center justify-center">
-    <div className={`${jost.className} text-black/80 text-3xl md:text-4xl border-b-4 pb-2`}> Your Ultimate Bike Hub</div>
-
+    <div className=" overflow-hidden w-full max-w-screen-xl h-1/2 py-7  flex flex-col space-y-14 items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center">
+                        {/* <p className="text-end text-sm">Best Companies</p> */}
+                        <div className={`${jost.className} text-black/80 text-3xl md:text-4xl `}>Your Ultimate Bike Hub</div>
+                        <div style={{fontWeight:400}} className={`${jost.className}  text-md text-[#879099]  `}>Lorem ipsum  sit amet elit, sed  tempor </div> 
+        </div>
       <Carousel slides={slideData} />
     </div>
     </div>

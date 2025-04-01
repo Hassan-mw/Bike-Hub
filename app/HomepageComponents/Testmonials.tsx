@@ -180,9 +180,11 @@ const Testmonials=()=> {
   return (
 
     <div className="w-full py-16 bg-[#f0f5f7]">
-    <div className="w-full flex items-center justify-center">
-           <div className={`${jost.className} text-black/80 text-3xl md:text-4xl border-b-4 pb-2 `}>Testimonials From Our Customers</div>
-    </div>
+       <div className="w-full flex flex-col items-center justify-center">
+                        {/* <p className="text-end text-sm">Best Companies</p> */}
+                        <div className={`${jost.className} text-black/80 text-3xl md:text-4xl `}>Testimonials From Our Customers</div>
+                        <div style={{fontWeight:400}} className={`${jost.className}  text-md text-[#879099]  `}>Lorem ipsum  sit amet elit, sed  tempor </div> 
+        </div>
       <div className="w-full">
       <StickyScroll content={content} />
     </div></div>
