@@ -16,14 +16,75 @@ const PopularBikeSearch = () => {
    <div style={{fontWeight:400}} className={`${jost.className}  text-md text-[#a1a9b2] `}>2025 bikes available – 50 added today. </div> 
     </div>
     {/* Data */}
-    <div className='w-full grid grid-col-1 md:grid-cols-2 lg:grid-cols-3'>
-     <div className='flex items-center justify-center border rounded-md p-3'>
+    <div className='w-full grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-7'>
+        {/* 1 */}
+     <div className='flex items-center justify-start space-x-8 border rounded-md p-2'>
       {/* Image */}
       <div>
-        <img src="./offroad-category.jpeg"/>
+        <img className='h-24' src="./road.png"/>
       </div>
       <div className='flex flex-col space-y-2 '>
-    <div className={`${jost.className} text-[#252629] text-xl`}>Road Bikes </div>
+    <div className={`${jost.className} text-[#252629] text-2xl`}>Road Bikes </div>
+    <div style={{fontWeight:400}} className={`${jost.className} text-[#a1a9b2] text-md`}>(5 avaliable) </div>
+      
+      </div>
+     </div>
+        {/* 2 */}
+     <div className='flex items-center justify-start space-x-8 border rounded-md p-2'>
+      {/* Image */}
+      <div>
+        <img className='h-24' src="./touring.png"/>
+      </div>
+      <div className='flex flex-col space-y-2 '>
+    <div className={`${jost.className} text-[#252629] text-2xl`}>Adventure Bikes </div>
+    <div style={{fontWeight:400}} className={`${jost.className} text-[#a1a9b2] text-md`}>(5 avaliable) </div>
+      
+      </div>
+     </div>
+        {/* 3 */}
+     <div className='flex items-center justify-start space-x-8 border rounded-md p-2'>
+      {/* Image */}
+      <div>
+        <img className='h-24' src="./sports.png"/>
+      </div>
+      <div className='flex flex-col space-y-2 '>
+    <div className={`${jost.className} text-[#252629] text-2xl`}>Sports Bikes </div>
+    <div style={{fontWeight:400}} className={`${jost.className} text-[#a1a9b2] text-md`}>(5 avaliable) </div>
+      
+      </div>
+     </div>
+        {/* 4 */}
+     <div className='flex items-center justify-start space-x-8 border rounded-md p-2'>
+      {/* Image */}
+      <div>
+        <img className='h-16' src="./street.jpeg"/>
+      </div>
+      <div className='flex flex-col space-y-2 '>
+    <div className={`${jost.className} text-[#252629] text-2xl`}>Street Bikes </div>
+    <div style={{fontWeight:400}} className={`${jost.className} text-[#a1a9b2] text-md`}>(5 avaliable) </div>
+      
+      </div>
+     </div>
+        {/* 5 */}
+     <div className='flex items-center justify-start space-x-8 border rounded-md p-3'>
+      {/* Image */}
+      <div>
+        <img className='h-16' src="./electric.png"/>
+      </div>
+      <div className='flex flex-col space-y-2 '>
+    <div className={`${jost.className} text-[#252629] text-2xl`}>Electric Bikes </div>
+    <div style={{fontWeight:400}} className={`${jost.className} text-[#a1a9b2] text-md`}>(5 avaliable) </div>
+      
+      </div>
+     </div>
+        {/* 6 */}
+     <div className='flex items-center justify-start space-x-8 border rounded-md p-3'>
+      {/* Image */}
+      <div>
+        <img className='h-16' src="./curiser.png"/>
+      </div>
+      <div className='flex flex-col space-y-2 '>
+    <div className={`${jost.className} text-[#252629] text-2xl`}>Cruiser Bikes </div>
     <div style={{fontWeight:400}} className={`${jost.className} text-[#a1a9b2] text-md`}>(5 avaliable) </div>
       
       </div>
