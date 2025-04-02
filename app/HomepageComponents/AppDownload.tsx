@@ -9,7 +9,7 @@ const jost=Jost({
 const AppDownload = () => {
   return (
     <div>
-        <div className='w-full flex items-center justify-center  px-2 border-t py-20'>
+        <div className='w-full flex items-center justify-center  px-2 py-20'>
         <div className='w-full max-w-screen-xl flex items-center justify-center lg:space-x-16 lg:px-16 '>
             <div><img className='hidden lg:block   h-5/6' src="./mobile-screen.png"/></div>
        

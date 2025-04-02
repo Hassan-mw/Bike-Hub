@@ -24,7 +24,7 @@ const AboutWebsite=() =>{
       url:'/gear'  },
     {
       title: "Compare & Choose the Best Ride",
-      button: "Start Compareing",
+      button: "Start Compareing Bikes",
       src: "./3-carsole.jpeg",
         url:'/compare'
     },
