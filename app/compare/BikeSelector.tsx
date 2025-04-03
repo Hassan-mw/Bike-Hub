@@ -28,8 +28,15 @@ const jost=Jost({
   subsets:['latin']
 })
 
+interface dataType {
 
-const BikeSelector = ({bike,setBike,value}:{value:string,bike:{name:string,id:string},setBike:React.Dispatch<React.SetStateAction<string>>}) => {
+  name:string;
+  id:string
+  setBike: React.Dispatch<React.SetStateAction<{ id: string; name: String;}>>
+}
+
+
+const BikeSelector = ({bike,setBike,value}:{value:string,bike:{},setBike:React.Dispatch<React.SetStateAction<{id:string,name:String}>>}) => {
 
   
   const pathname=usePathname();

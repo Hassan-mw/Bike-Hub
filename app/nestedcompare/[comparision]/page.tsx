@@ -6,8 +6,10 @@
 import { MdCompareArrows } from "react-icons/md";
 import { Jost } from 'next/font/google';
 import { getBikeById } from "@/app/DataFetching/api";
-import ComparedBikeLeft from "@/app/compare/ComparedBikeLeft";
-import ComparedBikeRight from "@/app/compare/ComparedBikeRight";
+import ComparedBikeLeft from "../ComparedBikeLeft";
+import ComparedBikeRight from "../ComparedBikeRight";
+// import ComparedBikeLeft from "@/app/compare/ComparedBikeLeft";
+// import ComparedBikeRight from "@/app/compare/ComparedBikeRight";
 
 
 
