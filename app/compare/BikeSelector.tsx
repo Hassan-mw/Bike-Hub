@@ -32,9 +32,9 @@ interface dataType {
   
   bike:{name:string;id:string}
   value:string;
-  name:string;
-  id:string
-  setBike: React.Dispatch<React.SetStateAction<string>>
+  // name:string;
+  // id:string
+  setBike: React.Dispatch<React.SetStateAction<{name:string;id:string}>>
 }
 
 
