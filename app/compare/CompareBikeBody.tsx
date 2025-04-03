@@ -60,7 +60,7 @@ const [showResult,setShowResult]=useState(false)
 const value1='first';
 const value2='second';
 const value3='third';
-const x=searchParams.get('first')
+
 
 
 const handleClearAll = () => {

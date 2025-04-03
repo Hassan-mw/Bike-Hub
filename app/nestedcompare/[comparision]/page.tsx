@@ -24,9 +24,10 @@ const page = async({params}:{params:{comparision:string}}) => {
 const x=await params.comparision
 const splitingValue=x.toString()
 const [bike1,bike2]=splitingValue.split('-vs-')
+console.log(bike1,bike2)
 const firstBikeData=await getBikeById({bikeNames:bike1})
 const secondBikeData=await getBikeById({bikeNames:bike2})
-
+console.log(firstBikeData,secondBikeData)
   return (
     <div className='w-full flex flex-col items-center justify-center space-y-6 py-20 px-5'>
     {/* <div className='w-full max-w-screen-xl bg-[#f0f5f7] p-2 rounded-md  flex items-center justify-between'>

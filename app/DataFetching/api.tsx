@@ -43,11 +43,12 @@ console.error(error)
 
 
 
-export const getBikeById=async({bikeNames}:{bikeNames:any})=>{
+export const getBikeById=async({bikeNames}:{bikeNames:string})=>{
 try{
  const response = await fetch(`http://127.0.0.1:5000/api/bike/${bikeNames}`);
 
  const data=await response.json();
+ console.log(data,'🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇🐇')
 return data
 
 }catch(err){

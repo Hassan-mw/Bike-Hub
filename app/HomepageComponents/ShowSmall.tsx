@@ -23,9 +23,7 @@ import {
 
 const ShowSmall = () => {
   return ( 
-  
     <HeroData/>
-
   )
 }
 

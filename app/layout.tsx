@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Footer from "./HomepageComponents/Footer";
 import Navigation from "./Navbar/Navigation";
+import Head from "next/head";
 
 
 const geistSans = Geist({
@@ -28,6 +29,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" >
+      <Head>
+      <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+          />
+      </Head>
       <body className="overflow-x-hidden " >
         <Navigation/>
         {children}

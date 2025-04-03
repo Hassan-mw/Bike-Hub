@@ -18,7 +18,7 @@ const handleExpiredToken=(error)=>{
 
 
 module.exports=(err,req,res,next)=>{
-  console.log(err.name,'🐱‍👓🐱‍👓🐱‍👓🐱‍👓')
+ 
     err.statusCode=err.statusCode || 500;
     err.status=err.status || 'err';
   let error={...err};
@@ -27,7 +27,7 @@ module.exports=(err,req,res,next)=>{
     if(err.path==='_id' && err.kind==='ObjectId') error=handleInvalidId(error)  
       if(err.name==='ValidationError')  error=handleValidatorError(error)
       if(err.name==='TokenExpiredError')  error=handleExpiredToken(error)
-      console.log(err.name,'😴😴😴😴😴😴')
+     
       res.status(err.statusCode).json({
         status:err.status,
         message:err.message
