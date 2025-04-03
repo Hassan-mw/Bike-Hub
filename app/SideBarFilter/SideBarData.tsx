@@ -57,7 +57,7 @@ function handleFuleTypeChange(){
   return (
     <div>
         
-        <div className='w-full  flex flex-col  space-y-8  bg-white lg:border-4 lg:rounded-lg p-4  min-w-[350px]'>
+        <div className='w-full  flex flex-col  space-y-8  bg-white lg:border-2 lg:rounded-lg border-slate-100 p-4  min-w-[350px]'>
    
         <div  className={`${jost.className} w-full  grid grid-cols-3 gap-4 text-sm text-[#898989] `}>
        {category!=='all' && <div onClick={()=>setCategory('all')} className='bg-[#eaeffa] rounde-lg px-3  py-2  flex items-center justify-between w-full hover:cursor-pointer'> {category } <span className='text-red-500'>x</span></div>} 

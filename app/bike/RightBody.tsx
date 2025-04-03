@@ -60,7 +60,7 @@ const RightBody = ({paginatedData,number,setCount,count,initial,final,result}:Da
         
          <div className="">
   
-          <select className="w-36 md:w-52 border-4 px-3 py-2 rounded-md focus:border-blue-400">
+          <select className="w-36 md:w-52 border-2 border-slate-100 px-3 py-2 rounded-md focus:border-blue-400">
             <option>All</option>
             <option>Oldest</option>
             <option>Newest</option>
@@ -74,7 +74,7 @@ const RightBody = ({paginatedData,number,setCount,count,initial,final,result}:Da
 
          <div className='w-full max-w-screen-xl grid grid-cols-1 2xl:grid-cols-2 xl: gap-10 '>
        { paginatedData.map((data,index:number)=>(
-        <Link href={`/singleBike/${data._id}`} key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border-4 group relative '>
+        <Link href={`/singleBike/${data._id}`} key={data._id} className='flex flex-col items-center justify-center p-4 bg-white rounded-md overflow-hidden border-2 border-slate-100 group relative '>
          <div className='absolute top-8 -right-10 bg-green-500 text-white rotate-45 w-40 flex itemscenter justify-center text-lg'>{data.category}</div>
          {/* <div className='absolute top-5 -left-14 bg-green-500 text-white -rotate-45 w-40 flex itemscenter justify-center text-sm'>{data.category}</div> */}
          <img className='h-60  ' src={`${data.image} `} />

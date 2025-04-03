@@ -29,7 +29,7 @@ const jost=Jost({
 })
 
 
-const BikeSelector = ({bike,setBike,value}:{value:string,bike:{name:string,id:string}}) => {
+const BikeSelector = ({bike,setBike,value}:{value:string,bike:{name:string,id:string},setBike:React.Dispatch<React.SetStateAction<string>>}) => {
 
   
   const pathname=usePathname();
