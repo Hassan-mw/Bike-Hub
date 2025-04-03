@@ -31,13 +31,15 @@ const BikeCarsoleArray = () => {
       <img className=" w-full object-cover rounded-t-md " src="./honda-125.jpeg"/>
       </div>
       </CarouselItem>
-    <CarouselItem><div className="flex flex-col  p-3 rounded-md">
+    <CarouselItem>
+      <div className="flex flex-col  p-3 rounded-md">
       <div className={`${jost.className} w-full flex items-center justify-center text-xl`}>Honda CG 125</div>
-      <img className=" w-full object-cover rounded-t-md " src="./honda-125.jpeg"/>
+      <img className=" w-full object-cover rounded-t-md " src="./yamaha.jpeg"/>
       </div></CarouselItem>
-    <CarouselItem><div className="flex flex-col  p-3 rounded-md">
-      <div className={`${jost.className} w-full flex items-center justify-center text-xl`}>Honda CG 125</div>
-      <img className=" w-full object-cover rounded-t-md " src="./honda-125.jpeg"/>
+    <CarouselItem>
+      <div className="flex flex-col  p-3 rounded-md">
+      <div className={`${jost.className} w-full flex items-center justify-center text-xl`}>Suzuki GS 150</div>
+      <img className=" w-full object-cover rounded-t-md " src="./suzuki-150.jpg"/>
       </div></CarouselItem>
   </CarouselContent>
   <CarouselPrevious />
