@@ -29,14 +29,16 @@ const jost=Jost({
 })
 
 interface dataType {
-
+  
+  bike:{name:string;id:string}
+  value:string;
   name:string;
   id:string
-  setBike: React.Dispatch<React.SetStateAction<{ id: string; name: String;}>>
+  setBike: React.Dispatch<React.SetStateAction<string>>
 }
 
 
-const BikeSelector = ({bike,setBike,value}:{value:string,bike:{},setBike:React.Dispatch<React.SetStateAction<{id:string,name:String}>>}) => {
+const BikeSelector = ({bike,setBike,value}:dataType) => {
 
   
   const pathname=usePathname();

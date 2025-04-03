@@ -1,9 +1,9 @@
 'use client'
 import React, { useState } from 'react'
-import BikeOneSelector from './BikeOneSelector'
-import BikeRight from './BikeSecondSelector'
+// import BikeOneSelector from './BikeOneSelector'
+// import BikeRight from './BikeSecondSelector'
 import { Jost } from 'next/font/google'
-import CompareBothBike from './CompareBothBike'
+// import CompareBothBike from './CompareBothBike'
 
 import { Button } from "@/components/ui/moving-border";
 
@@ -23,6 +23,7 @@ import {
 import BikeSelector from './BikeSelector'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import BikeCarsoleArray from './BikeCarsoleArray';
 
 
 interface BikeDataType {
@@ -186,6 +187,12 @@ const handleClearAll = () => {
   </Accordion>
 
        </div>
+
+
+
+       {/* //!   New Bikes */}
+       <BikeCarsoleArray/>
+       
     </div>
     </div>
   )
