@@ -25,22 +25,24 @@ const BikeCarsoleArray = () => {
 
 <Carousel>
   <CarouselContent>
-    <CarouselItem>
+    <CarouselItem className="md:w-1/3">
         <div className="flex flex-col  p-3 rounded-md">
       <div className={`${jost.className} w-full flex items-center justify-center text-xl`}>Honda CG 125</div>
       <img className=" w-full object-cover rounded-t-md " src="./honda-125.jpeg"/>
       </div>
       </CarouselItem>
-    <CarouselItem>
+    <CarouselItem className="md:w-1/3">
       <div className="flex flex-col  p-3 rounded-md">
-      <div className={`${jost.className} w-full flex items-center justify-center text-xl`}>Honda CG 125</div>
-      <img className=" w-full object-cover rounded-t-md " src="./yamaha.jpeg"/>
-      </div></CarouselItem>
-    <CarouselItem>
+      <div className={`${jost.className} w-full flex items-center justify-center text-xl`}>Honda Pridor</div>
+      <img className=" w-full object-cover rounded-t-md " src="./honda-pridor.jpg"/>
+      </div>
+      </CarouselItem>
+    <CarouselItem className="md:w-1/3">
       <div className="flex flex-col  p-3 rounded-md">
       <div className={`${jost.className} w-full flex items-center justify-center text-xl`}>Suzuki GS 150</div>
       <img className=" w-full object-cover rounded-t-md " src="./suzuki-150.jpg"/>
-      </div></CarouselItem>
+      </div>
+      </CarouselItem>
   </CarouselContent>
   <CarouselPrevious />
   <CarouselNext />
