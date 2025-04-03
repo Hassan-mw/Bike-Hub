@@ -32,8 +32,6 @@ interface dataType {
   
   bike:{name:string;id:string}
   value:string;
-  // name:string;
-  // id:string
   setBike: React.Dispatch<React.SetStateAction<{name:string;id:string}>>
 }
 
@@ -149,7 +147,6 @@ const BikeSelector = ({bike,setBike,value}:dataType) => {
   :
 <div className='flex flex-col items-center justify-center space-y-3'>
   {bike.name}
-  {/* <div className=' bg-red-500 rounded-md text-white hover:bg-red-600 flex items-center justify-center px-3 py-1' onClick={()=>updateBikeSelection('','')}>Cancel</div> */}
   </div>
   }
      
