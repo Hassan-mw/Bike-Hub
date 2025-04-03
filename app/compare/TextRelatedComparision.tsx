@@ -18,7 +18,7 @@ const jost=Jost({
 
 const TextRelatedComparision = () => {
   return (
-    <div className='w-full max-w-screen-xl py-6 px-10   flex flex-col space-y-5 items-center border-t justify-center shadow-md bg-[#f4f7fc]  rounded-md '>
+    <div className='w-full max-w-screen-xl py-6 px-10   flex flex-col space-y-5 items-center border-t justify-center shadow-md bg-[#f4f7fc]  shadow-sm md:shadow-md '>
  <div className='w-full items-start justify-start flex flex-col space-y-2'>
 <div className={`${jost.className} w-full flex items-start justify-start text-4xl  `}>Bikes Comparison in Pakistan</div>
  <div className={`${jost.className} text-2xl text-[#434343]`}></div>

@@ -1,5 +1,6 @@
 import React from 'react'
-import CompareBikeData from './CompareBikeData';
+import CompareBikeData from '../compare/CompareBikeData';
+
 
 interface BikeDataType {
   name: string;

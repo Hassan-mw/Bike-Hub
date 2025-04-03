@@ -6,7 +6,7 @@ const jost=Jost({
 })
 const HotBikeComparision = () => {
   return (
-    <div className='w-full max-w-screen-xl flex flex-col py-4 space-y-9  rounded-lg px-10 border-t  shadow-md'>
+    <div className='w-full max-w-screen-xl flex flex-col py-4 space-y-9  rounded-lg px-10 border-t shadow-sm md:shadow-md'>
 
     <div className={`${jost.className} w-full flex items-start justify-start text-4xl  `}>Hot Bike Comparisons</div>
     
