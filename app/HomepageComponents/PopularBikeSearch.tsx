@@ -46,7 +46,7 @@ const PopularBikeSearch = () => {
       </div>
       <div className='flex flex-col space-y-2 '>
     <div className={`${jost.className} text-[#252629] text-2xl`}>{data.name}</div>
-    <div style={{fontWeight:400}} className={`${jost.className} text-[#a1a9b2] text-md`}>(${data.avalibale} avaliable) </div>
+    <div style={{fontWeight:400}} className={`${jost.className} text-[#a1a9b2] text-md `}>(${data.avalibale} avaliable) </div>
       
       </div>
      </div> 
