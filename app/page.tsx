@@ -63,8 +63,8 @@ const Page = () => {
         ref={popularBikeSearchRef}  className="py-12 w-full flex flex-col space-y-20 items-center justify-center"   data-scroll-section    style={{ backgroundColor: '#fff', position: 'relative',  zIndex: 50, }} >
       <PopularBikeSearch />
       <FeaturesBike />
-      <PopularCompany />
       <AboutWebsite />
+      <PopularCompany />
       <Status />
       <Testmonials />
       <AppDownload />
