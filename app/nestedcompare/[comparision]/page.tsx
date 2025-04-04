@@ -34,9 +34,8 @@ console.log(firstBikeData,secondBikeData)
     <div onClick={handleGoBack}>Go Back</div> 
      <div  className={`${jost.className} bg-blue-500 rounded-md px-2 hover:cursor-pointer text-white hover:bg-blue-600`}>Save it</div>
      </div>  */}
-    <div className='w-full max-w-screen-xl flex items-center justify-between space-x-4  '>
+    <div className='w-full max-w-screen-xl flex items-center justify-between  '>
         <ComparedBikeLeft data={firstBikeData.bike} />
-        <MdCompareArrows />
         <ComparedBikeRight data={secondBikeData.bike}/>
     </div>
  
