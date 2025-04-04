@@ -10,12 +10,12 @@ const jost=Jost({
 const PopularBikeSearch = () => {
 
   const  popularBikeData=[
-    {url:"/road.png",name:"Road Bikes ",avalibale:'3'},
-    {url:"/classic.png",name:"Street Bikes  ",avalibale:'3'},
-    {url:"/sports.png",name:"Sports Bikes  ",avalibale:'3'},
-    {url:"/touring.png",name:"Adventure Bikes  ",avalibale:'3'},
-    {url:"/electric.png",name:"Electric Bikes  ",avalibale:'3'},
-    {url:"/curiser.png",name:"Cruiser Bikes ",avalibale:'3'},
+    {url:"/road.jpg",name:"Road Bikes ",avalibale:'3'},
+    {url:"/classic.jpg",name:"Street Bikes  ",avalibale:'3'},
+    {url:"/sports.jpg",name:"Sports Bikes  ",avalibale:'3'},
+    {url:"/adventure-.png",name:"Adventure Bikes  ",avalibale:'3'},
+    {url:"/electric.jpg",name:"Electric Bikes  ",avalibale:'3'},
+    {url:"/curiser.jpg",name:"Cruiser Bikes ",avalibale:'3'},
   ]
 
 

@@ -37,6 +37,8 @@ export default function RootLayout({
             type="font/woff2"
             crossorigin="anonymous"
           />
+      <link rel="preload" href="/images/bg-image-hd.jpg" as="image"/>
+
       </Head>
       <body className="overflow-x-hidden " >
         <Navigation/>
