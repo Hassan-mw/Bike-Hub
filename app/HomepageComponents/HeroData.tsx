@@ -21,7 +21,12 @@ import {
 import { CiSearch } from 'react-icons/ci';
 import { RiEBikeLine } from 'react-icons/ri';
 import Link from 'next/link';
+import { Jost } from "next/font/google";
 
+const jost=Jost({
+  weight:['500'],
+  subsets:['latin']
+})
 
 
 const HeroData = () => {
@@ -30,8 +35,8 @@ const HeroData = () => {
     <div className='flex space-y-3 xl:space-y-8  flex-col lg:absolute lg:top-[30%] lg:left-9  lg:space-y-6  lg:text-white  font-extrabold w-full lg:w-5/6 bg-[#e5ebf5] lg:bg-transparent  text-[#494a4f]  px-7 lg:px-0 lg:py-0 py-14 '>
    <div className='w-full flex flex-col items-start justify-start space-y-3'>
 
-    <div  className={` text-3xl  xl:text-4xl 2xl:text-5xl z-20 `}>Ride the Future, Own the Road</div>
-    <div    className={`text-black lg:text-white text-xl lg:text-sm xl:text-xl `}>Explore the best motorbikes, accessories, and gear. Find your perfect ride today!</div>
+    <div  className={`${jost.className} text-3xl  xl:text-4xl 2xl:text-5xl z-20 `}>Ride the Future, Own the Road</div>
+    <div style={{fontWeight:300}}    className={` ${jost.className}  text-black lg:text-white text-xl lg:text-sm xl:text-xl `}>Explore the best motorbikes, accessories, and gear. Find your perfect ride today!</div>
    </div>
    
    
@@ -53,7 +58,7 @@ const HeroData = () => {
 <SelectTrigger style={{fontWeight:400}} className="w-full outline-none border-none shadow-none py-5 text-xl">
 <SelectValue placeholder="Search by brand" />
 </SelectTrigger>
-<SelectContent>
+<SelectContent className={`${jost.className} `}>
 <SelectItem value="Yahama">Yahama</SelectItem>
 <SelectItem value="Honda">Honda</SelectItem>
 <SelectItem value="Suzuki">Suzuki</SelectItem>
