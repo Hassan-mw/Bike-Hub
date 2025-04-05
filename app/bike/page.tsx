@@ -93,7 +93,9 @@ const page = async({searchParams}:{searchParams:URLSearchParams}) => {
 </div>}>
 
     
-      <BikeBody  result={result.data} />
+  {!result ? 
+  <div>No Data recived</div>
+  :    <BikeBody  result={result.data} />}
      </Suspense>
     </div>
 
