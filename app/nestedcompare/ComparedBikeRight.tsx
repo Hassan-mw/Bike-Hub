@@ -24,7 +24,7 @@ const ComparedBikeRight = ({data}:ParamsDataType)=> {
   const {name,brand,category,price,mileage,topSpeed,weight,image,fuelType,model}=data
 
   return (
-    <div className='w-full flex flex-col space-y-3 col-span-4'>
+    <div className='w-full flex flex-col space-y-3 col-span-3  '>
         <CompareBikeData name={name} brand={brand} category={category} price={price} mileage={mileage} topSpeed={topSpeed} weight={weight} fuelType={fuelType} model={model} image={image}   />
 
     </div>

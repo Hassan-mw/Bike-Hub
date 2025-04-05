@@ -27,7 +27,7 @@ const CompareBikeData = ({name,brand,category,price,mileage,topSpeed,weight,imag
      <img className=' aspect-auto object-cover' src={`/image-1.png`}/> 
      </div>
      <div className='w-full flex flex-col  min-h-[450px]'>
-    <div  style={{fontWeight:500}}   className={`${jost.className} border w-full truncate overflow-hidden flex flex-col items-start p-3 px-8 justify-start   text-xs md:text-3xl py-2`}>{name}</div>
+    <div  style={{fontWeight:500}}   className={`${jost.className} border w-full truncate overflow-hidden flex flex-col items-start p-3 px-8 justify-start   text-xs py-2`}>{name}</div>
     <div style={{fontWeight:300}} className={`${jost.className}   text-md p-3 border w-full flex flex-col items-start  justify-start px-8 `}>{brand}</div>
     <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start justify-start px-8 `}>{category}</div>
     <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start px-8 `}>${price}</div>
