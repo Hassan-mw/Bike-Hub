@@ -20,7 +20,18 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
  
 
-
+// import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 
 
 const jost=Jost({
@@ -80,6 +91,19 @@ const BikeSelector = ({bike,setBike,value}:dataType) => {
 
     <div className={`${jost.className} w-full flex items-center justify-center h-16 border  rounded-md border-[#e6e6e6]  bg-white relative group hover:cursor-pointer `}>
 {bike.name==='' ?
+  <Dialog>
+  <DialogTrigger>Open</DialogTrigger>
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Are you absolutely sure?</DialogTitle>
+      <DialogDescription>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </DialogDescription>
+    </DialogHeader>
+  </DialogContent>
+</Dialog>
+
     <DropdownMenu >
     <DropdownMenuTrigger asChild>
       <div  className='w-full   h-full rounded-md hover:cursor-pointer bg-none hover:bg-none shadow-none flex flex-col items-center justify-center '> 
