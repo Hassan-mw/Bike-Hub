@@ -20,20 +20,6 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
  
 
-// import { Button } from "@/components/ui/button"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-
-
 const jost=Jost({
   weight:['500'],
   subsets:['latin']
@@ -91,18 +77,7 @@ const BikeSelector = ({bike,setBike,value}:dataType) => {
 
     <div className={`${jost.className} w-full flex items-center justify-center h-16 border  rounded-md border-[#e6e6e6]  bg-white relative group hover:cursor-pointer `}>
 {bike.name==='' ?
-  <Dialog>
-  <DialogTrigger>Open</DialogTrigger>
-  <DialogContent>
-    <DialogHeader>
-      <DialogTitle>Are you absolutely sure?</DialogTitle>
-      <DialogDescription>
-        This action cannot be undone. This will permanently delete your account
-        and remove your data from our servers.
-      </DialogDescription>
-    </DialogHeader>
-  </DialogContent>
-</Dialog>
+
 
     <DropdownMenu >
     <DropdownMenuTrigger asChild>
@@ -111,7 +86,7 @@ const BikeSelector = ({bike,setBike,value}:dataType) => {
       <div style={{fontWeight:300}} className={`${jost.className} text-xl`}>Select Bike</div>
     </div>
     </DropdownMenuTrigger>
-    <DropdownMenuContent className={`${jost.className}  w-56  text-2xl`}>
+    <DropdownMenuContent side='top' className={`${jost.className}  w-56  text-2xl`}>
       <DropdownMenuGroup>
         {/* 1 */}
         <DropdownMenuSub>
