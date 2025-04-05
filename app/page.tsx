@@ -55,7 +55,7 @@ const Page = () => {
   }, []);
 
   return (
-    <div ref={containerRef} data-scroll-container  className="h-full bg-red-500">
+    <div ref={containerRef} data-scroll-container  className="h-full ">
       {/* Sections will scroll smoothly but we will only animate the PopularBikeSearch on scroll */}
       <Hero />
       
