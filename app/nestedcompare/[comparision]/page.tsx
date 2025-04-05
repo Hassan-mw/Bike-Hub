@@ -51,14 +51,14 @@ const {name: name2, brand: brand2, category: category2, price: price2, mileage: 
    </div>
      <div className='w-full flex flex-col  h-[450px]'>
     <div  style={{fontWeight:500}}   className={`${jost.className} border w-full flex flex-col items-center p-3 px-2 justify-center   text-2xl md:text-3xl py-2`}>Name</div>
-    <div style={{fontWeight:200}} className={`${jost.className}   text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Company</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center justify-center  px-2 `}>Category</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Price</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center   justify-center  px-2 `}>Mileage</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Top Speed</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center   justify-center  px-2 `}>Weight</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Fuel Type</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Fuel Type</div>
+    <div style={{fontWeight:300}} className={`${jost.className}   text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Company</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center justify-center  px-2 `}>Category</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Price</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center   justify-center  px-2 `}>Mileage</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Top Speed</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center   justify-center  px-2 `}>Weight</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Fuel Type</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Fuel Type</div>
     {/* <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start  px-2 `}>{fuelType}</div> */}
 
      </div>

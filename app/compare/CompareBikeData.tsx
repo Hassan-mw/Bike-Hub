@@ -24,15 +24,15 @@ const CompareBikeData = ({name,brand,category,price,mileage,topSpeed,weight,imag
     <div className='w-full grid gap-6   '>
    <div className='  '> <img className=' aspect-auto object-cover' src={`/image-1.png`}/> </div>
      <div className='w-full flex flex-col  h-[450px]'>
-    <div  style={{fontWeight:500}}   className={`${jost.className} border w-full flex flex-col items-start p-3 px-2 justify-start   text-2xl md:text-3xl py-2`}>{name}</div>
-    <div style={{fontWeight:200}} className={`${jost.className}   text-md p-3 border w-full flex flex-col items-start  justify-start  px-2 `}>{brand}</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start justify-start  px-2 `}>{category}</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start  px-2 `}>${price}</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start   justify-start  px-2 `}>{mileage}</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start  px-2 `}>{topSpeed} km/h</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start   justify-start  px-2 `}>{weight} kg</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start  px-2 `}>{fuelType}</div>
-    <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start  px-2 `}>{fuelType}</div>
+    <div  style={{fontWeight:500}}   className={`${jost.className} border w-full flex flex-col items-start p-3 px-8 justify-start   text-2xl md:text-3xl py-2`}>{name}</div>
+    <div style={{fontWeight:300}} className={`${jost.className}   text-md p-3 border w-full flex flex-col items-start  justify-start px-8 `}>{brand}</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start justify-start px-8 `}>{category}</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start px-8 `}>${price}</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start   justify-start px-8 `}>{mileage}</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start px-8 `}>{topSpeed} km/h</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start   justify-start px-8 `}>{weight} kg</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start px-8 `}>{fuelType}</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start px-8 `}>{fuelType}</div>
 
      </div>
      </div>
