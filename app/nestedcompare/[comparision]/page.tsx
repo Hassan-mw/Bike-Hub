@@ -39,9 +39,13 @@ const {name: name2, brand: brand2, category: category2, price: price2, mileage: 
 
 
 :
-
-
-    <div className='w-full max-w-screen-xl grid grid-cols-9  bg-white shadow-2xl rounded-lg'>
+       <div className="w-full flex flex-col items-center justify-center space-y-7 ">
+     <div className="text-black-500 bg-white text-center py-8 w-full max-w-screen-lg rounded-t-lg shadow-2xl">
+    <h1 className={`${jost.className} text-4xl font-bold`}>Bike Comparison</h1>
+    <p className={`${jost.className}  mt-4 text-lg`}>Compare the latest bikes based on speed, performance, and features.</p>
+  </div>
+  
+    <div className='w-full max-w-screen-lg grid grid-cols-9  bg-white shadow-2xl rounded-b-lg'>
         <ComparedBikeLeft data={firstBikeData.bike} />
 
     {/* <div className='w-full flex flex-col items-center justify-between col-span-3 lg:col-span-1 '>
@@ -52,8 +56,9 @@ const {name: name2, brand: brand2, category: category2, price: price2, mileage: 
      <img className=' aspect-auto object-cover opacity-0' src={`/image-1.png`}/> 
      </div>
      <div className='w-full flex flex-col  min-h-[450px]  '>
-    <div  style={{fontWeight:500}}   className={`${jost.className} border w-full  flex flex-col items-center p-3 px-2 justify-center   text-xs  py-2`}>Name</div>
+    <div  style={{fontWeight:500}}   className={`${jost.className} border w-full  flex flex-col items-center p-3 px-2 justify-center   text-xs md:text-2xl py-2`}>Name</div>
     <div style={{fontWeight:300}} className={`${jost.className}   text-md p-3 border w-full flex flex-col items-center  justify-center  px-8 `}>Company</div>
+    <div style={{fontWeight:300}} className={`${jost.className}   text-md p-3 border w-full flex flex-col items-center  justify-center  px-8 `}>Rating</div>
     <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center justify-center  px-8 `}>Category</div>
     <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-8 `}>Price</div>
     <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center   justify-center  px-8 `}>Mileage</div>
@@ -67,6 +72,8 @@ const {name: name2, brand: brand2, category: category2, price: price2, mileage: 
      </div>
         <ComparedBikeRight data={secondBikeData.bike}/>
     </div>
+    </div>
+
  }
    </div>)
   
