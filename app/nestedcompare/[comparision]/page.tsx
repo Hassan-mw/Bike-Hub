@@ -41,24 +41,26 @@ const {name: name2, brand: brand2, category: category2, price: price2, mileage: 
 :
 
 
-    <div className='w-full max-w-screen-xl grid grid-cols-9  bg-white shadow-2xl rounded-lg'>
-      
+    <div className='w-full max-w-screen-xl grid grid-cols-10  bg-white shadow-2xl rounded-lg'>
         <ComparedBikeLeft data={firstBikeData.bike} />
-        <div className='w-full flex flex-col items-center justify-between col-span-3 lg:col-span-1'>
-   {/* <div className='  aspect-auto object-cover '> <img className='' src='/vd.pngg' /> j</div> */}
-   <div className="w-full  h-full flex items-center justify-center text-4xl text-red-400">
-              vs
-   </div>
-     <div className='w-full flex flex-col  h-[450px]'>
-    <div  style={{fontWeight:500}}   className={`${jost.className} border w-full flex flex-col items-center p-3 px-2 justify-center   text-2xl md:text-3xl py-2`}>Name</div>
-    <div style={{fontWeight:300}} className={`${jost.className}   text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Company</div>
-    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center justify-center  px-2 `}>Category</div>
-    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Price</div>
-    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center   justify-center  px-2 `}>Mileage</div>
-    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Top Speed</div>
-    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center   justify-center  px-2 `}>Weight</div>
-    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Fuel Type</div>
-    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-2 `}>Fuel Type</div>
+
+    {/* <div className='w-full flex flex-col items-center justify-between col-span-3 lg:col-span-1 '>
+     */}
+      <div className='w-full flex flex-col items-center justify-between gap-6 col-span-2   '>
+   <div className='  '>
+     {/* <div>Check bike In Detail</div> */}
+     <img className=' aspect-auto object-cover opacity-0' src={`/image-1.png`}/> 
+     </div>
+     <div className='w-full flex flex-col  min-h-[450px]  '>
+    <div  style={{fontWeight:500}}   className={`${jost.className} border w-full  flex flex-col items-center p-3 px-2 justify-center   text-xs md:text-3xl py-2`}>Name</div>
+    <div style={{fontWeight:300}} className={`${jost.className}   text-md p-3 border w-full flex flex-col items-center  justify-center  px-8 `}>Company</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center justify-center  px-8 `}>Category</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-8 `}>Price</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center   justify-center  px-8 `}>Mileage</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-8 `}>Top Speed</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center   justify-center  px-8 `}>Weight</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-8 `}>Fuel Type</div>
+    <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-center  justify-center  px-8 `}>Fuel Type</div>
     {/* <div style={{fontWeight:200}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start  px-2 `}>{fuelType}</div> */}
 
      </div>
