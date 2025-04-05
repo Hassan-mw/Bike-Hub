@@ -23,7 +23,7 @@ console.log(bike1,bike2)
 const firstBikeData=await getBikeById({bikeNames:bike1}) 
 const secondBikeData=await getBikeById({bikeNames:bike2}) 
 
-console.log(firstBikeData,secondBikeData)
+const {name,brand,category,price,mileage,topSpeed,weight,image,fuelType,model}=firstBikeData.bike
   return (
     <div className='w-full flex flex-col items-center justify-center space-y-6 py-20 px-5'>
 {!firstBikeData || !secondBikeData
@@ -39,6 +39,7 @@ console.log(firstBikeData,secondBikeData)
 
 
     <div className='w-full max-w-screen-xl flex items-center justify-between  '>
+      
         <ComparedBikeLeft data={firstBikeData.bike} />
         <ComparedBikeRight data={secondBikeData.bike}/>
     </div>
