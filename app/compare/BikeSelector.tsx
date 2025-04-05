@@ -90,12 +90,12 @@ const BikeSelector = ({bike,setBike,value}:dataType) => {
       <DropdownMenuGroup>
         {/* 1 */}
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger style={{fontWeight:400}}  className={`${jost.className} text-md`}>Triump</DropdownMenuSubTrigger>
+          <DropdownMenuSubTrigger style={{fontWeight:300}}  className={`${jost.className} text-lg`}>Triump</DropdownMenuSubTrigger>
           <DropdownMenuPortal>
-            <DropdownMenuSubContent  style={{fontWeight:300}} className={`${jost.className} text-md`}>
-            <DropdownMenuItem onClick={() => updateBikeSelection('67dda2e4c92b5fdeb986ba1f','Triump Tiger 900')}>Triump Tiger 900</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => updateBikeSelection('67dda9c7f089a983c560ee93','Triump Bonneville T100')}>Triump Bonneville T100</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => updateBikeSelection('67ddadb5f089a983c560eebd','Triumpt Speed Triple 1200 RS')}>Triump Speed Triple 1200 RS</DropdownMenuItem>
+            <DropdownMenuSubContent  >
+            <DropdownMenuItem style={{fontWeight:200}} className={`${jost.className} text-xs`} onClick={() => updateBikeSelection('67dda2e4c92b5fdeb986ba1f','Triump Tiger 900')}>Triump Tiger 900</DropdownMenuItem>
+            <DropdownMenuItem style={{fontWeight:200}} className={`${jost.className} text-xs`} onClick={() => updateBikeSelection('67dda9c7f089a983c560ee93','Triump Bonneville T100')}>Triump Bonneville T100</DropdownMenuItem>
+            <DropdownMenuItem  onClick={() => updateBikeSelection('67ddadb5f089a983c560eebd','Triumpt Speed Triple 1200 RS')}>Triump Speed Triple 1200 RS</DropdownMenuItem>
 
   
             </DropdownMenuSubContent>
@@ -104,11 +104,11 @@ const BikeSelector = ({bike,setBike,value}:dataType) => {
      
         {/* 2 */}
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger  className={`${jost.className} text-xl`}>Ducati</DropdownMenuSubTrigger>
+        <DropdownMenuSubTrigger style={{fontWeight:300}}  className={`${jost.className} text-lg`}>Ducati</DropdownMenuSubTrigger>
           <DropdownMenuPortal>
-            <DropdownMenuSubContent  style={{fontWeight:300}} className={`${jost.className} text-sm`}>
-            <DropdownMenuItem onClick={() => updateBikeSelection('67dda6eaf089a983c560ee6b','Ducati Panigale V4')}> Ducati Panigale V 4</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => updateBikeSelection('67ddab57f089a983c560eea5','Ducati Multistrada V4')}>Ducati Multistrada V 4</DropdownMenuItem>
+            <DropdownMenuSubContent  >
+            <DropdownMenuItem style={{fontWeight:200}} className={`${jost.className} text-xs`} onClick={() => updateBikeSelection('67dda6eaf089a983c560ee6b','Ducati Panigale V4')}> Ducati Panigale V 4</DropdownMenuItem>
+            <DropdownMenuItem style={{fontWeight:200}} className={`${jost.className} text-xs`} onClick={() => updateBikeSelection('67ddab57f089a983c560eea5','Ducati Multistrada V4')}>Ducati Multistrada V 4</DropdownMenuItem>
   
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
@@ -116,11 +116,11 @@ const BikeSelector = ({bike,setBike,value}:dataType) => {
      
         {/* 3 */}
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger className={`${jost.className} text-xl`}>Harley Davidson</DropdownMenuSubTrigger>
+        <DropdownMenuSubTrigger style={{fontWeight:300}}  className={`${jost.className} text-lg`}>Harley Davidson</DropdownMenuSubTrigger>
           <DropdownMenuPortal>
             <DropdownMenuSubContent  style={{fontWeight:300}} className={`${jost.className} text-sm`}>
-            <DropdownMenuItem onClick={() => updateBikeSelection('67dda7d3f089a983c560ee73','Harley Davidson Iron 883')}>Harley Davidson Iron 883</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => updateBikeSelection('67ddac46f089a983c560eeb1','Harley Davidson Street 750')}>Harley Davidson Street 750</DropdownMenuItem>
+            <DropdownMenuItem style={{fontWeight:200}} className={`${jost.className} text-xs`} onClick={() => updateBikeSelection('67dda7d3f089a983c560ee73','Harley Davidson Iron 883')}>Harley Davidson Iron 883</DropdownMenuItem>
+            <DropdownMenuItem style={{fontWeight:200}} className={`${jost.className} text-xs`} onClick={() => updateBikeSelection('67ddac46f089a983c560eeb1','Harley Davidson Street 750')}>Harley Davidson Street 750</DropdownMenuItem>
   
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
@@ -129,11 +129,11 @@ const BikeSelector = ({bike,setBike,value}:dataType) => {
      
         {/* 4 */}
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger className={`${jost.className} text-xl`}>Honda</DropdownMenuSubTrigger>
+         <DropdownMenuSubTrigger style={{fontWeight:300}}  className={`${jost.className} text-lg`}>Honda</DropdownMenuSubTrigger>
           <DropdownMenuPortal>
-            <DropdownMenuSubContent style={{fontWeight:300}} className={`${jost.className} text-sm`}>
-            <DropdownMenuItem onClick={() => updateBikeSelection('67dda3a8f089a983c560ee50','Honda CBR 500R')}>Honda CBR500R</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => updateBikeSelection('67dda8f8f089a983c560ee83','Honda Gold Wing')}>Honda Gold Wing</DropdownMenuItem>
+            <DropdownMenuSubContent >
+            <DropdownMenuItem style={{fontWeight:200}} className={`${jost.className} text-xs`} onClick={() => updateBikeSelection('67dda3a8f089a983c560ee50','Honda CBR 500R')}>Honda CBR500R</DropdownMenuItem>
+            <DropdownMenuItem style={{fontWeight:200}} className={`${jost.className} text-xs`} onClick={() => updateBikeSelection('67dda8f8f089a983c560ee83','Honda Gold Wing')}>Honda Gold Wing</DropdownMenuItem>
   
             </DropdownMenuSubContent>
           </DropdownMenuPortal>
