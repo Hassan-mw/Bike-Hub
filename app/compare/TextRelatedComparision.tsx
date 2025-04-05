@@ -18,9 +18,9 @@ const jost=Jost({
 
 const TextRelatedComparision = () => {
   return (
-    <div className='w-full max-w-screen-xl py-6 px-10   flex flex-col space-y-5 items-center border-t justify-center shadow-md bg-[#f4f7fc]  shadow-sm md:shadow-md '>
+    <div className='w-full max-w-screen-xl py-6 px-10   flex flex-col space-y-5 items-center border-t justify-center  bg-[#f4f7fc]  shadow-sm md:shadow-md '>
  <div className='w-full items-start justify-start flex flex-col space-y-2'>
-<div className={`${jost.className} w-full flex items-start justify-start text-4xl  `}>Bikes Comparison in Pakistan</div>
+<div className={`${jost.className} w-full flex items-start justify-start  text-2xl md:text-3xl lg:text-4xl   `}>Bikes Comparison in Pakistan</div>
  <div className={`${jost.className} text-2xl text-[#434343]`}></div>
   <div style={{fontWeight:300}} className={`${jost.className} text-[#3b3939] text-md max-w-screen-lg`}>If you’re still in a dilemma on purchasing a new bike, BikeHub is here to help you in choosing you the best bike in your desired budget. BikeHub bike comparison tool made with comprehensive research and practicality. Although there is no direct naming of the brand in regards to which one is better or not we still try to make it clear to the assumed rational customers with a good list of points. </div>
  </div>

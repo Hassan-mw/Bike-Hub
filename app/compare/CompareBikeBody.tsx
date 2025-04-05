@@ -91,7 +91,7 @@ const handleClearAll = () => {
 
      {/*//!     Comparision Select */}
     <div className='w-full flex flex-col space-y-7  py-6 rounded-md shadow-sm md:shadow-md border-t px-10'>
-    <div className={`${jost.className} text-4xl w-full flex items-start  justify-start `}>Select Bike for Comparision</div>
+    <div className={`${jost.className} text-2xl md:text-3xl lg:text-4xl w-full flex items-center  justify-start  `}>Select Bike for Comparision</div>
     <div className='w-full flex flex-col md:flex-row space-y-6 md:space-y-0 md:gap-x-6 items-center justify-center pt-6   '>
         <BikeSelector bike={bike1} setBike={setBike1}  value={value1}   />
         <BikeSelector bike={bike2}  setBike={setBike2} value={value2}    />

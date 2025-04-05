@@ -8,7 +8,7 @@ const HotBikeComparision = () => {
   return (
     <div className='w-full max-w-screen-xl flex flex-col py-4 space-y-9  rounded-lg px-10 border-t shadow-sm md:shadow-md'>
 
-    <div className={`${jost.className} w-full flex items-start justify-start text-4xl  `}>Hot Bike Comparisons</div>
+    <div className={`${jost.className} w-full flex items-start justify-start  text-2xl md:text-3xl lg:text-4xl   `}>Hot Bike Comparisons</div>
     
     <div className="w-full grid grid-cols-1  md:grid-cols-2 gap-6   pb-6 max-w-screen-xl  ">
     {/* 1 */}
