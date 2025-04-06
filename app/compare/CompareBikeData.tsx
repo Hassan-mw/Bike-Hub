@@ -25,6 +25,8 @@ const CompareBikeData = ({name,brand,category,price,mileage,topSpeed,weight,imag
   const [showSideIcon,setShowSideIcon]=useState(false)
   return (
     <div className='w-full grid gap-6  '>
+    
+    
        <div className="w-[400px] h-[100px]  flex items-center justify-end  fixed top-1/2 right-1/2">
        <div
   onClick={() => setShowSideIcon(!showSideIcon)}
@@ -88,6 +90,9 @@ const CompareBikeData = ({name,brand,category,price,mileage,topSpeed,weight,imag
     {/* <div className="size-6 rounded-full bg-green-600"></div> */}
     {/* <div className="size-6 rounded-full bg-green-600"></div> */}
     </div>
+
+
+    
    <div className='  '>
      {/* <div>Check bike In Detail</div> */}
      <img className=' aspect-auto object-cover' src={`/image-1.png`}/> 
