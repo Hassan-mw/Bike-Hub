@@ -148,3 +148,14 @@ html.has-scroll-dragging {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.light {
+  background-color: #fff;
+  color: #000;
+}

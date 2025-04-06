@@ -19,6 +19,7 @@ import FeaturesBike from './HomepageComponents/FeaturesBike';
 import Footer from "./HomepageComponents/Footer";
 
 import { ThemeProvider } from 'next-themes'
+import DarkModeButton from "./components-usage/DarkModeButton";
 
 const Page = () => {
   const containerRef = useRef(null);
@@ -68,13 +69,14 @@ const Page = () => {
   }, []);
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="light">
     <div ref={containerRef} data-scroll-container  className=" bg-white">
       {/* Sections will scroll smoothly but we will only animate the PopularBikeSearch on scroll */}
       <Hero />
       
       <div 
         ref={popularBikeSearchRef}  className="py-12 w-full bg-transparent flex flex-col space-y-20 items-center justify-center"   data-scroll-section    style={{ backgroundColor: '#fff', position: 'relative',  zIndex: 50, }} >
+        <DarkModeButton/>
+       
       <PopularBikeSearch />
       <FeaturesBike />
       <AboutWebsite />

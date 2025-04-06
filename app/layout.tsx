@@ -41,6 +41,8 @@ export default function RootLayout({
 
       </Head>
       <body className="overflow-x-hidden " >
+    <ThemeProvider attribute="class" defaultTheme="light">
+
         <Navigation/>
         {children}
         <Footer/>
