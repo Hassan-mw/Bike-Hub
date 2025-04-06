@@ -18,8 +18,8 @@ const jost=Jost({
 
 const Showlarge = () => {
   return (
-    <div className=' w-full h-full lg:max-h-[70vh] flex items-center justify-center  relative'>     
-    <div className='hidden  w-full h-full lg:block  flex-col relative '>
+    <div className=' w-full h-full  flex items-center justify-center  relative'>     
+    <div className='hidden  w-full h-full lg:block lg:max-h-[70vh] flex-col relative '>
 
 
 <Image
