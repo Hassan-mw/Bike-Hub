@@ -32,7 +32,7 @@ const FeaturesBike = () => {
     
     {
      data.map((data,index)=>
-      <div key={data.name} className="flex flex-col border  rounded-md">
+      <div key={index} className="flex flex-col border  rounded-md">
       <div className={`italic w-full flex items-center justify-center text-xl text-orange-500 border-b p-3`}>{data.category}</div>
       <Image layout="intrinsic"   height={300} width={300}  className="h-60 sm:h-40  lg:h-60 w-full object-cover px-4 " src={data.url} alt='Bike Image'/>
       <div className="flex flex-col items-center justify-center rounded-b-md border-t   bg-blue-400">

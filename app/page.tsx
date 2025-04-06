@@ -60,7 +60,7 @@ const Page = () => {
       <Hero />
       
       <div 
-        ref={popularBikeSearchRef}  className="py-12 w-full flex flex-col space-y-20 items-center justify-center"   data-scroll-section    style={{ backgroundColor: '#fff', position: 'relative',  zIndex: 50, }} >
+        ref={popularBikeSearchRef}  className=" w-full flex flex-col space-y-20 "   data-scroll-section    style={{ backgroundColor: '#fff', position: 'relative',  zIndex: 50, }} >
       <PopularBikeSearch />
       <FeaturesBike />
       <AboutWebsite />

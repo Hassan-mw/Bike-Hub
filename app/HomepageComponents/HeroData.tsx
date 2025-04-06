@@ -73,8 +73,8 @@ const HeroData = () => {
     </div>
   {/* //! Pppular Search */}
   <div className='w-full  flex items-start justify-start space-x-3'>
-    <div style={{fontWeight:300}} className={` text-md text-black lg:text-white  border-b border-black  lg:border-white`}>Popular Searches : </div> 
-    <div  style={{fontWeight:300}} className={` text-md text-black lg:text-white`}>Yamaha, Honda, BMW, Suzuki.  </div>
+    <div style={{fontWeight:300}} className={`${jost.className} text-md text-black lg:text-white  border-b border-black  lg:border-white`}>Popular Searches : </div> 
+    <div  style={{fontWeight:300}} className={`${jost.className} text-md text-black lg:text-white`}>Yamaha, Honda, BMW, Suzuki.  </div>
   </div>
 
 </div>
