@@ -1,5 +1,7 @@
+'use client'
+
 import { Jost } from 'next/font/google'
-import React from 'react'
+import React, { useState } from 'react'
 interface dataType{
   name: string;
   brand: string;
@@ -20,8 +22,53 @@ const jost=Jost({
 
 
 const CompareBikeData = ({name,brand,category,price,mileage,topSpeed,weight,image,fuelType,model}:dataType) => {
+  const [showSideIcon,setShowSideIcon]=useState(false)
   return (
-    <div className='w-full grid gap-6   '>
+    <div className='w-full grid gap-6  '>
+       <div className="w-[400px] h-[100px]  flex items-center justify-end  fixed top-1/2 right-5">
+       <div
+  onClick={() => setShowSideIcon(!showSideIcon)}
+  className="z-20 hover:cursor-pointer size-6 rounded-full bg-green-600 relative"
+>
+  {/* Dot 2 */}
+  <div
+    className={`${
+      showSideIcon ? '-translate-x-[65px] -translate-y-[75px]' : 'translate-x-0 translate-y-0'
+    } transition-transform duration-500 ease-in-out size-6 rounded-full bg-yellow-600 absolute z-10`}
+  ></div>
+  {/* Dot 1 */}
+  <div
+    className={`${
+      showSideIcon ? '-translate-x-[100px] translate-y-[0px]' : 'translate-x-0 translate-y-0'
+    } transition-transform duration-500 ease-in-out size-6 rounded-full bg-blue-600 absolute z-10`}
+  ></div>
+
+
+  {/* Dot 3 */}
+  <div
+    className={`${
+      showSideIcon ? '-translate-x-[65px] translate-y-[75px]' : 'translate-x-0 translate-y-0'
+    } transition-transform duration-500 ease-in-out size-6 rounded-full bg-purple-600 absolute z-10`}
+  ></div>
+
+  {/* Dot 4 */}
+  <div
+    className={`${
+      showSideIcon ? '-translate-x-[0px] -translate-y-[120px]' : 'translate-x-0 translate-y-0'
+    } transition-transform duration-500 ease-in-out size-6 rounded-full bg-amber-950 absolute z-10`}
+  ></div>
+
+  {/* Dot 5 */}
+  <div
+    className={`${
+      showSideIcon ? 'translate-x-[0px] translate-y-[120px]' : 'translate-x-0 translate-y-0'
+    } transition-transform duration-500 ease-in-out size-6 rounded-full bg-black absolute z-10`}
+  ></div>
+</div>
+
+    {/* <div className="size-6 rounded-full bg-green-600"></div> */}
+    {/* <div className="size-6 rounded-full bg-green-600"></div> */}
+    </div>
    <div className='  '>
      {/* <div>Check bike In Detail</div> */}
      <img className=' aspect-auto object-cover' src={`/image-1.png`}/> 

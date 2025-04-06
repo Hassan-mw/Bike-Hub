@@ -1,4 +1,3 @@
-
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdCompareArrows } from "react-icons/md";
 import { Jost } from 'next/font/google';
@@ -29,6 +28,9 @@ const {name: name2, brand: brand2, category: category2, price: price2, mileage: 
 
   return (
     <div className='w-full flex flex-col items-center justify-center space-y-6 py-20 px-5 bg-[#f4f7fc]' >
+   
+   
+
 {!firstBikeData || !secondBikeData
 ?
 <div className="w-full min-h-[70vh] flex flex-col space-y-8 items-center justify-center ">
@@ -75,7 +77,9 @@ const {name: name2, brand: brand2, category: category2, price: price2, mileage: 
     </div>
 
  }
-   </div>)
+   </div>
+   
+  )
   
 }
 
