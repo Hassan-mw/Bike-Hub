@@ -18,6 +18,8 @@ import PopularBikeSearch from './HomepageComponents/PopularBikeSearch';
 import FeaturesBike from './HomepageComponents/FeaturesBike';
 import Footer from "./HomepageComponents/Footer";
 
+import { ThemeProvider } from 'next-themes'
+
 const Page = () => {
   const containerRef = useRef(null);
   const scrollInstance = useRef<LocomotiveScroll | null>(null); // Store Locomotive instance
@@ -66,6 +68,7 @@ const Page = () => {
   }, []);
 
   return (
+    <ThemeProvider attribute="class">
     <div ref={containerRef} data-scroll-container  className=" bg-white">
       {/* Sections will scroll smoothly but we will only animate the PopularBikeSearch on scroll */}
       <Hero />
@@ -84,6 +87,7 @@ const Page = () => {
       <Footer/>
     </div>
       </div>
+      </ThemeProvider>
   );
 };
 
