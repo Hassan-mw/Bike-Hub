@@ -179,7 +179,7 @@ const content = [
 const Testmonials=()=> {
   return (
 
-    <div className="w-full py-16 bg-[#f0f5f7]">
+    <div className="w-full py-24 bg-[#f0f5f7] space-y-12">
        <div className="w-full flex flex-col items-center justify-center">
                         {/* <p className="text-end text-sm">Best Companies</p> */}
                         <div className={`${jost.className} text-black/80 text-3xl md:text-4xl `}>Testimonials From Our Customers</div>

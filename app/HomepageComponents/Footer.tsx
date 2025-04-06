@@ -67,7 +67,7 @@ const footerLinks = [
     },
 ]
   return (
-    <div className='w-full flex items-center justify-center p-3 '>
+    <div className='w-full flex items-center justify-center p-3 pb-36'>
     <div className='w-full max-w-screen-xl flex  flex-col space-y-8 items-center justify-center '>
       {/* 1 */}
     <div className='w-full flex items-center justify-between border-b pb-5  '>

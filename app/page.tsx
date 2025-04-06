@@ -59,14 +59,14 @@ const Page = () => {
     // }, []);
     
     // Cleanup on unmount
-    return () => {
-      if (scrollInstance.current) scrollInstance.current.destroy();
-      window.removeEventListener('scroll', handleScroll);
-    };
+  //   return () => {
+  //     if (scrollInstance.current) scrollInstance.current.destroy();
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
   }, []);
 
   return (
-    <div ref={containerRef} data-scroll-container  className=" bg-green-900">
+    <div ref={containerRef} data-scroll-container  className=" bg-white">
       {/* Sections will scroll smoothly but we will only animate the PopularBikeSearch on scroll */}
       <Hero />
       
@@ -77,6 +77,7 @@ const Page = () => {
       <AboutWebsite />
       <PopularCompany />
       <Status />
+      {/* <Status /> */}
       <Testmonials />
       {/* <Testmonials /> */}
       <AppDownload />
