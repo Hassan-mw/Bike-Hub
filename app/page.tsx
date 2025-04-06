@@ -68,7 +68,7 @@ const Page = () => {
   }, []);
 
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="light">
     <div ref={containerRef} data-scroll-container  className=" bg-white">
       {/* Sections will scroll smoothly but we will only animate the PopularBikeSearch on scroll */}
       <Hero />

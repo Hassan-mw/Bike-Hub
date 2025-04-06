@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/sheet"
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitch } from 'react-icons/fa'
 import { IoPerson } from 'react-icons/io5'
+import DarkModeButton from '../components-usage/DarkModeButton'
 
 
 
@@ -39,6 +40,7 @@ const Navigation = () => {
         <Link  style={{fontWeight:300}}  href='/gear' className={` ${jost.className} text-md   hover:text-[#1967d2] duration-500 `}>Accessories        </Link>
         <Link  style={{fontWeight:300}} href='/compare'  className={` ${jost.className} text-md   hover:text-[#1967d2] duration-500 `}>Compare</Link>
         <Link   style={{fontWeight:300}} href='/faq'   className={` ${jost.className} text-md  hover:text-[#1967d2] duration-500 `}>FAQ</Link>
+        <DarkModeButton/>
         <div  style={{fontWeight:300}}  className='border-2 py-2 px-5 duration-500 hover:border-white  rounded-2xl border-[#1967d2] hover:bg-[#1967d2] hover:text-white'>Login / Signup</div>
       </div>
       </div>
