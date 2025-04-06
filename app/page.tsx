@@ -20,7 +20,7 @@ import Footer from "./HomepageComponents/Footer";
 
 const Page = () => {
   const containerRef = useRef(null);
-  const scrollInstance = useRef(null); // Store Locomotive instance
+  const scrollInstance = useRef<LocomotiveScroll | null>(null); // Store Locomotive instance
   const popularBikeSearchRef = useRef(null);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Page = () => {
       if (popularBikeSearchRef.current) {
         const position = popularBikeSearchRef.current.getBoundingClientRect();
         
-        if (position.top <= 0) {
+        if (position.top <= 30) {
           // If PopularBikeSearch is scrolled over Hero, apply the smooth scroll
           // You can customize this logic for other sections too
         }
@@ -47,6 +47,17 @@ const Page = () => {
     // Add the scroll event listener
     window.addEventListener('scroll', handleScroll);
 
+
+    setTimeout(() => {
+      scrollInstance.current?.update();
+    }, 500); // Yo
+
+    // useEffect(() => {
+    //   window.addEventListener("load", () => {
+    //     scrollInstance.current?.update();
+    //   });
+    // }, []);
+    
     // Cleanup on unmount
     return () => {
       if (scrollInstance.current) scrollInstance.current.destroy();
@@ -55,18 +66,19 @@ const Page = () => {
   }, []);
 
   return (
-    <div ref={containerRef} data-scroll-container  className="h-full ">
+    <div ref={containerRef} data-scroll-container  className=" bg-green-900">
       {/* Sections will scroll smoothly but we will only animate the PopularBikeSearch on scroll */}
       <Hero />
       
       <div 
-        ref={popularBikeSearchRef}  className=" w-full flex flex-col space-y-20 "   data-scroll-section    style={{ backgroundColor: '#fff', position: 'relative',  zIndex: 50, }} >
+        ref={popularBikeSearchRef}  className="py-12 w-full bg-transparent flex flex-col space-y-20 items-center justify-center"   data-scroll-section    style={{ backgroundColor: '#fff', position: 'relative',  zIndex: 50, }} >
       <PopularBikeSearch />
       <FeaturesBike />
       <AboutWebsite />
       <PopularCompany />
       <Status />
       <Testmonials />
+      {/* <Testmonials /> */}
       <AppDownload />
       <Footer/>
     </div>

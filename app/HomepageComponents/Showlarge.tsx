@@ -18,13 +18,13 @@ const jost=Jost({
 
 const Showlarge = () => {
   return (
-    <div className=' w-full flex items-center justify-center  relative'>     
+    <div className=' w-full h-full lg:max-h-[70vh] flex items-center justify-center  relative'>     
     <div className='hidden  w-full h-full lg:block  flex-col relative '>
 
 
 <Image
   loading="lazy"
-  className="object-cover w-full h-full max-h-[90vh]"
+  className="object-cover w-full h-full "
   src="/bg-image-hd.jpg"
   alt="Background image"
   width={1920} // Adjust as needed
