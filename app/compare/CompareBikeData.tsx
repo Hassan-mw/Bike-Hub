@@ -25,43 +25,62 @@ const CompareBikeData = ({name,brand,category,price,mileage,topSpeed,weight,imag
   const [showSideIcon,setShowSideIcon]=useState(false)
   return (
     <div className='w-full grid gap-6  '>
-       <div className="w-[400px] h-[100px]  flex items-center justify-end  fixed top-1/2 right-5">
+       <div className="w-[400px] h-[100px]  flex items-center justify-end  fixed top-1/2 right-1/2">
        <div
   onClick={() => setShowSideIcon(!showSideIcon)}
   className="z-20 hover:cursor-pointer size-6 rounded-full bg-green-600 relative"
 >
-  {/* Dot 2 */}
-  <div
-    className={`${
-      showSideIcon ? '-translate-x-[65px] -translate-y-[75px]' : 'translate-x-0 translate-y-0'
-    } transition-transform duration-500 ease-in-out size-6 rounded-full bg-yellow-600 absolute z-10`}
-  ></div>
   {/* Dot 1 */}
   <div
     className={`${
-      showSideIcon ? '-translate-x-[100px] translate-y-[0px]' : 'translate-x-0 translate-y-0'
+      showSideIcon ? 'translate-x-[100px] translate-y-[0px]' : 'translate-x-0 translate-y-0'
     } transition-transform duration-500 ease-in-out size-6 rounded-full bg-blue-600 absolute z-10`}
+  ></div>
+  {/* Dot 2 */}
+  <div
+    className={`${
+      showSideIcon ? 'translate-x-[71px] translate-y-[71px]' : 'translate-x-0 translate-y-0'
+    } transition-transform duration-500 ease-in-out size-6 rounded-full bg-yellow-600 absolute z-10`}
   ></div>
 
 
   {/* Dot 3 */}
   <div
     className={`${
-      showSideIcon ? '-translate-x-[65px] translate-y-[75px]' : 'translate-x-0 translate-y-0'
+      showSideIcon ? 'translate-x-[-100px] translate-y-[0px]' : 'translate-x-0 translate-y-0'
     } transition-transform duration-500 ease-in-out size-6 rounded-full bg-purple-600 absolute z-10`}
   ></div>
 
   {/* Dot 4 */}
   <div
     className={`${
-      showSideIcon ? '-translate-x-[0px] -translate-y-[120px]' : 'translate-x-0 translate-y-0'
+      showSideIcon ? 'translate-x-[-71px] translate-y-[71px]' : 'translate-x-0 translate-y-0'
     } transition-transform duration-500 ease-in-out size-6 rounded-full bg-amber-950 absolute z-10`}
   ></div>
 
   {/* Dot 5 */}
   <div
     className={`${
-      showSideIcon ? 'translate-x-[0px] translate-y-[120px]' : 'translate-x-0 translate-y-0'
+      showSideIcon ? 'translate-x-[-71px] translate-y-[-71px]' : 'translate-x-0 translate-y-0'
+    } transition-transform duration-500 ease-in-out size-6 rounded-full bg-black absolute z-10`}
+  ></div>
+
+  {/* Dot6 */}
+  <div
+    className={`${
+      showSideIcon ? 'translate-x-[-0px] translate-y-[-100px]' : 'translate-x-0 translate-y-0'
+    } transition-transform duration-500 ease-in-out size-6 rounded-full bg-black absolute z-10`}
+  ></div>
+  {/* Dot7 */}
+  <div
+    className={`${
+      showSideIcon ? 'translate-x-[71px] translate-y-[-71px]' : 'translate-x-0 translate-y-0'
+    } transition-transform duration-500 ease-in-out size-6 rounded-full bg-black absolute z-10`}
+  ></div>
+  {/* Dot7 */}
+  <div
+    className={`${
+      showSideIcon ? 'translate-x-[0px] translate-y-[100px]' : 'translate-x-0 translate-y-0'
     } transition-transform duration-500 ease-in-out size-6 rounded-full bg-black absolute z-10`}
   ></div>
 </div>
@@ -86,6 +105,7 @@ const CompareBikeData = ({name,brand,category,price,mileage,topSpeed,weight,imag
     <div style={{fontWeight:300}} className={`${jost.className}  text-md p-3 border w-full flex flex-col items-start  justify-start px-8 `}>{fuelType}</div>
 
      </div>
+     
      </div>
   )
 }
