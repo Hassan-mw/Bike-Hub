@@ -30,14 +30,15 @@ const page=()=>{
       </div>
 
       {/* Down Body */}
-      <div className="w-full flex items-center justify-center py-20 ">
+      <div className="w-full flex items-center justify-center py-20 px-10">
 
-      <div className='w-full max-w-screen-lg flex flex-col items-center justify-center p-3 py-11  bg-white'>
+      <div className='w-full max-w-screen-md flex flex-col items-center justify-center p-3 py-11  bg-white'>
       <Accordion type="single" collapsible className="w-full space-y-16">
-      <AccordionItem value="item-1">
-        <AccordionTrigger className={`${jost.className} text-2xl hover:cursor-pointer`}>What types of bikes are listed on Bike-Hub?</AccordionTrigger>
-        <AccordionContent className={`${jost.className} text-[#888888] text-sm py-8`}>
-        We feature a wide range of motorcycles, including sports bikes, cruisers, touring bikes, off-road, and commuter models from top brands.
+      <AccordionItem value="item-1" className="border rounded-md p-3">
+        <AccordionTrigger style={{fontWeight:400}} className={`${jost.className} text-md hover:cursor-pointer`}>What types of bikes are listed on Bike-Hub?</AccordionTrigger>
+        <AccordionContent style={{fontWeight:300}} className={`${jost.className} text-[#888888] text-sm py-8`}>
+        Pharetra nulla ullamcorper sit lectus. Fermentum mauris pellentesque nec nibh sed et, vel diam, massa. Placerat quis vel fames interdum urna lobortis sagittis sed pretium. Aliquam eget posuere sit enim elementum nulla vulputate magna. Morbi sed arcu proin quis tortor non risus.
+Elementum lectus a porta commodo suspendisse arcu, aliquam lectus faucibus. Nisl malesuada tortor, ligula aliquet felis vitae enim. Mi augue aliquet mauris non elementum tincidunt eget facilisi. Pellentesque massa ipsum tempus vel aliquam massa eu pulvinar eget.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
