@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
 import Footer from "./HomepageComponents/Footer";
 import Navigation from "./Navbar/Navigation";
 import Head from "next/head";
@@ -35,14 +34,12 @@ export default function RootLayout({
             href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
             as="font"
             type="font/woff2"
-            crossorigin="anonymous"
+            // crossorigin="anonymous"
           />
       <link rel="preload" href="/images/bg-image-hd.jpg" as="image"/>
 
       </Head>
       <body className="overflow-x-hidden " >
-    <ThemeProvider attribute="class" defaultTheme="light">
-
         <Navigation/>
         {children}
         <Footer/>
