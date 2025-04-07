@@ -21,12 +21,10 @@ const page=()=>{
   return (
     <div className='w-full  pb-24'>
             {/* Upper Body */}
-      <div className='w-full flex flex-col space-y-2 py-10 lg:py-20 items-center justify-center bg-[#f4f7fc] border-t'>
-       {/* <div className={`${jost.className} text-5xl text-[#202124]`}>Bike List</div> */}
-       <div style={{fontWeight:400}} className={`${jost.className} text-4xl text-[#202124]`}>
-         <Link className='text-[#706d6d] hover:text-blue-400 duration-600 pr-2' href="/">Home</Link> 
-         / FAQ
-         </div>
+             {/* Upper Body */}
+             <div className='w-full flex flex-col space-y-2 py-10 lg:py-20 items-center justify-center bg-[#f4f7fc] border-t'>
+       <div className={`${jost.className} text-3xl md:text-4xl text-[#202124]`}> FAQ</div>
+       <div style={{fontWeight:400}} className={`${jost.className} text-md md:text-xl text-[#202124]`}> <Link className='text-[#888888]' href="/">Home</Link> /  FAQ</div>
       </div>
 
       {/* Down Body */}
