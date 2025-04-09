@@ -56,8 +56,9 @@ exports.createBike=catchAsync(async(req,res,next)=>{
       topSpeed: req.body.topSpeed,
       weight: req.body.weight,
       fuelType: req.body.fuelType,
-      image:  req.file.filename, // Store fixed path
+      image:req.file.filename, // Store fixed path
     });
+    console.log(req.file,req.body)
 
     res.status(201).json({
       status: "success",
@@ -71,7 +72,6 @@ exports.createBike=catchAsync(async(req,res,next)=>{
 
 exports.getBikeById=catchAsync(async(req,res,next)=>{
   const bike=await BIKE.findById(req.params.id)
-  console.log(bike,'🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑🐑')
     res.status(200).json({
     status:'success',
     bike
