@@ -10,3 +10,7 @@ class AppError extends Error {
 
 
 module.exports=AppError;
+
+
+// extend mean take properties of Error
+//super(message) sending message to upper class that call it

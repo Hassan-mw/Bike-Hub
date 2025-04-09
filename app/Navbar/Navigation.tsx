@@ -31,21 +31,39 @@ const Navigation = () => {
 
  
   return (
-    <div className={` ${jost.className} h-24 flex items-center justify-between w-full p-4  `}>
-      <Link href="/"><img className='h-12 w-32 lg:w-40 rounded-4xl' src="./logo.png" alt='logo' /></Link>
+    <div className='w-full flex items-center justify-center'>
+
+    <div className={` ${jost.className} h-24 grid grid-cols-2 sm:grid-cols-4 items-center justify-center gap-6 w-full p-4 max-w-screen-2xl `}>
+    
+    
+      {/* //!  1 */}
+  
+      <Link className=' col-span-1' href="/"><img className='h-12 w-32 lg:w-40 rounded-4xl' src="./logo.png" alt='logo' /></Link>
       
-      <div className='hidden sm:block'>
-      <div className='flex items-center justify-center space-x-7 lg:space-x-12 lg:text-lg xl:text-xl hover:cursor-pointer '>
+      
+      {/* //!  2 */}
+      
+      <div className='hidden sm:block   col-span-2' >
+      <div className='flex items-center justify-center space-x-7  lg:text-lg xl:text-xl hover:cursor-pointer '>
         <Link style={{fontWeight:300}} href='/bike' className={` ${jost.className} text-md   hover:text-[#1967d2] duration-500 `}>Bikes</Link>
         <Link  style={{fontWeight:300}}  href='/gear' className={` ${jost.className} text-md   hover:text-[#1967d2] duration-500 `}>Accessories        </Link>
         <Link  style={{fontWeight:300}} href='/compare'  className={` ${jost.className} text-md   hover:text-[#1967d2] duration-500 `}>Compare</Link>
         <Link   style={{fontWeight:300}} href='/faq'   className={` ${jost.className} text-md  hover:text-[#1967d2] duration-500 `}>FAQ</Link>
-        <div  style={{fontWeight:300}}  className='border-2 py-2 px-5 duration-500 hover:border-white  rounded-2xl border-[#1967d2] hover:bg-[#1967d2] hover:text-white'>Login / Signup</div>
       </div>
       </div>
+      {/* //!  3 */}
+      <div className='hidden sm:block'>
+       <div className='w-full  flex  items-center justify-end   col-span-1'>
+         <div  style={{fontWeight:300}}  className='border-2 w-32 text-xs lg:w-42  flex  items-center justify-center   py-2 px-5 duration-500 hover:border-white  rounded-2xl border-[#1967d2] hover:bg-[#1967d2] hover:text-white'>Login / Signup</div>
+      </div>
+      </div>
+
+
+     {/* //! Shown small */}
+
       <div className=" sm:hidden ">
        <Sheet >
-     <SheetTrigger className='hover:cursor-pointer text-[#868787] flex items-center justify-center space-x-3 '><Link href="/" className='hover:text-blue-500 duration-500'><IoPerson  size={20} /></Link><BsList size={30} /></SheetTrigger>
+     <SheetTrigger className='hover:cursor-pointer text-[#868787] flex items-center justify-end  w-full space-x-3 '><Link href="/" className='hover:text-blue-500 duration-500'><IoPerson  size={20} /></Link><BsList size={30} /></SheetTrigger>
      <SheetContent className='bg-[#202124] text-[#868787]  w-[300px]'>
      <SheetHeader  >
       
@@ -86,6 +104,8 @@ const Navigation = () => {
       </Sheet>
       </div>
       </div>
+    </div>
+
   )
 }
 
