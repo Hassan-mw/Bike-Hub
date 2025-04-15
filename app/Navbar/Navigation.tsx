@@ -40,7 +40,7 @@ const Navigation = () => {
     
       {/* //!  1 */}
   
-      <Link className=' col-span-1' href="/"><img className='h-12 w-32 lg:w-40 rounded-4xl' src="./logo.png" alt='logo' /></Link>
+      <Link className=' col-span-1' href="/"><img className='h-11 w-32 lg:w-32 rounded-4xl' src="./logo.png" alt='logo' /></Link>
       
       
       {/* //!  2 */}

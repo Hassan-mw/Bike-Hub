@@ -1,9 +1,4 @@
-// import { Jost } from "next/font/google"
 
-// const jost=Jost({
-//     weight:['500'],
-//     subsets:['latin']
-// })
 
 // export default function Status() {
 //     return (
@@ -74,16 +69,16 @@ const Status = () => {
 
         <div className='w-full max-w-screen-xl flex flex-col md:flex-row items-center justify-center md:justify-between space-y-8 md:space-y-0 md:px-12'>
   <div className='flex flex-col items-center justify-center space-y-3'>
-    <div className='text-4xl lg:text-4xl font-semibold flex items-center gap-x-2'>4 M</div>
-    <div className='text-sm lg:text-md text-[#798490] '>4 million bikes sold worldwide</div>
+    <div className={`${jost.className} text-4xl lg:text-4xl font-semibold flex items-center gap-x-2`}>4 M</div>
+    <div className={`${jost.className} text-sm lg:text-md text-[#798490] `}>4 million bikes sold worldwide</div>
   </div>
   <div className='flex flex-col items-center justify-center space-y-3'>
-    <div className='text-4xl lg:text-4xl font-semibold flex items-center gap-x-2'>12 K</div>
-    <div className='text-sm lg:text-md text-[#798490] '>Over 12k bike models to explore</div>
+    <div className={`${jost.className} 'text-4xl lg:text-4xl font-semibold flex items-center gap-x-2`}>12 K</div>
+    <div className={`${jost.className} text-sm lg:text-md text-[#798490] `}>Over 12k bike models to explore</div>
   </div>
   <div className='flex flex-col items-center justify-center space-y-3'>
-    <div className='text-4xl lg:text-4xl font-semibold flex items-center gap-x-2'>20 M</div>
-    <div className='text-sm lg:text-md text-[#798490] '>Over 20 million rides shared globally</div>
+    <div className={`${jost.className} text-4xl lg:text-4xl font-semibold flex items-center gap-x-2`}>20 M</div>
+    <div className={`${jost.className} text-sm lg:text-md text-[#798490] `}>Over 20 million rides shared globally</div>
   </div>
 </div>
   
