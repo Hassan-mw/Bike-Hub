@@ -1,5 +1,4 @@
 
-
 import Hero from './HomepageComponents/Hero';
 import PopularCompany from './HomepageComponents/PopularCompany';
 import BikeDetails from './HomepageComponents/BikeDetails';

@@ -45,7 +45,7 @@ return null;
 
 export const getBikeById=async({bikeNames}:{bikeNames:string})=>{
 try{
- const response = await fetch(`http://127.0.0.1:5000/api/bike/${bikeNames}`);
+ const response = await fetch(`http://127.0.0.1:6000/api/bike/${bikeNames}`);
 
  const data=await response.json();
 
