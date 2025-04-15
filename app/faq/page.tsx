@@ -24,7 +24,7 @@ const page=()=>{
              {/* Upper Body */}
              <div className='w-full flex flex-col space-y-2 py-10 lg:py-20 items-center justify-center bg-[#e5ebf5] border-t'>
        <div className={`${jost.className} text-3xl md:text-4xl text-[#202124]`}> FAQ</div>
-       <div style={{fontWeight:400}} className={`${jost.className} text-md md:text-xl text-[#202124]`}> <Link className='text-[#888888]' href="/">Home</Link> /  FAQ</div>
+       <div style={{fontWeight:400}} className={`${jost.className} text-md md:text-xl text-[#202124]`}> <Link className='text-[#8b8787]' href="/">Home</Link> /  FAQ</div>
       </div>
 
       {/* Down Body */}

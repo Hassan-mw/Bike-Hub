@@ -1,4 +1,4 @@
-
+'use client'
 import { Jost } from 'next/font/google'
 import Link from 'next/link'
 import React from 'react'
@@ -16,6 +16,7 @@ import {
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitch } from 'react-icons/fa'
 import { IoPerson } from 'react-icons/io5'
 import DarkModeButton from '../components-usage/DarkModeButton'
+import { usePathname } from 'next/navigation'
 
 
 
@@ -29,7 +30,8 @@ const jost=Jost({
 
 const Navigation = () => {
 
- 
+ const pathName=usePathname()
+ console.log(pathName,'😳😳🥶😦🙁☹🙁😧🥵😝')
   return (
     <div className='w-full flex items-center justify-center'>
 
@@ -45,10 +47,10 @@ const Navigation = () => {
       
       <div className='hidden sm:block   col-span-2' >
       <div className='flex items-center justify-center space-x-7  lg:text-lg xl:text-xl hover:cursor-pointer '>
-        <Link style={{fontWeight:300}} href='/bike' className={` ${jost.className} text-md   hover:text-[#1967d2] duration-500 `}>Bikes</Link>
-        <Link  style={{fontWeight:300}}  href='/gear' className={` ${jost.className} text-md   hover:text-[#1967d2] duration-500 `}>Accessories        </Link>
-        <Link  style={{fontWeight:300}} href='/compare'  className={` ${jost.className} text-md   hover:text-[#1967d2] duration-500 `}>Compare</Link>
-        <Link   style={{fontWeight:300}} href='/faq'   className={` ${jost.className} text-md  hover:text-[#1967d2] duration-500 `}>FAQ</Link>
+        <Link style={{fontWeight:200}} href='/bike' className={` ${jost.className} ${pathName==='/bike' && 'bg-blue-300 rounded-md px-3 py-1'} text-sm  hover:text-[#1967d2] duration-500 `}>Bikes</Link>
+        <Link  style={{fontWeight:200}}  href='/gear' className={` ${jost.className} text-sm  hover:text-[#1967d2] duration-500 py-1 `}>Accessories        </Link>
+        <Link  style={{fontWeight:200}} href='/compare'  className={` ${jost.className} text-sm  hover:text-[#1967d2] duration-500 py-1 `}>Compare</Link>
+        <Link   style={{fontWeight:200}} href='/faq'   className={` ${jost.className} ${pathName==='/faq' && 'bg-blue-300 rounded-md px-3 py-1 text-white'} text-sm hover:text-[#1967d2] duration-500 `}>FAQ</Link>
       </div>
       </div>
       {/* //!  3 */}
