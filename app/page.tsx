@@ -30,9 +30,7 @@ const Page = () => {
       <AboutWebsite />
       <PopularCompany />
       <Status />
-      {/* <Status /> */}
       <Testmonials />
-      {/* <Testmonials /> */}
       <AppDownload />
       <Footer/>
     </div>

@@ -56,7 +56,7 @@ const Navigation = () => {
       {/* //!  3 */}
       <div className='hidden sm:block'>
        <div className='w-full  flex  items-center justify-end   col-span-1'>
-         <div  style={{fontWeight:300}}  className='border-2 w-32 text-xs lg:w-42  flex  items-center justify-center   py-2 px-5 duration-500 hover:border-white  rounded-2xl border-[#1967d2] hover:bg-[#1967d2] hover:text-white'>Login / Signup</div>
+         <div  style={{fontWeight:300}}  className='hover:cursor-pointer border-2 w-32 text-xs lg:w-42  flex  items-center justify-center   py-2 px-5 duration-500 hover:border-white  rounded-2xl border-[#1967d2] hover:bg-[#1967d2] hover:text-white'>Login / Signup</div>
       </div>
       </div>
 
