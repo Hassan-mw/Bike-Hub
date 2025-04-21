@@ -13,8 +13,6 @@ console.error(error)
 return null;
 
 }
-
-
 }
 
 export default getAllBike;
