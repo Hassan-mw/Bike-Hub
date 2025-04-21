@@ -13,6 +13,17 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitch } from 'react-icons/fa'
 import { IoPerson } from 'react-icons/io5'
 import DarkModeButton from '../components-usage/DarkModeButton'
@@ -56,7 +67,23 @@ const Navigation = () => {
       {/* //!  3 */}
       <div className='hidden sm:block'>
        <div className='w-full  flex  items-center justify-end   col-span-1'>
-         <div  style={{fontWeight:300}}  className='hover:cursor-pointer border-2 w-32 text-xs lg:w-42  flex  items-center justify-center   py-2 px-5 duration-500 hover:border-white  rounded-2xl border-[#1967d2] hover:bg-[#1967d2] hover:text-white'>Login / Signup</div>
+       <AlertDialog>
+  <AlertDialogTrigger>         <div  style={{fontWeight:300}}  className='hover:cursor-pointer border-2 w-32 text-xs lg:w-42  flex  items-center justify-center   py-2 px-5 duration-500 hover:border-white  rounded-2xl border-[#1967d2] hover:bg-[#1967d2] hover:text-white'>Login / Signup</div>
+  </AlertDialogTrigger>
+  <AlertDialogContent>
+    <AlertDialogHeader>
+      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+      <AlertDialogDescription>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <AlertDialogCancel>Cancel</AlertDialogCancel>
+      <AlertDialogAction>Continue</AlertDialogAction>
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog>
       </div>
       </div>
 
